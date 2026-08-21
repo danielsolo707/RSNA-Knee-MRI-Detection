@@ -80,30 +80,74 @@ def fetch_whole(name: str, url: str, dst: Path) -> None:
 
 
 def fetch_resumable(name: str, url: str, dst: Path, total: int) -> None:
-    while True:
-        pos = dst.stat().st_size if dst.exists() else 0
-        if pos >= total:
-            log(f"{name}: complete on disk ({pos:,} B)")
-            return
-        try:
-            end = min(pos + CHUNK, total) - 1
-            r = requests.get(url, headers={"Range": f"bytes={pos}-{end}"}, timeout=300)
-            if r.status_code == 206:
-                data = r.content
-                if len(data) != end - pos + 1:
-                    raise RuntimeError(f"short read {len(data)} != {end - pos + 1}")
-                with open(dst, "ab") as f:
-                    f.write(data)
-            elif r.status_code == 200 and pos == 0:
-                with open(dst, "wb") as f:
-                    f.write(r.content)
-            else:
-                raise RuntimeError(f"HTTP {r.status_code} at pos={pos}")
-        except KeyboardInterrupt:
-            raise
-        except Exception as e:
-            log(f"{name}: {e}; pos={pos:,}; backoff 10s (safe to close PC - re-run later)")
-            time.sleep(10)
+    import threading
+
+    stop = threading.Event()
+
+    def fmt_eta(sec: float) -> str:
+        if sec <= 0 or sec != sec or sec == float("inf"):
+            return "--"
+        m, s = divmod(int(sec), 60)
+        return f"{m}m{s:02d}s"
+
+    def bar_loop() -> None:
+        last_bytes = dst.stat().st_size if dst.exists() else 0
+        last_t = time.time()
+        while not stop.is_set():
+            time.sleep(1.0)
+            try:
+                cur = dst.stat().st_size
+            except OSError:
+                continue
+            now = time.time()
+            dt = max(now - last_t, 1e-6)
+            speed = (cur - last_bytes) / dt
+            last_bytes, last_t = cur, now
+            pct = 100.0 * cur / total
+            filled = int(pct // 2.5)
+            bar = "#" * filled + "-" * (40 - filled)
+            eta = (total - cur) / speed if speed > 0 else float("inf")
+            print(f"\r{name}: [{bar}] {pct:5.1f}%  {cur/1e9:6.2f}/{total/1e9:.2f} GB"
+                  f"  {speed/1e6:5.1f} MB/s  ETA {fmt_eta(eta)}   ", end="", flush=True)
+
+    tick = threading.Thread(target=bar_loop, daemon=True)
+    tick.start()
+    try:
+        while True:
+            pos = dst.stat().st_size if dst.exists() else 0
+            if pos >= total:
+                break
+            try:
+                end = min(pos + CHUNK, total) - 1
+                r = requests.get(url, headers={"Range": f"bytes={pos}-{end}"}, timeout=300)
+                if r.status_code == 206:
+                    data = r.content
+                    if len(data) != end - pos + 1:
+                        raise RuntimeError(f"short read {len(data)} != {end - pos + 1}")
+                    with open(dst, "ab") as f:
+                        f.write(data)
+                elif r.status_code == 200 and pos == 0:
+                    with open(dst, "wb") as f:
+                        f.write(r.content)
+                else:
+                    raise RuntimeError(f"HTTP {r.status_code} at pos={pos}")
+            except KeyboardInterrupt:
+                raise
+            except Exception as e:
+                stop.set()
+                tick.join(timeout=2)
+                print()
+                pos_now = dst.stat().st_size if dst.exists() else 0
+                log(f"{name}: {e}; pos={pos_now:,}; backoff 10s (safe to close PC - re-run later)")
+                time.sleep(10)
+                tick = threading.Thread(target=bar_loop, daemon=True)
+                stop = threading.Event()
+                tick.start()
+    finally:
+        stop.set()
+        time.sleep(0.1)
+        final = dst.stat().st_size if dst.exists() else 0
+        print(f"\r{name}: [{'#' * 40}] 100.0%  {final:,} B downloaded", flush=True)
 
 
 def verify(man: dict) -> bool:
@@ -185,21 +229,28 @@ def main() -> None:
     log(f"{len(urls)} output files listed")
 
     man = None
-    for name, url in sorted(urls.items()):
-        dst = DEST / Path(name).name
-        if name.endswith("manifest.json"):
-            fetch_whole(name, url, dst)
-            man = json.loads(dst.read_text())
-            continue
-        if dst.exists() and dst.stat().st_size > 0 and name != "v31_cache/x_f16.dat":
-            log(f"{name}: already present ({dst.stat().st_size:,} B), skip")
-            continue
-        total, ranged = probe_total(url)
-        log(f"{name}: remote {total:,} B ranged={ranged}")
-        if total <= SMALL_LIMIT or not ranged:
-            fetch_whole(name, url, dst)
-        else:
-            fetch_resumable(name, url, dst, total)
+    try:
+        for name, url in sorted(urls.items()):
+            dst = DEST / Path(name).name
+            if name.endswith("manifest.json"):
+                fetch_whole(name, url, dst)
+                man = json.loads(dst.read_text())
+                continue
+            if dst.exists() and dst.stat().st_size > 0 and name != "v31_cache/x_f16.dat":
+                log(f"{name}: already present ({dst.stat().st_size:,} B), skip")
+                continue
+            total, ranged = probe_total(url)
+            log(f"{name}: remote {total:,} B ranged={ranged}")
+            if total <= SMALL_LIMIT or not ranged:
+                fetch_whole(name, url, dst)
+            else:
+                fetch_resumable(name, url, dst, total)
+    finally:
+        if LOCK.exists():
+            try:
+                LOCK.unlink()
+            except OSError:
+                pass
 
     assert man is not None, "manifest missing"
     if man.get("status") != "complete":
