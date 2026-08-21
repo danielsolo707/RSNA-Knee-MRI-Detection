@@ -1,0 +1,243 @@
+﻿{
+  "topic": {
+    "id": 390974,
+    "title": "6th Place Solution: Multi-view Multi-lateral Multi-stage Approach ",
+    "authorName": "RabotniKuma",
+    "commentCount": 33,
+    "votes": 101,
+    "postDate": "2023-02-28T02:16:14.507000"
+  },
+  "comments": [
+    {
+      "id": 2163523,
+      "authorName": "Remek Kinas",
+      "votes": 5,
+      "postDate": "2023-02-28T22:07:15.377000",
+      "content": "<p>Congratulations! You have great solution, great score \u2026. but \u2026 I looked into your github - masterpiece of code module management. Configs management - brilliant. I downloaded this code to learn from you how to write great competition code. Guys - you are great! Looking in such repository is the best takeaway and learning from me. Thank you for sharing such things.</p>"
+    },
+    {
+      "id": 2162709,
+      "authorName": "Dieter",
+      "votes": 3,
+      "postDate": "2023-02-28T11:27:45.363000",
+      "content": "<p>Great write-up. Thanks for sharing your approach. </p>"
+    },
+    {
+      "id": 2162201,
+      "authorName": "Ian Pan",
+      "votes": 3,
+      "postDate": "2023-02-28T03:43:14.157000",
+      "content": "<p>Thanks for sharing! I'm curious how you dealt with studies with multiple images per view. </p>"
+    },
+    {
+      "id": 2162251,
+      "authorName": "RabotniKuma",
+      "votes": 8,
+      "postDate": "2023-02-28T04:40:38.523000",
+      "content": "<p><a href=\"https://www.kaggle.com/vaillant\" target=\"_blank\">@vaillant</a> Good question! We randomly sampled an image per view during training, and sampled the image with most valid pixels (valid pixel is defined as pixel with value \u2282 [16, 160]) during inference. So actually we didn't use all images in the test dataset.</p>"
+    },
+    {
+      "id": 2165535,
+      "authorName": "Chenglu",
+      "votes": 1,
+      "postDate": "2023-03-02T09:05:45.243000",
+      "content": "<p>Congrates on the winning and many thanks for sharing the solusion.</p>\n<p>I'm impressed of how you utilze the CAM, very brilliant method! </p>"
+    },
+    {
+      "id": 2162884,
+      "authorName": "moth",
+      "votes": 1,
+      "postDate": "2023-02-28T13:14:30.253000",
+      "content": "<p>Congratulations <a href=\"https://www.kaggle.com/analokamus\" target=\"_blank\">@analokamus</a>. I have one question, if I remember correctly, there are patients with varying numbers of images and also other lateralities than MLO and CC. </p>\n<p>How did you manage to always input the images shown in the models? Did you use some rules on the Dataset definition for loading the input or some custom DataLoader sampler?</p>\n<p>I look forward to see the models implementations!</p>"
+    },
+    {
+      "id": 2163224,
+      "authorName": "Antti Isosalo",
+      "votes": 1,
+      "postDate": "2023-02-28T17:09:09.273000",
+      "content": "<p>I would add an additional column, \"projection\". Then I would device a dictionary, where I would have 'L-MLO, R-MLO,\u2026 as keys: <a href=\"https://www.kaggle.com/code/anttiisosalo/birads-classification-rsna-bc-detection?scriptVersionId=119512630&amp;cellId=42\" target=\"_blank\">https://www.kaggle.com/code/anttiisosalo/birads-classification-rsna-bc-detection</a> \ud83d\ude00 Perhaps there could also be a vector of filenames for each key to not discard any files without consideration.</p>"
+    },
+    {
+      "id": 2163897,
+      "authorName": "RabotniKuma",
+      "votes": 0,
+      "postDate": "2023-03-01T06:41:05.807000",
+      "content": "<p>Thank you! Please refer to this thread: <a href=\"https://www.kaggle.com/competitions/rsna-breast-cancer-detection/discussion/390974#2162251\" target=\"_blank\">https://www.kaggle.com/competitions/rsna-breast-cancer-detection/discussion/390974#2162251</a></p>"
+    },
+    {
+      "id": 2162554,
+      "authorName": "Quan H. Cap",
+      "votes": 1,
+      "postDate": "2023-02-28T09:38:11.037000",
+      "content": "<p>Big congratulations on becoming a grandmaster! \ud83c\udf89\ud83c\udf89\ud83c\udf89</p>"
+    },
+    {
+      "id": 2162477,
+      "authorName": "Darragh",
+      "votes": 1,
+      "postDate": "2023-02-28T08:24:13.490000",
+      "content": "<p>Nice work team, we were thinking of something like the stepwise rejection but got to it too late. <br>\nMVF model looks very cool. Well deserved new grandmasters &gt;&gt; <a href=\"https://www.kaggle.com/amanatsu\" target=\"_blank\">@amanatsu</a> <a href=\"https://www.kaggle.com/analokamus\" target=\"_blank\">@analokamus</a> <a href=\"https://www.kaggle.com/yujiariyasu\" target=\"_blank\">@yujiariyasu</a> \ud83d\udcaa\ud83d\ude80</p>"
+    },
+    {
+      "id": 2162369,
+      "authorName": "Antti Isosalo",
+      "votes": 1,
+      "postDate": "2023-02-28T06:48:20.640000",
+      "content": "<p>Great! I tried a bit similar thing, but could not get it working. I used Quasi-Hyberbolic Adam optimizer. What was your optimizer of choice if I may ask? Or was it mentioned?</p>"
+    },
+    {
+      "id": 2162417,
+      "authorName": "RabotniKuma",
+      "votes": 2,
+      "postDate": "2023-02-28T07:29:20.410000",
+      "content": "<p>I used AdamW optimizer, cosine annealing with warm restarts scheduler, and initial learning rate of 1e-5 for batch size 16. </p>"
+    },
+    {
+      "id": 2162185,
+      "authorName": "hengck23",
+      "votes": 1,
+      "postDate": "2023-02-28T03:29:50.220000",
+      "content": "<p>i am curious about multi-view training.<br>\ndid it not over fit in training?</p>\n<p>(or is my transformer encoder too strong)?</p>"
+    },
+    {
+      "id": 2162265,
+      "authorName": "RabotniKuma",
+      "votes": 1,
+      "postDate": "2023-02-28T04:48:00.487000",
+      "content": "<p><a href=\"https://www.kaggle.com/hengck23\" target=\"_blank\">@hengck23</a> Thank your for the question! We learnt a lot from your discussion topics (as usual \ud83d\ude0a).<br>\nWith regard to multi-view training, we tried efficientnet, convnext, seresnext, nextvit, and some other backbones, and none of them significantly overfitted. Compared to fusion models with stronger spatial regularization, normal multi-view models usually were slightly overfitted after the same training epochs, but we did not observe big differences.</p>"
+    },
+    {
+      "id": 2162139,
+      "authorName": "RB",
+      "votes": 1,
+      "postDate": "2023-02-28T02:49:06.070000",
+      "content": "<p>Congratulations and Thank you for sharing your solution.  Looking forward to the github code. </p>\n<p>I'm trying to understand Stepwise Rejection Ensemble - <br>\nYou start with predictions for Model 1 and Model 2 and bottom 25% probability samples will not be predicted by Model 3 and Model 4 ? Is that correct or did I misunderstand ? </p>"
+    },
+    {
+      "id": 2162271,
+      "authorName": "RabotniKuma",
+      "votes": 4,
+      "postDate": "2023-02-28T04:56:29.890000",
+      "content": "<p>Thank you for the question, let me clarify:</p>\n<pre><code>[1st stage] [100% test data] x [model 1, model 2]\n-&gt; bottom 25% were removed and labelled as 0\n[2nd stage] [75% test data] x ([model 1, model 2] from 1st stage + [model 3])\n-&gt; bottom 40% (x 75%) were removed and labelled as 0\n[3rd stage] [45% test data] x ([model 1, model 2, model 3] from 2nd stage + [model 4])\n</code></pre>\n<p>In this way, additional models are run only on suspicious data.</p>"
+    },
+    {
+      "id": 2162175,
+      "authorName": "hengck23",
+      "votes": 2,
+      "postDate": "2023-02-28T03:27:52.200000",
+      "content": "<p>Thanks for the write up. good job!</p>\n<p>\" it has lower CV and public LB \"<br>\n\u2026 sometimes it is a bit of luck :;</p>"
+    },
+    {
+      "id": 2162116,
+      "authorName": "z7777",
+      "votes": 2,
+      "postDate": "2023-02-28T02:20:38.893000",
+      "content": "<p>Great solution! Thanks for your sharing!</p>"
+    },
+    {
+      "id": 2272989,
+      "authorName": "Shantanu Ghosh",
+      "votes": 0,
+      "postDate": "2023-05-24T23:45:16.853000",
+      "content": "<p>Hi, Thanks for sharing the solution. I want to replicate your solution. Can you please tell me the order in which i will replicate your code. My understanding is follows:</p>\n<ol>\n<li>[YOLOX(ishikei) part] <a href=\"https://github.com/ishikei14k/RSNA_Screening_Mammography_Breast_Cancer_Detection\" target=\"_blank\">https://github.com/ishikei14k/RSNA_Screening_Mammography_Breast_Cancer_Detection</a> </li>\n<li>[RabotniKuma part]<a href=\"https://github.com/analokmaus/kaggle-rsna-breast-cancer\" target=\"_blank\">https://github.com/analokmaus/kaggle-rsna-breast-cancer</a> </li>\n<li>[Charmq part] <a href=\"https://github.com/tyamaguchi17/rsna_mammo\" target=\"_blank\">https://github.com/tyamaguchi17/rsna_mammo</a> </li>\n</ol>"
+    },
+    {
+      "id": 2215411,
+      "authorName": "LYLY123",
+      "votes": 0,
+      "postDate": "2023-04-09T09:21:08.633000",
+      "content": "<p>Thanks for sharing your approach. This notebook is so useful \ud83d\udc4d</p>"
+    },
+    {
+      "id": 2170899,
+      "authorName": "ForcewithMe",
+      "votes": 0,
+      "postDate": "2023-03-06T11:22:41.497000",
+      "content": "<p>Hi <a href=\"https://www.kaggle.com/analokamus\" target=\"_blank\">@analokamus</a> , congratulations on becoming a grandmaster. It's a brilliant solution. May you describe more about how you trained the local encoder? </p>"
+    },
+    {
+      "id": 2165574,
+      "authorName": "L\u00ea Th\u00e0nh Ngh\u0129a",
+      "votes": 0,
+      "postDate": "2023-03-02T09:35:19.600000",
+      "content": "<p>Thanks, i got learn so much after read this Discussion. Good job u guys </p>"
+    },
+    {
+      "id": 2164793,
+      "authorName": "Ali Abdin",
+      "votes": 0,
+      "postDate": "2023-03-01T19:53:46.163000",
+      "content": "<p>Congratulations and thanks for the great summary! </p>"
+    },
+    {
+      "id": 2163197,
+      "authorName": "i_love_huyen_tran",
+      "votes": 0,
+      "postDate": "2023-02-28T16:43:39.340000",
+      "content": "<p>Thank you, i find many useful techniques that i can apply for future competitions.</p>"
+    },
+    {
+      "id": 2163015,
+      "authorName": "K Pradyumna",
+      "votes": 0,
+      "postDate": "2023-02-28T14:34:21.110000",
+      "content": "<p>congratulation\u2026thanks for sharing detailed documentation.</p>"
+    },
+    {
+      "id": 2162926,
+      "authorName": "Hammad khan2412",
+      "votes": 0,
+      "postDate": "2023-02-28T13:31:31.260000",
+      "content": "<p>Big congratulations on becoming a grandmaster! </p>"
+    },
+    {
+      "id": 2162500,
+      "authorName": "TheStrugglingEngineer",
+      "votes": 0,
+      "postDate": "2023-02-28T08:41:06.343000",
+      "content": "<blockquote>\n  <p>Mixup did not work</p>\n</blockquote>\n<p>Can you elaborate? How was the mixup performed, in more detail?<br>\nAnd Congratulations on the amazing performance.</p>"
+    },
+    {
+      "id": 2162858,
+      "authorName": "RabotniKuma",
+      "votes": 0,
+      "postDate": "2023-02-28T12:59:28.610000",
+      "content": "<p>Using mixup usually making training very slow to converge, and the final results are not always better than without mixup.</p>"
+    },
+    {
+      "id": 2162171,
+      "authorName": "dragon zhang",
+      "votes": 0,
+      "postDate": "2023-02-28T03:22:14.853000",
+      "content": "<p>thx for sharing.  Again,  good hardware seems a necessary for good score.</p>"
+    },
+    {
+      "id": 2162135,
+      "authorName": "joejeo1",
+      "votes": 0,
+      "postDate": "2023-02-28T02:43:33.560000",
+      "content": "<p>Very nice models and  illustrations.  Thanks and congrats.  </p>"
+    },
+    {
+      "id": 2162125,
+      "authorName": "Feng Qilong",
+      "votes": 0,
+      "postDate": "2023-02-28T02:31:05.980000",
+      "content": "<p>Amazing Solution!</p>"
+    },
+    {
+      "id": 2162505,
+      "authorName": "Khang Duong",
+      "votes": 0,
+      "postDate": "2023-02-28T08:45:12.817000",
+      "content": "<p>Thanks for sharing! Well deserved \ud83d\udcaf</p>"
+    },
+    {
+      "id": 2162358,
+      "authorName": "leumon",
+      "votes": 0,
+      "postDate": "2023-02-28T06:40:04.443000",
+      "content": "<p>Thanks for sharing\uff01</p>"
+    }
+  ]
+}

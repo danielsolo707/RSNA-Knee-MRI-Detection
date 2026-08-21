@@ -1,0 +1,1517 @@
+{
+  "fallback_cells": [],
+  "fold_crossfit_gold_auc": {
+    "ACL": 0.977328431372549,
+    "Baker's": 0.9438405797101449,
+    "Contusion": 0.844804318488529,
+    "Effusion": 0.8906832298136645,
+    "Fracture": 0.8701388888888889,
+    "Lateral Meniscus": 0.8409937888198757,
+    "Lateral OA": 0.8278529980657641,
+    "MCL": 0.9603174603174603,
+    "Medial Meniscus": 0.9429086538461539,
+    "Medial OA": 0.9341085271317829,
+    "PF OA": 0.9015444015444015,
+    "Synovitis": 0.7903225806451613
+  },
+  "fold_crossfit_gold_macro_auc": 0.8937369882203647,
+  "fold_crossfit_policy": {
+    "0": {
+      "ACL": {
+        "best_minus_runner_up": 0.006730769230769207,
+        "fitted_auc": {
+          "lixin": 0.9317307692307693,
+          "pilkwang": 0.9971153846153846,
+          "steven2": 0.9903846153846154,
+          "steven4": 0.9817307692307692
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "pilkwang",
+          "steven2",
+          "steven4",
+          "lixin"
+        ],
+        "selected_sources": [
+          "pilkwang",
+          "steven2"
+        ]
+      },
+      "Baker's": {
+        "best_minus_runner_up": 0.002777777777777768,
+        "fitted_auc": {
+          "lixin": 0.8791666666666667,
+          "pilkwang": 0.9111111111111111,
+          "steven2": 0.9305555555555556,
+          "steven4": 0.9277777777777778
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "steven4",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven2",
+          "steven4"
+        ]
+      },
+      "Contusion": {
+        "best_minus_runner_up": 0.021505376344086002,
+        "fitted_auc": {
+          "lixin": 0.8709677419354839,
+          "pilkwang": 0.8064516129032258,
+          "steven2": 0.8548387096774194,
+          "steven4": 0.8924731182795699
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "lixin",
+          "steven2",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "steven4"
+        ]
+      },
+      "Effusion": {
+        "best_minus_runner_up": 0.02826510721247566,
+        "fitted_auc": {
+          "lixin": 0.6842105263157895,
+          "pilkwang": 0.8304093567251462,
+          "steven2": 0.8596491228070176,
+          "steven4": 0.8879142300194932
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4"
+        ]
+      },
+      "Fracture": {
+        "best_minus_runner_up": 0.060267857142857095,
+        "fitted_auc": {
+          "lixin": 0.7689732142857143,
+          "pilkwang": 0.8292410714285714,
+          "steven2": 0.7399553571428571,
+          "steven4": 0.7410714285714286
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "pilkwang",
+          "lixin",
+          "steven4",
+          "steven2"
+        ],
+        "selected_sources": [
+          "pilkwang"
+        ]
+      },
+      "Lateral Meniscus": {
+        "best_minus_runner_up": 0.012670565302144277,
+        "fitted_auc": {
+          "lixin": 0.8382066276803118,
+          "pilkwang": 0.8138401559454191,
+          "steven2": 0.8284600389863548,
+          "steven4": 0.8508771929824561
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "lixin",
+          "steven2",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "steven4",
+          "lixin"
+        ]
+      },
+      "Lateral OA": {
+        "best_minus_runner_up": 0.00164473684210531,
+        "fitted_auc": {
+          "lixin": 0.8585526315789473,
+          "pilkwang": 0.8355263157894737,
+          "steven2": 0.912828947368421,
+          "steven4": 0.9144736842105263
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "lixin",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "MCL": {
+        "best_minus_runner_up": 0.0073260073260073,
+        "fitted_auc": {
+          "lixin": 0.9267399267399268,
+          "pilkwang": 0.967032967032967,
+          "steven2": 0.9523809523809523,
+          "steven4": 0.9597069597069597
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "pilkwang",
+          "steven4",
+          "steven2",
+          "lixin"
+        ],
+        "selected_sources": [
+          "pilkwang",
+          "steven4"
+        ]
+      },
+      "Medial Meniscus": {
+        "best_minus_runner_up": 0.005714285714285672,
+        "fitted_auc": {
+          "lixin": 0.8828571428571429,
+          "pilkwang": 0.9476190476190476,
+          "steven2": 0.9561904761904761,
+          "steven4": 0.9504761904761905
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "steven4",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven2",
+          "steven4"
+        ]
+      },
+      "Medial OA": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.8774509803921569,
+          "pilkwang": 0.9080882352941176,
+          "steven2": 0.9301470588235294,
+          "steven4": 0.9301470588235294
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "PF OA": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.8041666666666667,
+          "pilkwang": 0.8802083333333334,
+          "steven2": 0.8854166666666666,
+          "steven4": 0.8854166666666666
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Synovitis": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.7102272727272727,
+          "pilkwang": 0.7159090909090909,
+          "steven2": 0.8513257575757576,
+          "steven4": 0.8513257575757576
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      }
+    },
+    "1": {
+      "ACL": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.9482758620689655,
+          "pilkwang": 0.9827586206896551,
+          "steven2": 0.9952107279693486,
+          "steven4": 0.9952107279693486
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Baker's": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.9094594594594595,
+          "pilkwang": 0.9391891891891891,
+          "steven2": 0.9418918918918919,
+          "steven4": 0.9418918918918919
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Contusion": {
+        "best_minus_runner_up": 0.046875,
+        "fitted_auc": {
+          "lixin": 0.7916666666666666,
+          "pilkwang": 0.703125,
+          "steven2": 0.7927083333333333,
+          "steven4": 0.8395833333333333
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "lixin",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "steven4"
+        ]
+      },
+      "Effusion": {
+        "best_minus_runner_up": 0.03065134099616862,
+        "fitted_auc": {
+          "lixin": 0.7222222222222222,
+          "pilkwang": 0.8045977011494253,
+          "steven2": 0.8227969348659003,
+          "steven4": 0.853448275862069
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4"
+        ]
+      },
+      "Fracture": {
+        "best_minus_runner_up": 0.06493506493506496,
+        "fitted_auc": {
+          "lixin": 0.8116883116883117,
+          "pilkwang": 0.8766233766233766,
+          "steven2": 0.8106060606060606,
+          "steven4": 0.8106060606060606
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "pilkwang",
+          "lixin",
+          "steven4",
+          "steven2"
+        ],
+        "selected_sources": [
+          "pilkwang"
+        ]
+      },
+      "Lateral Meniscus": {
+        "best_minus_runner_up": 0.022556390977443663,
+        "fitted_auc": {
+          "lixin": 0.8984962406015038,
+          "pilkwang": 0.8289473684210527,
+          "steven2": 0.8430451127819549,
+          "steven4": 0.8759398496240601
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "lixin",
+          "steven4",
+          "steven2",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "lixin"
+        ]
+      },
+      "Lateral OA": {
+        "best_minus_runner_up": 0.014619883040935755,
+        "fitted_auc": {
+          "lixin": 0.8099415204678363,
+          "pilkwang": 0.7426900584795322,
+          "steven2": 0.7953216374269005,
+          "steven4": 0.7953216374269005
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "lixin",
+          "steven4",
+          "steven2",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "lixin",
+          "steven4"
+        ]
+      },
+      "MCL": {
+        "best_minus_runner_up": 0.0071428571428571175,
+        "fitted_auc": {
+          "lixin": 0.9142857142857143,
+          "pilkwang": 0.9821428571428571,
+          "steven2": 0.9678571428571429,
+          "steven4": 0.975
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "pilkwang",
+          "steven4",
+          "steven2",
+          "lixin"
+        ],
+        "selected_sources": [
+          "pilkwang",
+          "steven4"
+        ]
+      },
+      "Medial Meniscus": {
+        "best_minus_runner_up": 0.00366300366300365,
+        "fitted_auc": {
+          "lixin": 0.9157509157509157,
+          "pilkwang": 0.9587912087912088,
+          "steven2": 0.9661172161172161,
+          "steven4": 0.9624542124542125
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "steven4",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven2",
+          "steven4"
+        ]
+      },
+      "Medial OA": {
+        "best_minus_runner_up": 0.0011904761904761862,
+        "fitted_auc": {
+          "lixin": 0.9107142857142857,
+          "pilkwang": 0.9083333333333333,
+          "steven2": 0.930952380952381,
+          "steven4": 0.9297619047619048
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "steven4",
+          "lixin",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "steven2",
+          "steven4"
+        ]
+      },
+      "PF OA": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.765686274509804,
+          "pilkwang": 0.8598039215686275,
+          "steven2": 0.8813725490196078,
+          "steven4": 0.8813725490196078
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Synovitis": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.6445454545454545,
+          "pilkwang": 0.6618181818181819,
+          "steven2": 0.7554545454545455,
+          "steven4": 0.7554545454545455
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      }
+    },
+    "2": {
+      "ACL": {
+        "best_minus_runner_up": 0.007797270955165692,
+        "fitted_auc": {
+          "lixin": 0.9317738791423001,
+          "pilkwang": 0.9844054580896686,
+          "steven2": 0.9951267056530214,
+          "steven4": 0.9873294346978557
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "steven4",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven2",
+          "steven4"
+        ]
+      },
+      "Baker's": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.972972972972973,
+          "pilkwang": 0.9819819819819819,
+          "steven2": 0.993993993993994,
+          "steven4": 0.993993993993994
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Contusion": {
+        "best_minus_runner_up": 0.04270833333333335,
+        "fitted_auc": {
+          "lixin": 0.80625,
+          "pilkwang": 0.7145833333333333,
+          "steven2": 0.8125,
+          "steven4": 0.8552083333333333
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "lixin",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "steven4"
+        ]
+      },
+      "Effusion": {
+        "best_minus_runner_up": 0.02631578947368418,
+        "fitted_auc": {
+          "lixin": 0.6842105263157895,
+          "pilkwang": 0.817738791423002,
+          "steven2": 0.8586744639376218,
+          "steven4": 0.884990253411306
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4"
+        ]
+      },
+      "Fracture": {
+        "best_minus_runner_up": 0.0580357142857143,
+        "fitted_auc": {
+          "lixin": 0.7979910714285714,
+          "pilkwang": 0.8560267857142857,
+          "steven2": 0.7957589285714286,
+          "steven4": 0.7957589285714286
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "pilkwang",
+          "lixin",
+          "steven4",
+          "steven2"
+        ],
+        "selected_sources": [
+          "pilkwang"
+        ]
+      },
+      "Lateral Meniscus": {
+        "best_minus_runner_up": 0.009920634920634885,
+        "fitted_auc": {
+          "lixin": 0.8571428571428571,
+          "pilkwang": 0.8621031746031746,
+          "steven2": 0.8918650793650794,
+          "steven4": 0.9017857142857143
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Lateral OA": {
+        "best_minus_runner_up": 0.009009009009009028,
+        "fitted_auc": {
+          "lixin": 0.8078078078078078,
+          "pilkwang": 0.7612612612612613,
+          "steven2": 0.7942942942942943,
+          "steven4": 0.7987987987987988
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "lixin",
+          "steven4",
+          "steven2",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "lixin",
+          "steven4"
+        ]
+      },
+      "MCL": {
+        "best_minus_runner_up": 0.020146520146520075,
+        "fitted_auc": {
+          "lixin": 0.9120879120879121,
+          "pilkwang": 0.9816849816849816,
+          "steven2": 0.9578754578754579,
+          "steven4": 0.9615384615384616
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "pilkwang",
+          "steven4",
+          "steven2",
+          "lixin"
+        ],
+        "selected_sources": [
+          "pilkwang"
+        ]
+      },
+      "Medial Meniscus": {
+        "best_minus_runner_up": 0.0019047619047619646,
+        "fitted_auc": {
+          "lixin": 0.8904761904761904,
+          "pilkwang": 0.9247619047619048,
+          "steven2": 0.9419047619047619,
+          "steven4": 0.94
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "steven4",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven2",
+          "steven4"
+        ]
+      },
+      "Medial OA": {
+        "best_minus_runner_up": 0.006127450980392135,
+        "fitted_auc": {
+          "lixin": 0.8688725490196079,
+          "pilkwang": 0.875,
+          "steven2": 0.9056372549019608,
+          "steven4": 0.9117647058823529
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "PF OA": {
+        "best_minus_runner_up": 0.001014198782961384,
+        "fitted_auc": {
+          "lixin": 0.8052738336713996,
+          "pilkwang": 0.8793103448275862,
+          "steven2": 0.8935091277890467,
+          "steven4": 0.8945233265720081
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Synovitis": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.6666666666666666,
+          "pilkwang": 0.6808712121212122,
+          "steven2": 0.7821969696969697,
+          "steven4": 0.7821969696969697
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      }
+    },
+    "3": {
+      "ACL": {
+        "best_minus_runner_up": 0.007518796992481258,
+        "fitted_auc": {
+          "lixin": 0.9154135338345865,
+          "pilkwang": 0.981203007518797,
+          "steven2": 0.9896616541353384,
+          "steven4": 0.9821428571428571
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "steven4",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven2",
+          "steven4"
+        ]
+      },
+      "Baker's": {
+        "best_minus_runner_up": 0.0029239766081871066,
+        "fitted_auc": {
+          "lixin": 0.8771929824561403,
+          "pilkwang": 0.9152046783625731,
+          "steven2": 0.9298245614035088,
+          "steven4": 0.9269005847953217
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "steven4",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven2",
+          "steven4"
+        ]
+      },
+      "Contusion": {
+        "best_minus_runner_up": 0.019791666666666652,
+        "fitted_auc": {
+          "lixin": 0.7854166666666667,
+          "pilkwang": 0.7239583333333334,
+          "steven2": 0.8260416666666667,
+          "steven4": 0.8458333333333333
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "lixin",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "steven4"
+        ]
+      },
+      "Effusion": {
+        "best_minus_runner_up": 0.029693486590038343,
+        "fitted_auc": {
+          "lixin": 0.6944444444444444,
+          "pilkwang": 0.8151340996168582,
+          "steven2": 0.8668582375478927,
+          "steven4": 0.896551724137931
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4"
+        ]
+      },
+      "Fracture": {
+        "best_minus_runner_up": 0.06458333333333344,
+        "fitted_auc": {
+          "lixin": 0.8583333333333333,
+          "pilkwang": 0.9229166666666667,
+          "steven2": 0.8552083333333333,
+          "steven4": 0.8552083333333333
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "pilkwang",
+          "lixin",
+          "steven4",
+          "steven2"
+        ],
+        "selected_sources": [
+          "pilkwang"
+        ]
+      },
+      "Lateral Meniscus": {
+        "best_minus_runner_up": 0.006704980842911823,
+        "fitted_auc": {
+          "lixin": 0.828544061302682,
+          "pilkwang": 0.8237547892720306,
+          "steven2": 0.8333333333333334,
+          "steven4": 0.8400383141762452
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "lixin",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Lateral OA": {
+        "best_minus_runner_up": 0.0029239766081871066,
+        "fitted_auc": {
+          "lixin": 0.783625730994152,
+          "pilkwang": 0.7558479532163743,
+          "steven2": 0.8011695906432749,
+          "steven4": 0.804093567251462
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "lixin",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "MCL": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.925,
+          "pilkwang": 0.9732142857142857,
+          "steven2": 0.9785714285714285,
+          "steven4": 0.9785714285714285
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Medial Meniscus": {
+        "best_minus_runner_up": 0.009157509157509236,
+        "fitted_auc": {
+          "lixin": 0.8818681318681318,
+          "pilkwang": 0.9423076923076923,
+          "steven2": 0.9615384615384616,
+          "steven4": 0.9523809523809523
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "steven4",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven2",
+          "steven4"
+        ]
+      },
+      "Medial OA": {
+        "best_minus_runner_up": 0.0011904761904761862,
+        "fitted_auc": {
+          "lixin": 0.9226190476190477,
+          "pilkwang": 0.9535714285714286,
+          "steven2": 0.9654761904761905,
+          "steven4": 0.9666666666666667
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "PF OA": {
+        "best_minus_runner_up": 0.0009803921568627416,
+        "fitted_auc": {
+          "lixin": 0.8392156862745098,
+          "pilkwang": 0.9225490196078432,
+          "steven2": 0.9401960784313725,
+          "steven4": 0.9411764705882353
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Synovitis": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.6672727272727272,
+          "pilkwang": 0.6745454545454546,
+          "steven2": 0.7645454545454545,
+          "steven4": 0.7645454545454545
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      }
+    },
+    "4": {
+      "ACL": {
+        "best_minus_runner_up": 0.007692307692307665,
+        "fitted_auc": {
+          "lixin": 0.9317307692307693,
+          "pilkwang": 0.9884615384615385,
+          "steven2": 0.9961538461538462,
+          "steven4": 0.9875
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "pilkwang",
+          "steven4",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven2",
+          "pilkwang"
+        ]
+      },
+      "Baker's": {
+        "best_minus_runner_up": 0.002777777777777768,
+        "fitted_auc": {
+          "lixin": 0.8791666666666667,
+          "pilkwang": 0.9097222222222222,
+          "steven2": 0.9291666666666667,
+          "steven4": 0.9263888888888889
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "steven4",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven2",
+          "steven4"
+        ]
+      },
+      "Contusion": {
+        "best_minus_runner_up": 0.003225806451612856,
+        "fitted_auc": {
+          "lixin": 0.8172043010752689,
+          "pilkwang": 0.8139784946236559,
+          "steven2": 0.8698924731182796,
+          "steven4": 0.8666666666666667
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "steven4",
+          "lixin",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "steven2",
+          "steven4"
+        ]
+      },
+      "Effusion": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.6944444444444444,
+          "pilkwang": 0.8115079365079365,
+          "steven2": 0.8680555555555556,
+          "steven4": 0.8680555555555556
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Fracture": {
+        "best_minus_runner_up": 0.0956989247311828,
+        "fitted_auc": {
+          "lixin": 0.7688172043010753,
+          "pilkwang": 0.864516129032258,
+          "steven2": 0.7634408602150538,
+          "steven4": 0.7634408602150538
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "pilkwang",
+          "lixin",
+          "steven4",
+          "steven2"
+        ],
+        "selected_sources": [
+          "pilkwang"
+        ]
+      },
+      "Lateral Meniscus": {
+        "best_minus_runner_up": 0.005952380952381042,
+        "fitted_auc": {
+          "lixin": 0.9077380952380952,
+          "pilkwang": 0.8819444444444444,
+          "steven2": 0.9176587301587301,
+          "steven4": 0.9236111111111112
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "lixin",
+          "pilkwang"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Lateral OA": {
+        "best_minus_runner_up": 0.006006006006005982,
+        "fitted_auc": {
+          "lixin": 0.8633633633633634,
+          "pilkwang": 0.8573573573573574,
+          "steven2": 0.8528528528528528,
+          "steven4": 0.8573573573573574
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "lixin",
+          "steven4",
+          "pilkwang",
+          "steven2"
+        ],
+        "selected_sources": [
+          "lixin",
+          "steven4"
+        ]
+      },
+      "MCL": {
+        "best_minus_runner_up": 0.009868421052631637,
+        "fitted_auc": {
+          "lixin": 0.9259868421052632,
+          "pilkwang": 0.9769736842105263,
+          "steven2": 0.9638157894736842,
+          "steven4": 0.9671052631578947
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "pilkwang",
+          "steven4",
+          "steven2",
+          "lixin"
+        ],
+        "selected_sources": [
+          "pilkwang",
+          "steven4"
+        ]
+      },
+      "Medial Meniscus": {
+        "best_minus_runner_up": 0.006730769230769207,
+        "fitted_auc": {
+          "lixin": 0.8778846153846154,
+          "pilkwang": 0.9423076923076923,
+          "steven2": 0.9490384615384615,
+          "steven4": 0.9394230769230769
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "pilkwang",
+          "steven4",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven2",
+          "pilkwang"
+        ]
+      },
+      "Medial OA": {
+        "best_minus_runner_up": 0.002450980392156854,
+        "fitted_auc": {
+          "lixin": 0.8786764705882353,
+          "pilkwang": 0.8970588235294118,
+          "steven2": 0.9215686274509803,
+          "steven4": 0.9191176470588235
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven2",
+          "steven4",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven2",
+          "steven4"
+        ]
+      },
+      "PF OA": {
+        "best_minus_runner_up": 0.001014198782961384,
+        "fitted_auc": {
+          "lixin": 0.8225152129817445,
+          "pilkwang": 0.8853955375253549,
+          "steven2": 0.9006085192697769,
+          "steven4": 0.9016227180527383
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      },
+      "Synovitis": {
+        "best_minus_runner_up": 0.0,
+        "fitted_auc": {
+          "lixin": 0.6923076923076923,
+          "pilkwang": 0.7,
+          "steven2": 0.7951923076923076,
+          "steven4": 0.7951923076923076
+        },
+        "gap_gate": 0.015,
+        "ranked_sources": [
+          "steven4",
+          "steven2",
+          "pilkwang",
+          "lixin"
+        ],
+        "selected_sources": [
+          "steven4",
+          "steven2"
+        ]
+      }
+    }
+  },
+  "fold_crossfit_source_gap_gate": 0.015,
+  "fold_summary": {
+    "0": {
+      "gold_positive_counts": {
+        "ACL": 4,
+        "Baker's": 2,
+        "Contusion": 4,
+        "Effusion": 8,
+        "Fracture": 4,
+        "Lateral Meniscus": 4,
+        "Lateral OA": 3,
+        "MCL": 2,
+        "Medial Meniscus": 5,
+        "Medial OA": 3,
+        "PF OA": 5,
+        "Synovitis": 5
+      },
+      "gold_rows": 12,
+      "rows": 882
+    },
+    "1": {
+      "gold_positive_counts": {
+        "ACL": 6,
+        "Baker's": 2,
+        "Contusion": 4,
+        "Effusion": 6,
+        "Fracture": 4,
+        "Lateral Meniscus": 4,
+        "Lateral OA": 2,
+        "MCL": 2,
+        "Medial Meniscus": 5,
+        "Medial OA": 3,
+        "PF OA": 4,
+        "Synovitis": 5
+      },
+      "gold_rows": 11,
+      "rows": 882
+    },
+    "2": {
+      "gold_positive_counts": {
+        "ACL": 5,
+        "Baker's": 3,
+        "Contusion": 3,
+        "Effusion": 8,
+        "Fracture": 4,
+        "Lateral Meniscus": 5,
+        "Lateral OA": 2,
+        "MCL": 2,
+        "Medial Meniscus": 5,
+        "Medial OA": 3,
+        "PF OA": 4,
+        "Synovitis": 5
+      },
+      "gold_rows": 12,
+      "rows": 881
+    },
+    "3": {
+      "gold_positive_counts": {
+        "ACL": 5,
+        "Baker's": 3,
+        "Contusion": 4,
+        "Effusion": 6,
+        "Fracture": 3,
+        "Lateral Meniscus": 5,
+        "Lateral OA": 2,
+        "MCL": 2,
+        "Medial Meniscus": 5,
+        "Medial OA": 3,
+        "PF OA": 4,
+        "Synovitis": 5
+      },
+      "gold_rows": 11,
+      "rows": 881
+    },
+    "4": {
+      "gold_positive_counts": {
+        "ACL": 4,
+        "Baker's": 2,
+        "Contusion": 4,
+        "Effusion": 7,
+        "Fracture": 3,
+        "Lateral Meniscus": 5,
+        "Lateral OA": 2,
+        "MCL": 1,
+        "Medial Meniscus": 6,
+        "Medial OA": 3,
+        "PF OA": 4,
+        "Synovitis": 7
+      },
+      "gold_rows": 12,
+      "rows": 881
+    }
+  },
+  "format": "rsna-knee-v3-label-bank-v1",
+  "gold_rows": 58,
+  "input_sha256": {
+    "data\\labels\\lixin73\\report_labels_gpt56sol.csv": "91678f249ec576d63e16c566b6d7a5c968dfd1af8d1d0721dfde4d0384832add",
+    "data\\labels\\pilkwang\\report_labels_v2.csv": "6f704a7bdb2f894cc49445b19ba7c4378c3f548d3449e00361e10044bee40920",
+    "data\\labels\\stevenleehans\\llm_labels_v2.csv": "3c082a987939528a55202028f655bd6f9dc5c9e28eff5058bbae7ef088a9f144",
+    "data\\labels\\stevenleehans\\llm_labels_v4_blend.csv": "eb4c2b29e7e84adbb4b5ccee825ca20ade6a43dbe295f13be442d549e4f5dca4",
+    "data\\raw\\train.csv": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33"
+  },
+  "leave_one_out_choice_counts": {
+    "ACL": {
+      "lixin": 0,
+      "pilkwang": 1,
+      "steven2": 57,
+      "steven4": 0
+    },
+    "Baker's": {
+      "lixin": 0,
+      "pilkwang": 0,
+      "steven2": 58,
+      "steven4": 0
+    },
+    "Contusion": {
+      "lixin": 0,
+      "pilkwang": 0,
+      "steven2": 0,
+      "steven4": 58
+    },
+    "Effusion": {
+      "lixin": 0,
+      "pilkwang": 0,
+      "steven2": 1,
+      "steven4": 57
+    },
+    "Fracture": {
+      "lixin": 0,
+      "pilkwang": 58,
+      "steven2": 0,
+      "steven4": 0
+    },
+    "Lateral Meniscus": {
+      "lixin": 1,
+      "pilkwang": 0,
+      "steven2": 0,
+      "steven4": 57
+    },
+    "Lateral OA": {
+      "lixin": 1,
+      "pilkwang": 0,
+      "steven2": 1,
+      "steven4": 56
+    },
+    "MCL": {
+      "lixin": 0,
+      "pilkwang": 57,
+      "steven2": 1,
+      "steven4": 0
+    },
+    "Medial Meniscus": {
+      "lixin": 0,
+      "pilkwang": 1,
+      "steven2": 57,
+      "steven4": 0
+    },
+    "Medial OA": {
+      "lixin": 0,
+      "pilkwang": 0,
+      "steven2": 4,
+      "steven4": 54
+    },
+    "PF OA": {
+      "lixin": 0,
+      "pilkwang": 0,
+      "steven2": 2,
+      "steven4": 56
+    },
+    "Synovitis": {
+      "lixin": 0,
+      "pilkwang": 0,
+      "steven2": 58,
+      "steven4": 0
+    }
+  },
+  "leave_one_out_source_selection_auc": {
+    "ACL": 0.9810049019607843,
+    "Baker's": 0.9456521739130435,
+    "Contusion": 0.8596491228070176,
+    "Effusion": 0.8763975155279503,
+    "Fracture": 0.8701388888888889,
+    "Lateral Meniscus": 0.8416149068322981,
+    "Lateral OA": 0.7785299806576402,
+    "MCL": 0.9727891156462585,
+    "Medial Meniscus": 0.9519230769230769,
+    "Medial OA": 0.92015503875969,
+    "PF OA": 0.8996138996138996,
+    "Synovitis": 0.7903225806451613
+  },
+  "leave_one_out_source_selection_macro_auc": 0.8906492668479756,
+  "output_sha256": {
+    "artifacts\\v3_labels\\folds_v3.csv": "7c767bba081d69fe23b1883b68738a6edc1cbe6e26f552b5aa7869d360ac7d10",
+    "artifacts\\v3_labels\\labels_v3.csv": "c07e7e54a50e502202858980c5513a42bfc2b3e54aeb612efad9659cde34dbde",
+    "artifacts\\v3_labels\\labels_v3_fold0.csv": "c23da37abef2069422afbf7beea7efad72725fabf1a154e85508f6235d7dcc9f",
+    "artifacts\\v3_labels\\labels_v3_fold1.csv": "dc3bf3ce4c2f6570f48530aa998ecabde477eeb90fa9276639eb1d89ad148204",
+    "artifacts\\v3_labels\\labels_v3_fold2.csv": "4c02eeb7ab02263c8ca34a8c428e27d0020a5fcdbfc5314c39c7a0e7d3aebb94",
+    "artifacts\\v3_labels\\labels_v3_fold3.csv": "b0fa1aae2b65706ada1b0158d57f3731955465c7aee4e666145a73a440b2b6dc",
+    "artifacts\\v3_labels\\labels_v3_fold4.csv": "da5b0c0905463a2d5c6ad969f2882da768eaa9dfda4d5ee7de5ff7dd41fb1ed5"
+  },
+  "rows": 4407,
+  "selected_full_gold_auc": {
+    "ACL": 0.9932598039215687,
+    "Baker's": 0.9456521739130435,
+    "Contusion": 0.8596491228070176,
+    "Effusion": 0.8770186335403727,
+    "Fracture": 0.8701388888888889,
+    "Lateral Meniscus": 0.8788819875776398,
+    "Lateral OA": 0.8326885880077369,
+    "MCL": 0.9761904761904762,
+    "Medial Meniscus": 0.9543269230769231,
+    "Medial OA": 0.931782945736434,
+    "PF OA": 0.9015444015444015,
+    "Synovitis": 0.7903225806451613
+  },
+  "selected_full_gold_macro_auc": 0.900954710487472,
+  "selected_source": {
+    "ACL": "steven2",
+    "Baker's": "steven2",
+    "Contusion": "steven4",
+    "Effusion": "steven4",
+    "Fracture": "pilkwang",
+    "Lateral Meniscus": "steven4",
+    "Lateral OA": "steven4",
+    "MCL": "pilkwang",
+    "Medial Meniscus": "steven2",
+    "Medial OA": "steven4",
+    "PF OA": "steven4",
+    "Synovitis": "steven2"
+  },
+  "source_gold_auc": {
+    "lixin": {
+      "ACL": 0.9313725490196079,
+      "Baker's": 0.9030797101449275,
+      "Contusion": 0.8144399460188934,
+      "Effusion": 0.6956521739130435,
+      "Fracture": 0.8013888888888889,
+      "Lateral Meniscus": 0.8664596273291926,
+      "Lateral OA": 0.8239845261121856,
+      "MCL": 0.9206349206349206,
+      "Medial Meniscus": 0.8900240384615384,
+      "Medial OA": 0.8914728682170543,
+      "PF OA": 0.8075933075933076,
+      "Synovitis": 0.6762246117084827
+    },
+    "pilkwang": {
+      "ACL": 0.9865196078431373,
+      "Baker's": 0.9320652173913043,
+      "Contusion": 0.7530364372469636,
+      "Effusion": 0.8149068322981367,
+      "Fracture": 0.8701388888888889,
+      "Lateral Meniscus": 0.8422360248447205,
+      "Lateral OA": 0.7891682785299806,
+      "MCL": 0.9761904761904762,
+      "Medial Meniscus": 0.9435096153846154,
+      "Medial OA": 0.9085271317829458,
+      "PF OA": 0.8861003861003861,
+      "Synovitis": 0.6869772998805257
+    },
+    "steven2": {
+      "ACL": 0.9932598039215687,
+      "Baker's": 0.9456521739130435,
+      "Contusion": 0.8306342780026991,
+      "Effusion": 0.853416149068323,
+      "Fracture": 0.7930555555555555,
+      "Lateral Meniscus": 0.8621118012422361,
+      "Lateral OA": 0.8297872340425532,
+      "MCL": 0.963718820861678,
+      "Medial Meniscus": 0.9543269230769231,
+      "Medial OA": 0.9310077519379845,
+      "PF OA": 0.9009009009009009,
+      "Synovitis": 0.7903225806451613
+    },
+    "steven4": {
+      "ACL": 0.9871323529411765,
+      "Baker's": 0.9438405797101449,
+      "Contusion": 0.8596491228070176,
+      "Effusion": 0.8770186335403727,
+      "Fracture": 0.7930555555555555,
+      "Lateral Meniscus": 0.8788819875776398,
+      "Lateral OA": 0.8326885880077369,
+      "MCL": 0.9682539682539683,
+      "Medial Meniscus": 0.9483173076923077,
+      "Medial OA": 0.931782945736434,
+      "PF OA": 0.9015444015444015,
+      "Synovitis": 0.7903225806451613
+    }
+  },
+  "targets": [
+    "ACL",
+    "MCL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Effusion",
+    "Synovitis",
+    "Baker's",
+    "Contusion",
+    "Fracture"
+  ]
+}

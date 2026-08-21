@@ -1,0 +1,54 @@
+﻿{
+  "topic": {
+    "id": 539439,
+    "title": "[7th solution, my part] Single Stage Model Wins!",
+    "authorName": "hengck23",
+    "commentCount": 6,
+    "votes": 35,
+    "postDate": "2024-10-09T00:03:36.555000"
+  },
+  "comments": [
+    {
+      "id": 3013047,
+      "authorName": "C R Suthikshn Kumar",
+      "votes": -2,
+      "postDate": "2024-10-09T15:58:31.320000",
+      "content": "<p>Congratulations on winning the 7th prize in this competition. Commendable solution approach with single model.</p>"
+    },
+    {
+      "id": 3016170,
+      "authorName": "Rasoul Mojtahedzadeh",
+      "votes": 0,
+      "postDate": "2024-10-13T12:58:26.137000",
+      "content": "<p>Congratulations!</p>\n<p>I wrote a training script for your single stage method that you published in this <a href=\"https://www.kaggle.com/code/hengck23/ver-1-magic-single-stage-model\" target=\"_blank\">notebook</a>, and I managed to successfully train a 5-fold model for Sagittal T2/STIR series with a local CV score of 0.29. I used a few custom implemented data augmentation methods for the volumes, namely, Random Brightness, Random Additive Noise, Random Horizontal Flip, Random Rotation along centered z-axis and Random Translation along x- and y-axis that modifies coordinates accordingly.<br>\nHowever, I failed to train the same model with Sagittal T1 and Axial T2 series. No matter how much I tried different tricks, I couldn't get any local CV scores better than 0.55 (Sagittal T1 ) and 0.63 (Axial T2). I am eager to look at your training code to see how you managed to train Sagittal T1 and Axial T2 series. Could you share your experiment with these two series?</p>"
+    },
+    {
+      "id": 3017227,
+      "authorName": "hengck23",
+      "votes": 2,
+      "postDate": "2024-10-14T16:49:58.353000",
+      "content": "<p>please wait till the end of this week for the final update of this discussion post.<br>\nhere is a preliminary version of the training code:<br>\n<a href=\"https://github.com/hengck23/solution-rsna-2024-lumbar-spine/\" target=\"_blank\">https://github.com/hengck23/solution-rsna-2024-lumbar-spine/</a></p>\n<p>\u2026 note that it is not the final version yet as we are finalising post-submission experiments\u2026</p>"
+    },
+    {
+      "id": 3012370,
+      "authorName": "Shun Kuraishi",
+      "votes": 0,
+      "postDate": "2024-10-09T01:19:48.010000",
+      "content": "<p>That was very informative. Congratulations!</p>"
+    },
+    {
+      "id": 3012818,
+      "authorName": "Evanhis",
+      "votes": 1,
+      "postDate": "2024-10-09T12:02:51.110000",
+      "content": "<p>Congrats :)</p>"
+    },
+    {
+      "id": 3012348,
+      "authorName": "Victor S",
+      "votes": 1,
+      "postDate": "2024-10-09T00:23:24.780000",
+      "content": "<p>Congrats! </p>"
+    }
+  ]
+}

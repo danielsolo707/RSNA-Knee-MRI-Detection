@@ -1,0 +1,21 @@
+{
+  "fold": 2,
+  "best_val_auc": 0.8094031366717734,
+  "last_epoch": 11,
+  "last_val_auc": 0.8041729162991217,
+  "patience_bad": 4,
+  "smoke": false,
+  "img": 224,
+  "unfreeze_last": 4,
+  "epochs_target": 12,
+  "n_train": 3526,
+  "n_val": 881,
+  "batch": 8,
+  "gpu": "Tesla T4",
+  "resumed_from": 0,
+  "seconds": 1118.793813943863,
+  "status": "complete",
+  "mixup": 0.0,
+  "dropout": 0.3,
+  "augment": true
+}

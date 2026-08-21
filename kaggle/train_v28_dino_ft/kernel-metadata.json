@@ -1,0 +1,26 @@
+{
+  "id": "danielsolo1770/rsna-knee-v28-dino-ft-fold0",
+  "title": "rsna-knee-v28-dino-ft-fold0",
+  "code_file": "rsna-knee-v28-dino-ft-fold0.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "pilkwang/rsna-knee-llm-labels",
+    "stevenleehans/rsna-knee-llm-report-labels",
+    "lixin73/rsna-knee-llm-report-labels-sol56"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [
+    "metaresearch/dinov2/PyTorch/small/1"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}

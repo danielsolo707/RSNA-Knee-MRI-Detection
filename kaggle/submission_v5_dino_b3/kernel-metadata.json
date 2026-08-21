@@ -1,0 +1,34 @@
+{
+  "id": "danielsolo1770/rsna-knee-v5-dino-b3-gold-gated-blend",
+  "title": "rsna-knee-v5-dino-b3-gold-gated-blend",
+  "code_file": "rsna-knee-v5-dino-b3-blend.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "pilkwang/pilkwang-public-dataset-for-notebooks-figures",
+    "pilkwang/rsna-knee-llm-labels",
+    "pilkwang/rsna-knee-weights"
+  ],
+  "kernel_sources": [
+    "danielsolo1770/rsna-knee-v5-b3-fold0",
+    "danielsolo1770/rsna-knee-v5-b3-fold1",
+    "danielsolo1770/rsna-knee-v5-b3-fold2",
+    "danielsolo1770/rsna-knee-v5-b3-fold3",
+    "danielsolo1770/rsna-knee-v5-b3-fold4"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [
+    "metaresearch/dinov2/PyTorch/small/1",
+    "timm/tf-efficientnet/PyTorch/tf-efficientnet-b3/1"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}

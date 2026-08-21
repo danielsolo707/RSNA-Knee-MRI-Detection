@@ -1,0 +1,26 @@
+{
+  "id": "danielsolo1770/rsna-knee-v3-1-b3-fold-0-smoke",
+  "title": "RSNA Knee V3.1 B3 Fold 0 Smoke",
+  "code_file": "rsna-knee-v3-b3-fold0.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "efficientnet",
+    "gpu"
+  ],
+  "dataset_sources": [
+    "danielsolo1770/rsna-knee-v3-labels-folds"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [
+    "timm/tf-efficientnet/PyTorch/tf-efficientnet-b3/1"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}

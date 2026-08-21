@@ -1,0 +1,48 @@
+{
+  "baker_floor": 0.08,
+  "folds": {
+    "0": {
+      "baker_floor_rows": 1178,
+      "gold_baker_auc": 1.0,
+      "gold_syn_auc": 1.0,
+      "n_gold_joined": 58,
+      "syn_boost_rows": 50
+    },
+    "1": {
+      "baker_floor_rows": 1178,
+      "gold_baker_auc": 1.0,
+      "gold_syn_auc": 1.0,
+      "n_gold_joined": 58,
+      "syn_boost_rows": 50
+    },
+    "2": {
+      "baker_floor_rows": 1178,
+      "gold_baker_auc": 1.0,
+      "gold_syn_auc": 1.0,
+      "n_gold_joined": 58,
+      "syn_boost_rows": 50
+    },
+    "3": {
+      "baker_floor_rows": 1178,
+      "gold_baker_auc": 1.0,
+      "gold_syn_auc": 1.0,
+      "n_gold_joined": 58,
+      "syn_boost_rows": 50
+    },
+    "4": {
+      "baker_floor_rows": 1178,
+      "gold_baker_auc": 1.0,
+      "gold_syn_auc": 1.0,
+      "n_gold_joined": 58,
+      "syn_boost_rows": 50
+    }
+  },
+  "global": {
+    "baker_floor_rows": 1181,
+    "gold_baker_auc": 1.0,
+    "gold_syn_auc": 1.0,
+    "n_gold_joined": 58,
+    "syn_boost_rows": 47
+  },
+  "syn_alpha": 0.4
+}

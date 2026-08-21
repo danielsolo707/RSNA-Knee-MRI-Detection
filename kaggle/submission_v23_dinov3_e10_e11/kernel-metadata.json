@@ -1,0 +1,36 @@
+{
+  "id": "danielsolo1770/rsna-knee-v23-dinov3-e10-e11-070",
+  "title": "rsna-knee-v23-dinov3-e10-e11-070",
+  "code_file": "rsna-knee-v23-dinov3-e10-e11-070.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "mattiaangeli/knee-mri-fold-weights",
+    "marwanmath/resnet-50-radimagenet-marwan",
+    "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+    "stevenleehans/rsna-knee-llm-report-labels",
+    "lixin73/rsna-knee-llm-report-labels-sol56",
+    "pilkwang/rsna-knee-llm-labels",
+    "mattiaangeli/rsna-knee-radimagenet-foldsv1-heads",
+    "pilkwang/rsna-knee-weights",
+    "tonylica/rsna2026-models"
+  ],
+  "kernel_sources": [
+    "sofiaanjenje/rsna-knee-e11-train"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [
+    "metaresearch/dinov2/PyTorch/base/1",
+    "metaresearch/dinov2/PyTorch/small/1"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}

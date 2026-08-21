@@ -1,0 +1,32 @@
+{
+  "n": 4407,
+  "x_shape": [
+    4407,
+    21,
+    1,
+    280,
+    280
+  ],
+  "dtype": "float16",
+  "img": 280,
+  "crop_mm": 140.0,
+  "n_anchor": 7,
+  "recipe": "v31-280-7anchor-3fs-planes",
+  "targets": [
+    "ACL",
+    "MCL",
+    "Medial Meniscus",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Effusion",
+    "Synovitis",
+    "Baker's",
+    "Contusion",
+    "Fracture"
+  ],
+  "n_ok_last_pass": 4407,
+  "seconds": 4945.329442501068,
+  "status": "complete"
+}

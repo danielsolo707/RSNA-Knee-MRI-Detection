@@ -1,0 +1,31 @@
+{
+  "id": "danielsolo1770/rsna-knee-v9-rad-dino-gated",
+  "title": "rsna-knee-v9-rad-dino-gated",
+  "code_file": "rsna-knee-v9-rad-dino-gated.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "pilkwang/pilkwang-public-dataset-for-notebooks-figures",
+    "pilkwang/rsna-knee-llm-labels",
+    "pilkwang/rsna-knee-weights",
+    "stevenleehans/rsna-knee-llm-report-labels",
+    "lixin73/rsna-knee-llm-report-labels-sol56",
+    "marwanmath/resnet-50-radimagenet-marwan",
+    "antoinegg1/rsna-knee-e9-radimagenet-heads-v15"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [
+    "metaresearch/dinov2/PyTorch/small/1"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}

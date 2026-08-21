@@ -1,0 +1,32 @@
+{
+  "arm": "e11 diverse 4-slot 130mm RadImageNet",
+  "blended_rows": 3,
+  "blended_sha256": "6043087642e2d642813c6119abb775d8b9e5d0d245271138d8b587ebfec5bc64",
+  "e11_test_encoder_sha256": "08629f7e7bd3e29b8ee9522ca3f65ce4d010a7ddf74f0ea3c7e3f3d0bbab0734",
+  "e11_test_preds_sha256": "4c6100afd62700bbb1097df5a326168ef92ba87b538a610a6ca6f96466a1f6a0",
+  "evidence_boundary": "Gates are local diagnostics on OOF and the gold rows; submission.csv is overwritten only when all four gates pass.",
+  "gate": {
+    "fold_gains": [
+      0.002499099161338836,
+      0.002746515590051457,
+      0.005960993491352262,
+      0.004720559493264442,
+      0.0074983243486531626
+    ],
+    "g1_soft_delta": 0.003956324874402561,
+    "g2_gold_delta": 0.004776443822909204,
+    "g2_gold_pos_folds": 5,
+    "g3_worst_soft": -0.001016902044031709,
+    "g4_rank_corr": 0.7346033108039819,
+    "passes": true
+  },
+  "parent": "in-kernel V10 pipeline (main + rad cross, ACL/Syn 0.505)",
+  "parent_path": "/kaggle/working/rsna_rad_v10/submission_v10_cross_505.csv",
+  "parent_rows": 3,
+  "parent_sha256": "29a1ae14b5610d5056b9ce06d19442d7378a3915e31c67377d615b99477e4e29",
+  "promote": true,
+  "remaining_seconds_at_start": 17919.638661384583,
+  "status": "V16_PROMOTED",
+  "test_rows": 3,
+  "w": 0.2
+}

@@ -1,0 +1,14 @@
+{
+  "fold0": {"best_val_auc": 0.7972194253681882, "status": "early_stop", "unfreeze_last": 4},
+  "fold0_u6aug": {"best_val_auc": 0.8104403324484873, "status": "complete", "unfreeze_last": 6, "mixup": 0.2},
+  "fold0_base": {"best_val_auc": 0.8139147019814171, "status": "complete", "unfreeze_last": 4, "mixup": 0.0},
+  "fold0_slice9": {"best_val_auc": 0.8262884090116293, "status": "complete", "unfreeze_last": 6, "mixup": 0.2, "expand_slices": true},
+  "fold1_u6aug": {"best_val_auc": 0.8001793513270877, "status": "complete"},
+  "fold1_base": {"best_val_auc": 0.7960164496573062, "status": "complete"},
+  "fold2_u6aug": {"best_val_auc": 0.8099238169499285, "status": "complete"},
+  "fold2_base": {"best_val_auc": 0.8094031366717734, "status": "complete"},
+  "fold3_u6aug": {"best_val_auc": 0.8139627625934924, "status": "complete"},
+  "fold3_base": {"best_val_auc": 0.8055534619106316, "status": "complete"},
+  "fold4_u6aug": {"best_val_auc": 0.810966334515479, "status": "complete"},
+  "fold4_base": {"best_val_auc": 0.7999326299501955, "status": "complete"}
+}

@@ -1,0 +1,56 @@
+{
+  "config": {
+    "backbone": "efficientnet_b3",
+    "backbone_chunk": 8,
+    "batch_size": 2,
+    "folds": 5,
+    "frozen_epochs": 1,
+    "frozen_lr": 0.0008,
+    "gold_weight": 2.0,
+    "image_size": 224,
+    "max_series_slices": 64,
+    "pseudo_weight_floor": 0.2,
+    "seed": 20260809,
+    "train_slices": 8,
+    "unfrozen_epochs": 0,
+    "unfrozen_lr": 8e-05,
+    "valid_slices": 8,
+    "weight_decay": 0.0001,
+    "workers": 0
+  },
+  "expert_rows": 58,
+  "fold_counts": {
+    "0": 882,
+    "1": 882,
+    "2": 881,
+    "3": 881,
+    "4": 881
+  },
+  "fold_cross_fitted_labels": true,
+  "fold_expert_counts": {
+    "0": 12,
+    "1": 11,
+    "2": 12,
+    "3": 11,
+    "4": 12
+  },
+  "full_heldout_fold_oof": true,
+  "inputs": {
+    "/kaggle/input/competitions/rsna-knee-abnormality-detection/train.csv": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33",
+    "/kaggle/input/competitions/rsna-knee-abnormality-detection/train_series.csv": "573c1d80772bf41211c91b149c95677385a1c22d63f485c347f1b46c0177aef3",
+    "/kaggle/input/datasets/danielsolo1770/rsna-knee-v3-labels-folds/folds_v3.csv": "7c767bba081d69fe23b1883b68738a6edc1cbe6e26f552b5aa7869d360ac7d10",
+    "/kaggle/input/datasets/danielsolo1770/rsna-knee-v3-labels-folds/labels_v3_fold0.csv": "c23da37abef2069422afbf7beea7efad72725fabf1a154e85508f6235d7dcc9f"
+  },
+  "module_sha256": "b9c6c51d868fe5a7a09b82e3e3f880fff7fe9b1a48d406aed1a945a2ae99b258",
+  "no_horizontal_flip": true,
+  "rows": 4407,
+  "square_padding_before_resize": true,
+  "status": "PREPARED",
+  "training_policy": {
+    "expert_sample_fraction": 0.15,
+    "gradient_clip_norm": 5.0,
+    "model_family": "efficientnet_b3_noflip_v3_1_smoke",
+    "unfrozen_backbone_blocks": 3
+  },
+  "uint8_disk_cache": "/kaggle/working/v3_1_uint8_cache"
+}

@@ -1,0 +1,228 @@
+{
+  "artifacts": {
+    "contract": {
+      "path": "C:\\Users\\ASUS\\Desktop\\DanielEmpire\\ML\\RSNA Knee Abnormality Detection\\references\\candidates\\antoine_e11_files\\e11_contract.json",
+      "sha256": "7f91e189ccc472b710791730bbbc2d26b3a1d04b45f60a0166445be158a093d3"
+    },
+    "dino": {
+      "path": "C:\\Users\\ASUS\\Desktop\\DanielEmpire\\ML\\RSNA Knee Abnormality Detection\\research\\pilkwang_oof\\oof.npz",
+      "sha256": "62d47ba4c0c8347b5b24e7fd2aa517aae0fd6d4656fd5d829fd3a50f0159909c"
+    },
+    "e11": {
+      "path": "C:\\Users\\ASUS\\Desktop\\DanielEmpire\\ML\\RSNA Knee Abnormality Detection\\references\\candidates\\antoine_e11_files\\v52_e11_oof.csv",
+      "sha256": "f5415485f57103fe86370e3d4bba420485a7497ef199d40545a20f6e53a0f0e2"
+    },
+    "e9": {
+      "path": "C:\\Users\\ASUS\\Desktop\\DanielEmpire\\ML\\RSNA Knee Abnormality Detection\\references\\candidates\\antoine_e9_files\\v52_oof.csv",
+      "sha256": "f5b1f02029af98740565bec5b6a76d8471b4b6a6039d09ea410368230cb1f03f"
+    },
+    "train": {
+      "path": "C:\\Users\\ASUS\\Desktop\\DanielEmpire\\ML\\RSNA Knee Abnormality Detection\\data\\raw\\train.csv",
+      "sha256": "8ca2203c0e9d61c080c7a314c7cdb51c1b03a1d9eb4770819f7f34af53ef4e33"
+    }
+  },
+  "bootstrap": {
+    "mean_delta": 0.02212720150377371,
+    "p_candidate_wins": 0.9983,
+    "q025": 0.007718307077410184,
+    "q500": 0.022099500130597804,
+    "q975": 0.03665433878571511,
+    "requested_draws": 10000,
+    "seed": 13035,
+    "valid_draws": 10000
+  },
+  "candidate_gold_macro": 0.8737902880571339,
+  "evidence_boundary": "OOF diagnostics only; not a Kaggle leaderboard score.",
+  "external_contract_default": "parent035_e11035",
+  "external_contract_nested": {
+    "public": {
+      "e11_selected_in_folds": 5,
+      "nested_macro": 0.8617182352348013,
+      "outer_fold_choices": [
+        [
+          0.35,
+          0.15
+        ],
+        [
+          0.6,
+          0.15
+        ],
+        [
+          0.5,
+          0.35
+        ],
+        [
+          0.35,
+          0.5
+        ],
+        [
+          0.35,
+          0.5
+        ]
+      ]
+    },
+    "v15": {
+      "e11_selected_in_folds": 5,
+      "nested_macro": 0.8719161142050743,
+      "outer_fold_choices": [
+        [
+          0.35,
+          0.35
+        ],
+        [
+          0.7,
+          0.15
+        ],
+        [
+          0.6,
+          0.25
+        ],
+        [
+          0.6,
+          0.25
+        ],
+        [
+          0.5,
+          0.35
+        ]
+      ]
+    }
+  },
+  "fold_results": [
+    {
+      "candidate": 0.8115443121693122,
+      "fold": 0,
+      "gain": 0.0739616402116402,
+      "rows": 10,
+      "v9": 0.737582671957672
+    },
+    {
+      "candidate": 0.9074875741542408,
+      "fold": 1,
+      "gain": 0.040013227513227445,
+      "rows": 15,
+      "v9": 0.8674743466410133
+    },
+    {
+      "candidate": 0.8865791037666039,
+      "fold": 2,
+      "gain": 0.012547666453916584,
+      "rows": 16,
+      "v9": 0.8740314373126873
+    },
+    {
+      "candidate": 0.9464285714285715,
+      "fold": 3,
+      "gain": 0.022486772486772444,
+      "rows": 9,
+      "v9": 0.9239417989417991
+    },
+    {
+      "candidate": 0.7867559523809523,
+      "fold": 4,
+      "gain": 0.01121031746031731,
+      "rows": 8,
+      "v9": 0.775545634920635
+    }
+  ],
+  "gold_gain": 0.022208078944717546,
+  "n_gold": 58,
+  "per_target": {
+    "ACL": {
+      "candidate": 0.9129901960784313,
+      "delta": 0.03676470588235292,
+      "v9": 0.8762254901960784
+    },
+    "Baker's": {
+      "candidate": 0.9547101449275363,
+      "delta": -0.0018115942028985588,
+      "v9": 0.9565217391304348
+    },
+    "Contusion": {
+      "candidate": 0.9041835357624831,
+      "delta": 0.04318488529014841,
+      "v9": 0.8609986504723347
+    },
+    "Effusion": {
+      "candidate": 0.9304347826086956,
+      "delta": -0.017391304347826098,
+      "v9": 0.9478260869565217
+    },
+    "Fracture": {
+      "candidate": 0.8944444444444445,
+      "delta": 0.005555555555555647,
+      "v9": 0.8888888888888888
+    },
+    "Lateral Meniscus": {
+      "candidate": 0.7130434782608696,
+      "delta": 0.04347826086956519,
+      "v9": 0.6695652173913044
+    },
+    "Lateral OA": {
+      "candidate": 0.8007736943907157,
+      "delta": 0.07543520309477758,
+      "v9": 0.7253384912959381
+    },
+    "MCL": {
+      "candidate": 0.8639455782312925,
+      "delta": -0.03401360544217691,
+      "v9": 0.8979591836734694
+    },
+    "Medial Meniscus": {
+      "candidate": 0.8569711538461539,
+      "delta": -0.0024038461538461453,
+      "v9": 0.859375
+    },
+    "Medial OA": {
+      "candidate": 0.9705426356589147,
+      "delta": 0.01705426356589146,
+      "v9": 0.9534883720930233
+    },
+    "PF OA": {
+      "candidate": 0.8507078507078507,
+      "delta": 0.03732303732303732,
+      "v9": 0.8133848133848134
+    },
+    "Synovitis": {
+      "candidate": 0.8327359617682198,
+      "delta": 0.06332138590203107,
+      "v9": 0.7694145758661888
+    }
+  },
+  "positive_folds": 5,
+  "promote": true,
+  "recipe": {
+    "preserved_targets": [
+      "Baker's",
+      "Fracture"
+    ],
+    "selection": "fixed external E11 default; no local weight fitting",
+    "voted_targets": [
+      "ACL",
+      "MCL",
+      "Medial Meniscus",
+      "Lateral Meniscus",
+      "Medial OA",
+      "Lateral OA",
+      "PF OA",
+      "Effusion",
+      "Synovitis",
+      "Contusion"
+    ],
+    "weights": {
+      "dino": 0.3,
+      "e11_rad_nofs": 0.35,
+      "e9_rad_fs": 0.35
+    }
+  },
+  "soft_candidate_macro": 0.8523522424839229,
+  "soft_delta": -0.001011213620031981,
+  "soft_v9_macro": 0.8533634561039549,
+  "status": "PROMOTE",
+  "thresholds": {
+    "min_bootstrap_win": 0.8,
+    "min_gain": 0.005,
+    "min_positive_folds": 3
+  },
+  "v9_gold_macro": 0.8515822091124163
+}

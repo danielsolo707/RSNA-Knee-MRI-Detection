@@ -1,0 +1,159 @@
+﻿{
+  "topic": {
+    "id": 540091,
+    "title": "1st place solution",
+    "authorName": "NANACHI",
+    "commentCount": 21,
+    "votes": 102,
+    "postDate": "2024-10-12T15:01:47.310000"
+  },
+  "comments": [
+    {
+      "id": 3015576,
+      "authorName": "Bartley",
+      "votes": 4,
+      "postDate": "2024-10-12T16:01:39.137000",
+      "content": "<p>Great first write up and congrats on the strong finish!</p>\n<p>Did the Attention-based MIL improvements improve your local CV as much as the LB? Also, do you know how much of the improvement was due to the auxillary loss?</p>"
+    },
+    {
+      "id": 3016126,
+      "authorName": "NANACHI",
+      "votes": 2,
+      "postDate": "2024-10-13T11:55:09.073000",
+      "content": "<p>Thank you Bartley! Also, congratulations on winning a gold medal!</p>\n<blockquote>\n  <p>Attention-based MIL improvements improve your local CV as much as the LB?</p>\n</blockquote>\n<p>Improvements of my local cv by MIL are smaller than the improvement of LB. I lost log of actual improvements of cv, but I remember the improvements are less than 0.012. However public LB improved 0.3729 -&gt; 0.3588 (diff is 0.0141) and private LB improved 0.4259 -&gt; 0.4062 (diff is 0.0197). </p>\n<blockquote>\n  <p>do you know how much of the improvement was due to the auxillary loss?</p>\n</blockquote>\n<p>Actually, I submitted bi-LSTM+aux loss model at the same time, so I don't have the result of the improvements on LB by aux losses. The table below is the result of validation data of scs (same seed, same preprocess, same hyper params and same architecture with/without aux head)</p>\n<table>\n<thead>\n<tr>\n<th>fold</th>\n<th>without aux</th>\n<th>with aux</th>\n</tr>\n</thead>\n<tbody>\n<tr>\n<td>0</td>\n<td>0.254</td>\n<td>0.240</td>\n</tr>\n<tr>\n<td>1</td>\n<td>0.283</td>\n<td>0.254</td>\n</tr>\n<tr>\n<td>2</td>\n<td>0.267</td>\n<td>0.254</td>\n</tr>\n<tr>\n<td>3</td>\n<td>0.264</td>\n<td>0.252</td>\n</tr>\n<tr>\n<td>4</td>\n<td>0.244</td>\n<td>0.261</td>\n</tr>\n<tr>\n<td>mean</td>\n<td>0.2624</td>\n<td>0.2522</td>\n</tr>\n</tbody>\n</table>"
+    },
+    {
+      "id": 3016176,
+      "authorName": "Bartley",
+      "votes": 2,
+      "postDate": "2024-10-13T13:08:46.380000",
+      "content": "<p>Interesting, the improvement for aux loss is a more significant than I thought. Thanks!</p>"
+    },
+    {
+      "id": 3016736,
+      "authorName": "samu2505",
+      "votes": 1,
+      "postDate": "2024-10-14T05:32:46.077000",
+      "content": "<p><code>In the classification task, these heads output (bs, 32) shape logits for each level.</code>; what targets were used since there are 5 levels for each image?</p>"
+    },
+    {
+      "id": 3016650,
+      "authorName": "Mingjie Wang",
+      "votes": 2,
+      "postDate": "2024-10-14T02:15:48.707000",
+      "content": "<p>Congratulations! Could you explain in detail why auxiliary loss is effective? I understand it should be nearly equivalent to the original architecture.</p>"
+    },
+    {
+      "id": 3016791,
+      "authorName": "NANACHI",
+      "votes": 2,
+      "postDate": "2024-10-14T07:02:11.390000",
+      "content": "<p>Thank you!</p>\n<p>In my opinion, auxiliary loss makes it possible to add context to feature vectors. For example, I added depth aux head after bi-LSTM. This is because I wanted to incorporate the context of which slice the annotators were focusing on into the feature vectors output by the LSTM. I think this allows the main attention layer to function more effectively.</p>"
+    },
+    {
+      "id": 3510943,
+      "authorName": "A D Vashishta",
+      "votes": 0,
+      "postDate": "2026-08-10T01:37:21.663000",
+      "content": "<p>This is very useful for my project, as i am working on similar predictive layer for Spine CSM , would like to connect with you further to seek your advice </p>"
+    },
+    {
+      "id": 3105794,
+      "authorName": "tim062912",
+      "votes": 0,
+      "postDate": "2025-01-24T01:58:51.063000",
+      "content": "<p>Could you kindly provide the necessary file? Without it, we are unable to run the notebook.</p>"
+    },
+    {
+      "id": 3041412,
+      "authorName": "Switch9527",
+      "votes": 0,
+      "postDate": "2024-11-10T10:06:48.170000",
+      "content": "<p>Hello! I\u2019d like to ask about the three model notebooks in the instance number prediction models (SCS). I assume that these three models aim to achieve the same objective, with the only difference being their model structures\u2014is that correct? Will these three models be integrated in the inference code? If my understanding is incorrect, could you please point it out? Thank you! Apologies for my slow progress with reading the code; so far, I\u2019ve only reviewed these three notebooks.</p>"
+    },
+    {
+      "id": 3036211,
+      "authorName": "homiecal",
+      "votes": 0,
+      "postDate": "2024-11-04T11:03:47.003000",
+      "content": "<p>Hi <a href=\"https://www.kaggle.com/wadakoki\" target=\"_blank\">@wadakoki</a> what hardware did you use for the competition? Was it just the free quota on Google Colab Notebooks?</p>"
+    },
+    {
+      "id": 3032725,
+      "authorName": "Kenny",
+      "votes": 0,
+      "postDate": "2024-10-31T09:40:41.890000",
+      "content": "<p>thanks for sharing. Great solution and explanation.</p>"
+    },
+    {
+      "id": 3021408,
+      "authorName": "Malabh Bakshi",
+      "votes": 0,
+      "postDate": "2024-10-18T13:19:38.073000",
+      "content": "<p>Amazing Presentation <a href=\"https://www.kaggle.com/wadakoki\" target=\"_blank\">@wadakoki</a> </p>"
+    },
+    {
+      "id": 3021156,
+      "authorName": "SUZUKI SEIYA",
+      "votes": 0,
+      "postDate": "2024-10-18T08:28:04.493000",
+      "content": "<p>You're number one!</p>"
+    },
+    {
+      "id": 3018270,
+      "authorName": "Yisak Birhanu Bule",
+      "votes": 0,
+      "postDate": "2024-10-15T16:34:27.020000",
+      "content": "<p>congra man you deserve  it</p>"
+    },
+    {
+      "id": 3016653,
+      "authorName": "dragon zhang",
+      "votes": 0,
+      "postDate": "2024-10-14T02:26:04.727000",
+      "content": "<p>thanks for sharing. Piece of artist solution cake.</p>"
+    },
+    {
+      "id": 3018155,
+      "authorName": "Vinothkumar Sekar",
+      "votes": 0,
+      "postDate": "2024-10-15T14:48:50.443000",
+      "content": "<p>Good work.!!! \ud83d\udc4d</p>"
+    },
+    {
+      "id": 3017994,
+      "authorName": "Rudrersh Asagodu",
+      "votes": 0,
+      "postDate": "2024-10-15T12:45:19.727000",
+      "content": "<p>Congratulations!</p>"
+    },
+    {
+      "id": 3017771,
+      "authorName": "Muhammed Tausif",
+      "votes": 0,
+      "postDate": "2024-10-15T07:32:04.183000",
+      "content": "<p>Thanks for sharing your approach. </p>"
+    },
+    {
+      "id": 3016963,
+      "authorName": "Usaid Ahmad",
+      "votes": 0,
+      "postDate": "2024-10-14T11:22:53.183000",
+      "content": "<p>good work!</p>"
+    },
+    {
+      "id": 3032724,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2024-10-31T09:39:40.360000",
+      "content": ""
+    },
+    {
+      "id": 3018310,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2024-10-15T17:00:45.067000",
+      "content": "<p>Congratulations! \ud83d\ude03</p>"
+    }
+  ]
+}

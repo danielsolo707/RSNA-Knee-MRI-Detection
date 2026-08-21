@@ -1,0 +1,41 @@
+{
+  "id": "danielsolo1770/rsna-knee-v29-v27-v28",
+  "title": "rsna-knee-v29-v27-v28",
+  "code_file": "rsna-knee-v29-v27-v28.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "pilkwang/pilkwang-public-dataset-for-notebooks-figures",
+    "pilkwang/rsna-knee-llm-labels",
+    "pilkwang/rsna-knee-weights",
+    "stevenleehans/rsna-knee-llm-report-labels",
+    "lixin73/rsna-knee-llm-report-labels-sol56",
+    "marwanmath/resnet-50-radimagenet-marwan",
+    "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+    "antoinegg1/rsna-knee-e11-diverse-heads-v20",
+    "mattiaangeli/knee-mri-fold-weights",
+    "sohaibanwaar1203/kneemridataset",
+    "mattiaangeli/rsna-knee-radimagenet-foldsv1-heads",
+    "tonylica/rsna2026-models",
+    "danielsolo1770/rsna-knee-v28-heads"
+  ],
+  "kernel_sources": [
+    "sofiaanjenje/rsna-knee-e11-train"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [
+    "metaresearch/dinov2/PyTorch/small/1",
+    "metaresearch/dinov2/PyTorch/large/1",
+    "metaresearch/dinov2/PyTorch/base/1"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}

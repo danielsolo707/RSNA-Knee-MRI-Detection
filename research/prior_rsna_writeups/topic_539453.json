@@ -1,0 +1,82 @@
+﻿{
+  "topic": {
+    "id": 539453,
+    "title": "3rd Place Solution",
+    "authorName": "Moyashii",
+    "commentCount": 10,
+    "votes": 65,
+    "postDate": "2024-10-09T01:47:44.627000"
+  },
+  "comments": [
+    {
+      "id": 3012532,
+      "authorName": "shash",
+      "votes": 3,
+      "postDate": "2024-10-09T06:28:49.127000",
+      "content": "<p>Great explanations! Do you think that temperature scaling had a bigger impact because of the noise in the dataset or just because \ud83e\udd14</p>"
+    },
+    {
+      "id": 3013384,
+      "authorName": "AJPath",
+      "votes": 1,
+      "postDate": "2024-10-10T02:58:17.660000",
+      "content": "<p>Thanks for sharing and explaining your solution in depth, awesome work!</p>"
+    },
+    {
+      "id": 3012618,
+      "authorName": "Marek Nurzynski",
+      "votes": 1,
+      "postDate": "2024-10-09T08:09:39.940000",
+      "content": "<p>Thank you for sharing your detailed solution. Congratulations, great work!</p>"
+    },
+    {
+      "id": 3012397,
+      "authorName": "suguuuuu",
+      "votes": 1,
+      "postDate": "2024-10-09T02:21:41.733000",
+      "content": "<h1>Not in the Final Submission</h1>\n<ul>\n<li>We decided not to use the following external dataset <a href=\"https://tianchi.aliyun.com/dataset/79463\" target=\"_blank\">Spinal Disease Dataset</a> one week before the deadline. The reason was that we were unsure if the content of the \"Terms of Use\" complied with Kaggle's rules. Using this dataset showed an approximate performance improvement of +0.005 in a single model. </li>\n<li>The DICOM information were corrupted, making it difficult to determine which image it corresponded to.  </li>\n</ul>"
+    },
+    {
+      "id": 3013054,
+      "authorName": "C R Suthikshn Kumar",
+      "votes": 0,
+      "postDate": "2024-10-09T16:02:58.863000",
+      "content": "<p>Congratulations on winning the 3rd prize in this competition. Thanks for sharing the details of your solution with diagrams and images. </p>"
+    },
+    {
+      "id": 3024953,
+      "authorName": "Chirag Patil",
+      "votes": 0,
+      "postDate": "2024-10-22T07:33:38.980000",
+      "content": "<p>Any updates on the code?</p>"
+    },
+    {
+      "id": 3021195,
+      "authorName": "Daniel Popov",
+      "votes": 0,
+      "postDate": "2024-10-18T08:52:22.183000",
+      "content": "<p>Did you use DICOM format images, or did you switch to another format (like PNG)?\"</p>"
+    },
+    {
+      "id": 3020103,
+      "authorName": "Switch9527",
+      "votes": 0,
+      "postDate": "2024-10-17T06:53:58.137000",
+      "content": "<p>Shocking! Thank you for this very detailed solution, which has made me realize the huge gap between me and the masters. I'm also looking forward to your code!!! I believe I can learn a lot from here.</p>"
+    },
+    {
+      "id": 3014935,
+      "authorName": "Humayra Khanom Rime",
+      "votes": 0,
+      "postDate": "2024-10-11T18:10:05.133000",
+      "content": "<p>Great explanations! </p>"
+    },
+    {
+      "id": 3014608,
+      "authorName": "MrSimple",
+      "votes": 0,
+      "postDate": "2024-10-11T12:15:32.703000",
+      "content": "<p>Thanks for sharing and explaining your solution in depth, awesome work!</p>"
+    }
+  ]
+}

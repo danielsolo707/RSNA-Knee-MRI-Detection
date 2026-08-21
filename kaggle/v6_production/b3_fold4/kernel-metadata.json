@@ -1,0 +1,25 @@
+{
+  "id": "danielsolo1770/rsna-knee-v6-b3-fold4",
+  "title": "rsna-knee-v6-b3-fold4",
+  "code_file": "rsna-knee-v6-b3-fold4.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "danielsolo1770/rsna-knee-v3-labels-folds"
+  ],
+  "kernel_sources": [
+    "danielsolo1770/rsna-knee-v5-parallel-uint8-cache-288"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [
+    "timm/tf-efficientnet/PyTorch/tf-efficientnet-b3/1"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}

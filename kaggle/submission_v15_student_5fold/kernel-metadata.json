@@ -1,0 +1,29 @@
+{
+  "id": "danielsolo1770/rsna-knee-v15-student-5fold",
+  "title": "rsna-knee-v15-student-5fold",
+  "code_file": "rsna-knee-v15-student-5fold.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "dataset_sources": [
+    "pilkwang/pilkwang-public-dataset-for-notebooks-figures",
+    "pilkwang/rsna-knee-weights",
+    "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+    "pilkwang/rsna-knee-llm-labels",
+    "stevenleehans/rsna-knee-llm-report-labels",
+    "lixin73/rsna-knee-llm-report-labels-sol56"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [],
+  "kernel_sources": [
+    "danielsolo1770/rsna-knee-v15-bridge"
+  ],
+  "keywords": [
+    "gpu"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}

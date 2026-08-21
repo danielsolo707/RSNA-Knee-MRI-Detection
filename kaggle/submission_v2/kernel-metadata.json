@@ -1,0 +1,27 @@
+{
+  "id": "danielsolo1770/rsna-knee-v2-oof-target-blend",
+  "title": "RSNA Knee V2 OOF target blend",
+  "code_file": "rsna-knee-v2-oof-blend.py",
+  "language": "python",
+  "kernel_type": "script",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "pilkwang/rsna-knee-weights",
+    "tonylica/rsna2026-models"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [
+    "metaresearch/dinov2/PyTorch/base/1",
+    "metaresearch/dinov2/PyTorch/small/1"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}

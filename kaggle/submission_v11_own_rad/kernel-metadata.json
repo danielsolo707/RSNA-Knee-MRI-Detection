@@ -1,0 +1,30 @@
+{
+  "id": "danielsolo1770/rsna-knee-v11-own-rad-gated",
+  "title": "rsna-knee-v11-own-rad-gated",
+  "code_file": "rsna-knee-v11-own-rad-gated.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "pilkwang/pilkwang-public-dataset-for-notebooks-figures",
+    "pilkwang/rsna-knee-llm-labels",
+    "pilkwang/rsna-knee-weights",
+    "marwanmath/resnet-50-radimagenet-marwan",
+    "antoinegg1/rsna-knee-e9-radimagenet-heads-v15",
+    "danielsolo1770/rsna-knee-v3-labels-folds"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [
+    "metaresearch/dinov2/PyTorch/small/1"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}

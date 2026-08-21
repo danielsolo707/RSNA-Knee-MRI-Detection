@@ -1,0 +1,369 @@
+﻿{
+  "topic": {
+    "id": 392449,
+    "title": "1st place solution",
+    "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+    "commentCount": 51,
+    "votes": 177,
+    "postDate": "2023-03-05T10:56:38.190000"
+  },
+  "comments": [
+    {
+      "id": 2169786,
+      "authorName": "sandy1112",
+      "votes": 9,
+      "postDate": "2023-03-05T12:35:48.053000",
+      "content": "<p>Thanks a lot for sharing such a detailed write up. Congratulations on your Gold\u2026 looking at the way you broke down the problem, its a well deserved gold. In my experiments also found that Maxpooling worked the best, while average pooling tended to wash away the required signals</p>"
+    },
+    {
+      "id": 2169862,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-03-05T13:59:42.743000",
+      "content": "<p>Thanks for your kind words !</p>"
+    },
+    {
+      "id": 2191737,
+      "authorName": "Reyihi",
+      "votes": 1,
+      "postDate": "2023-03-22T07:14:32.980000",
+      "content": "<p>Could you share more training parameters of ROI detection model? I can't get the same AP@0.5-0.95 as you mentioned above. I only train on <a href=\"https://www.kaggle.com/remekkinas\" target=\"_blank\">@remekkinas</a>'s dataset. thank you!</p>"
+    },
+    {
+      "id": 2192430,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-03-22T16:44:04.817000",
+      "content": "<p>Hi, insufficient number of val samples and personal labeling bias can make the AP@0.5-0.95 unstable. <br>\nFor YOLOX, I use <a href=\"https://github.com/dangnh0611/kaggle_rsna_breast_cancer/blob/reproduce/src/roi_det/YOLOX/exps/projects/rsna/yolox_nano_bre_416.py\" target=\"_blank\">this hyperparams config</a></p>"
+    },
+    {
+      "id": 2174211,
+      "authorName": "Jhye O'Meley",
+      "votes": 1,
+      "postDate": "2023-03-09T00:18:06.917000",
+      "content": "<p>Really great work. </p>"
+    },
+    {
+      "id": 2172703,
+      "authorName": "Pablo Larrosa",
+      "votes": 1,
+      "postDate": "2023-03-07T18:05:37.537000",
+      "content": "<p>Hi, you mentioned that you used image size 2048x1024 with Convnextv1-small model, but when you processed the images yolox produce as output image of 416?.</p>\n<p>Thank in advance!</p>"
+    },
+    {
+      "id": 2180975,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 1,
+      "postDate": "2023-03-14T08:19:48.853000",
+      "content": "<p>Hi, i get the bounding box output from YOLOX, then the coordinates will be used to crop the original resolution image, as described <a href=\"https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F10254700%2F9de52f41201b4a92774f5fee331cb879%2Fwriteup-Page-1.drawio.png?generation=1678001361222187&amp;alt=media\" target=\"_blank\">here</a></p>"
+    },
+    {
+      "id": 2171012,
+      "authorName": "Abdallah Ragab223",
+      "votes": 1,
+      "postDate": "2023-03-06T13:11:48.213000",
+      "content": "<p>great work, and thanks to share the solution </p>"
+    },
+    {
+      "id": 2170281,
+      "authorName": "Antti Isosalo",
+      "votes": 1,
+      "postDate": "2023-03-05T20:11:53.087000",
+      "content": "<p>Absolutely great work! And a overwhelming amount of experiments you have done starting from pre-processing and all the way to the inference. Also you seem to have picked up many things during this short time that took me couple of years to get a grasp over while doing PhD on this very topic. In my opinion publishing these results and answering those remaining questions that you have listed would get you far for a PhD, unless of course you already have one. \ud83d\ude03</p>"
+    },
+    {
+      "id": 2180985,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 3,
+      "postDate": "2023-03-14T08:23:21.857000",
+      "content": "<p>Thanks for you kind words and suggestions \ud83d\ude04 </p>\n<blockquote>\n  <p>unless of course you already have one</p>\n</blockquote>\n<p>I did not even have a Master's degree \ud83d\ude02</p>"
+    },
+    {
+      "id": 2169955,
+      "authorName": "Mr.G",
+      "votes": 1,
+      "postDate": "2023-03-05T15:17:35.710000",
+      "content": "<p>Thank you for your kind message! I'm looking forward to your training code! I have learned a lot from reading your sharing.</p>"
+    },
+    {
+      "id": 2170164,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 2,
+      "postDate": "2023-03-05T18:19:09.730000",
+      "content": "<p>Thank you! I guess that the training code should be available in next 2 days.</p>"
+    },
+    {
+      "id": 2169869,
+      "authorName": "Darragh",
+      "votes": 1,
+      "postDate": "2023-03-05T14:09:39.483000",
+      "content": "<p>Really great work. I like the augmentations, especially the different downscales. </p>"
+    },
+    {
+      "id": 2169905,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-03-05T14:37:13.920000",
+      "content": "<p>Thank you!</p>"
+    },
+    {
+      "id": 2388905,
+      "authorName": "\u7ee7\u7eed\u6218\u6597\u7ee7\u7eed\u524d\u8fdb",
+      "votes": 0,
+      "postDate": "2023-08-13T17:07:32.820000",
+      "content": "<p>Interesting!!!</p>"
+    },
+    {
+      "id": 2353153,
+      "authorName": "HANF Wang",
+      "votes": 0,
+      "postDate": "2023-07-21T13:38:16.540000",
+      "content": "<p>Sorry to bother you. I want to reproduce this project, but I can't install nvidia-dali-nightly-cuda. Is this package necessary</p>"
+    },
+    {
+      "id": 2313320,
+      "authorName": "Pedro Mart\u00ednez Barr\u00f3n",
+      "votes": 0,
+      "postDate": "2023-06-22T15:27:29.573000",
+      "content": "<p>Great work:), congrats. I just read the solution and review a little bit your code, I would like to know what is the image type input for the windowing process? (I know it must be an array but like, an array from the original dicom image\u2026?)<br>\nThx!</p>"
+    },
+    {
+      "id": 2315725,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 1,
+      "postDate": "2023-06-24T11:03:16.300000",
+      "content": "<p>Yes, it's raw pixel array from the original dicom image, e.g <code>pydicom.dcmread(dcm_path).pixel_array</code></p>"
+    },
+    {
+      "id": 2316028,
+      "authorName": "Pedro Mart\u00ednez Barr\u00f3n",
+      "votes": 0,
+      "postDate": "2023-06-24T15:47:57.880000",
+      "content": "<p>Ohh I see, thank u very much. Considering working with the raw dicom images as arrays I just wonder how did you manage memory and computation resources?:c hahaha</p>"
+    },
+    {
+      "id": 2316041,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-06-24T15:58:07.553000",
+      "content": "<p>ah sorry, just a small note that during inference, windowing is applied to the ROI-cropped patch only, which then resized to smaller fixed size, e.g 2048x1024. But, this only saves a little computation \ud83d\udc40</p>"
+    },
+    {
+      "id": 2305243,
+      "authorName": "Lidiia Kachmarska",
+      "votes": 0,
+      "postDate": "2023-06-16T14:26:40.557000",
+      "content": "<p>Helpful information, thank you for sharing.</p>"
+    },
+    {
+      "id": 2301571,
+      "authorName": "Bharys J",
+      "votes": 0,
+      "postDate": "2023-06-14T03:17:06.527000",
+      "content": "<p>Hi, thanks for the detailed writeup. I learnt many new things going through your codebase. I have a question. Winning model is an ensemble of four ConvNext models, did using an ensemble model show significantly better performance than a single model? Thanks</p>"
+    },
+    {
+      "id": 2301667,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-06-14T04:57:53.917000",
+      "content": "<p>In my quick test without threshold tunning, single model on single fold could archive LB 0.59 and PB 0.54</p>"
+    },
+    {
+      "id": 2301697,
+      "authorName": "Bharys J",
+      "votes": 0,
+      "postDate": "2023-06-14T05:32:15.057000",
+      "content": "<p>Thanks. If I get this correctly, based on the pb scores single model trained on single fold performs just as well as the ensemble right? <br>\nI'm just curious as to why four convnext models were used</p>"
+    },
+    {
+      "id": 2301713,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-06-14T05:56:39.603000",
+      "content": "<p>Because that's all I had at that time :D. Winning submission was created and submitted in the last day of this competition and I have no other stronger models (e.g with different architectures or training strategies) at that time --&gt; no more complex ensemble should be tried.<br>\n4 is always better stabilization/generalization/score than 1 in almost every cases. In this particular case, 0.02 LB and 0.01 PB difference is not a negligible improvement.</p>"
+    },
+    {
+      "id": 2301722,
+      "authorName": "Bharys J",
+      "votes": 0,
+      "postDate": "2023-06-14T06:08:04.180000",
+      "content": "<p>Thank you very much for explaining it. </p>"
+    },
+    {
+      "id": 2261305,
+      "authorName": "CJLUer",
+      "votes": 0,
+      "postDate": "2023-05-16T08:32:56.707000",
+      "content": "<p>num_logits = 2 means using sigmoid (BCEWithLogitsLoss) for training and softmax .Can you explain why this strategy is used? Is there any basis for it? Usually the same activation function is used for training and inference.Thanks in advance.</p>"
+    },
+    {
+      "id": 2261316,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-05-16T08:50:40.447000",
+      "content": "<p>Hi,<br>\nIt's just a baseline when I'm start with this competition. I experienced slightly better results with BCE instead of CCE for binary classification tasks in the past. Another reason is to easily integrating custom auxiliary losses (usually BCEs too) and balancing these loss weights, e.g all losses have same scales. Also, 2 logits --&gt; double the number of params in the linear head </p>"
+    },
+    {
+      "id": 2261636,
+      "authorName": "CJLUer",
+      "votes": 0,
+      "postDate": "2023-05-16T13:26:52.977000",
+      "content": "<p>Thank you for your reply. My question is why sigmoid is used in the training phase and softmax is used in the inference phase. This usage is very uncommon. Does it help the results?</p>"
+    },
+    {
+      "id": 2261793,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-05-16T14:51:04.733000",
+      "content": "<p>As you see the result (table above), sigmoid with num_logits=1 was used in my final submission since \u201csigmoid for training+softmax for inference\u201d worsen the result (did not help)</p>"
+    },
+    {
+      "id": 2283399,
+      "authorName": "CJLUer",
+      "votes": 0,
+      "postDate": "2023-06-01T08:21:48.583000",
+      "content": "<p>Here you mentioned pos cases upsample, I would like to ask whether your upsample is simply copying samples or other methods so that each batch has at least one pos case.thank you!</p>"
+    },
+    {
+      "id": 2285394,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-06-02T17:13:03.367000",
+      "content": "<p>Yes, it's simply copying samples using a custom batch sampler</p>"
+    },
+    {
+      "id": 2173792,
+      "authorName": "Fernando Cossio",
+      "votes": 0,
+      "postDate": "2023-03-08T16:39:01.987000",
+      "content": "<p>Congrats for the win! Thanks for the detailed write up, I have learned a lot.</p>"
+    },
+    {
+      "id": 2180989,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-03-14T08:25:21.330000",
+      "content": "<p>Thank you. Hope it helps</p>"
+    },
+    {
+      "id": 2172491,
+      "authorName": "Ifeanyichukwu Nwobodo",
+      "votes": 0,
+      "postDate": "2023-03-07T14:58:01.233000",
+      "content": "<p>You're a living genius. Bravo</p>"
+    },
+    {
+      "id": 2172374,
+      "authorName": "Theo Viel",
+      "votes": 0,
+      "postDate": "2023-03-07T13:40:11.260000",
+      "content": "<p>Congratz on the win ! <br>\nAnd thanks for the really nice write-up :)</p>"
+    },
+    {
+      "id": 2180992,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-03-14T08:26:00.457000",
+      "content": "<p>Thanks, I also learned a lot from you \ud83d\udcaf</p>"
+    },
+    {
+      "id": 2170596,
+      "authorName": "fate",
+      "votes": 0,
+      "postDate": "2023-03-06T05:52:18.743000",
+      "content": "<p>Gem was not work for me.<br>\nI think Gem is very tricky.In the same competition , some people say it works, but others say it doesn't work</p>"
+    },
+    {
+      "id": 2173793,
+      "authorName": "Fernando Cossio",
+      "votes": 0,
+      "postDate": "2023-03-08T16:39:42.787000",
+      "content": "<p>What is GEM?</p>"
+    },
+    {
+      "id": 2180999,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-03-14T08:28:41.263000",
+      "content": "<blockquote>\n  <p>What is GEM?</p>\n</blockquote>\n<p>Generalized Mean Pooling</p>"
+    },
+    {
+      "id": 2170123,
+      "authorName": "Pablo Rios",
+      "votes": 0,
+      "postDate": "2023-03-05T17:52:40.727000",
+      "content": "<p>Many thanks for the elaborate write-up and for sharing your reasonings throughout it!</p>\n<p>As you comment in <a href=\"https://github.com/dangnh0611/kaggle_rsna_breast_cancer/blob/dev/notebooks/roi_yolov5.ipynb\" target=\"_blank\">https://github.com/dangnh0611/kaggle_rsna_breast_cancer/blob/dev/notebooks/roi_yolov5.ipynb</a> can you share the annotation dataset and the yolov5 training notebook?</p>\n<p>Looking forward to study training code in the dev branch even before you publish the refactored one, if possible.</p>"
+    },
+    {
+      "id": 2170160,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 1,
+      "postDate": "2023-03-05T18:16:24.280000",
+      "content": "<p>I'm sorry, but the notebook you mentioned should be move to <code>notebooks/3rd/</code> directory instead since i just download <a href=\"https://www.kaggle.com/remekkinas\" target=\"_blank\">@remekkinas</a> 's <a href=\"https://www.kaggle.com/code/remekkinas/breast-cancer-roi-brest-extractor\" target=\"_blank\">notebook</a>. Giving credit to his awesome discussions (<a href=\"https://www.kaggle.com/competitions/rsna-breast-cancer-detection/discussion/371630\" target=\"_blank\">here</a> and <a href=\"https://www.kaggle.com/competitions/rsna-breast-cancer-detection/discussion/369749\" target=\"_blank\">here</a>), <a href=\"https://www.kaggle.com/code/remekkinas/roi-detector-yolov5-training-and-annotations/notebook\" target=\"_blank\">yolov5 training notebook</a>, <a href=\"https://www.kaggle.com/code/remekkinas/breast-cancer-roi-brest-extractor\" target=\"_blank\">yolov5 inference notebook</a> and <a href=\"https://www.kaggle.com/datasets/remekkinas/rsna-roi-detector-annotations-yolo\" target=\"_blank\">annotated dataset</a>. </p>"
+    },
+    {
+      "id": 2170342,
+      "authorName": "Pablo Rios",
+      "votes": 0,
+      "postDate": "2023-03-05T22:09:35.930000",
+      "content": "<p>Thank you.</p>\n<p>Training code of the Convnextv1-small classification models is available at <code>dev/src/pytorch-image-models/projects/rsna</code>, correct? Thanks again.</p>"
+    },
+    {
+      "id": 2180995,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-03-14T08:27:29.507000",
+      "content": "<p>Yes. And I have updated <a href=\"https://github.com/dangnh0611/kaggle_rsna_breast_cancer\" target=\"_blank\">the code</a>. Thanks for your attention \ud83d\ude04</p>"
+    },
+    {
+      "id": 2169724,
+      "authorName": "kingjohnson",
+      "votes": 0,
+      "postDate": "2023-03-05T11:32:39.940000",
+      "content": "<p>Thank you for your kind share! Do you train single-view models or dual-view models to achieve such an impressive performance?</p>"
+    },
+    {
+      "id": 2169730,
+      "authorName": "\u0110\u0103ng Nguy\u1ec5n H\u1ed3ng",
+      "votes": 0,
+      "postDate": "2023-03-05T11:39:21.357000",
+      "content": "<p>Hi, I just tried single-view models. Multi-views model is potential so I'll give it a try later \ud83d\ude0a</p>"
+    },
+    {
+      "id": 2893530,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2024-06-27T21:09:34.420000",
+      "content": ""
+    },
+    {
+      "id": 2283395,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2023-06-01T08:20:58.220000",
+      "content": ""
+    },
+    {
+      "id": 2261301,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2023-05-16T08:29:20.033000",
+      "content": ""
+    },
+    {
+      "id": 2175611,
+      "authorName": "",
+      "votes": -1,
+      "postDate": "2023-03-10T02:25:04.217000",
+      "content": ""
+    },
+    {
+      "id": 2180987,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2023-03-14T08:24:59.253000",
+      "content": ""
+    }
+  ]
+}

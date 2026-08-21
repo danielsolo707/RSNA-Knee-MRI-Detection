@@ -1,0 +1,61 @@
+﻿{
+  "topic": {
+    "id": 447706,
+    "title": "8th Place Solution & Code",
+    "authorName": "Ian Pan",
+    "commentCount": 7,
+    "votes": 28,
+    "postDate": "2023-10-16T23:09:34.240000"
+  },
+  "comments": [
+    {
+      "id": 2489981,
+      "authorName": "Darragh",
+      "votes": 1,
+      "postDate": "2023-10-20T10:50:49.220000",
+      "content": "<p>Congratulations <a href=\"https://www.kaggle.com/vaillant\" target=\"_blank\">@vaillant</a> that was a speed run</p>"
+    },
+    {
+      "id": 2485840,
+      "authorName": "Yee Ng",
+      "votes": 0,
+      "postDate": "2023-10-17T13:43:49.147000",
+      "content": "<p>Congratulations. Great job Ian!</p>"
+    },
+    {
+      "id": 2488028,
+      "authorName": "Ian Pan",
+      "votes": 0,
+      "postDate": "2023-10-19T00:44:51.027000",
+      "content": "<p>Thank you!</p>"
+    },
+    {
+      "id": 2485245,
+      "authorName": "YujiAriyasu",
+      "votes": 0,
+      "postDate": "2023-10-17T03:54:30.883000",
+      "content": "<p>Congratulations on your 10th gold medal! It was a great pleasure to see you again at the competition.</p>"
+    },
+    {
+      "id": 2488027,
+      "authorName": "Ian Pan",
+      "votes": 0,
+      "postDate": "2023-10-19T00:44:39.733000",
+      "content": "<p>Thanks! You too!</p>"
+    },
+    {
+      "id": 2485729,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2023-10-17T12:16:35.580000",
+      "content": "<p>Nice solution. Congratulations. <br>\n\"I decided to label some slices with injuries to the liver, kidneys, and spleen\". <br>\nWhat tool did you use to avoid making this task time-consuming? Med.ai ?<br>\nThank you for sharing</p>"
+    },
+    {
+      "id": 2488026,
+      "authorName": "Ian Pan",
+      "votes": 0,
+      "postDate": "2023-10-19T00:44:27.057000",
+      "content": "<p>I just saved the PNGs of each series to a folder and deleted the ones that I wanted to label as positive injury. Then I could just see which images were deleted and mark them as positive.</p>"
+    }
+  ]
+}

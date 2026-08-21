@@ -1,0 +1,110 @@
+﻿{
+  "topic": {
+    "id": 539472,
+    "title": "5th place solution",
+    "authorName": "siwooyong",
+    "commentCount": 14,
+    "votes": 35,
+    "postDate": "2024-10-09T04:51:44.684000"
+  },
+  "comments": [
+    {
+      "id": 3012511,
+      "authorName": "shash",
+      "votes": 3,
+      "postDate": "2024-10-09T05:55:47.523000",
+      "content": "<p>Congratulations, really interesting findings! Cutmix really does work well. Did you try experimenting with more augmentation for bigger cnn backbones? really counterintuitive to me why bigger model didn't perform better.</p>"
+    },
+    {
+      "id": 3012552,
+      "authorName": "siwooyong",
+      "votes": 3,
+      "postDate": "2024-10-09T06:59:44.947000",
+      "content": "<p>I tried using bigger models like convnext_base and maxvit_small, but their performance was worse. I haven't conducted detailed experiments, so I'm not certain, but I have two hypotheses. \ud83d\ude00</p>\n<p>The first is that for bigger models to perform well, they require a sufficient dataset and a certain level of problem complexity. In this competition, those conditions weren't met, which likely led to overfitting and resulted in poorer performance compared to the smaller models.</p>\n<p>The second is that I used an image size of (128, 128) instead of (224, 224), which may have been more detrimental to the bigger models.</p>"
+    },
+    {
+      "id": 3012581,
+      "authorName": "shash",
+      "votes": 1,
+      "postDate": "2024-10-09T07:37:17.853000",
+      "content": "<p>Ahh I see, that makes much more sense.</p>"
+    },
+    {
+      "id": 3018909,
+      "authorName": "Tanishk Patil",
+      "votes": 1,
+      "postDate": "2024-10-16T05:55:57.040000",
+      "content": "<p>Congratiulation!</p>"
+    },
+    {
+      "id": 3018733,
+      "authorName": "Foxtrot_98",
+      "votes": 1,
+      "postDate": "2024-10-16T03:03:58.373000",
+      "content": "<p>Congratulations! Really an eye-opener to a new thought process of object detection.</p>"
+    },
+    {
+      "id": 3013056,
+      "authorName": "C R Suthikshn Kumar",
+      "votes": 1,
+      "postDate": "2024-10-09T16:04:27.360000",
+      "content": "<p>Congratulations on winning the 5th prize in this competition. Thanks for sharing the details of your approach with specifics. </p>"
+    },
+    {
+      "id": 3012531,
+      "authorName": "Ahmed El Fazouani",
+      "votes": 1,
+      "postDate": "2024-10-09T06:25:23.100000",
+      "content": "<p>Thank you for the great teamwork <a href=\"https://www.kaggle.com/siwooyong\" target=\"_blank\">@siwooyong</a> !<br>\nI had a lot of fun working on this competition.</p>"
+    },
+    {
+      "id": 3012541,
+      "authorName": "siwooyong",
+      "votes": 1,
+      "postDate": "2024-10-09T06:42:36.773000",
+      "content": "<p>Working with you is always the best! \ud83d\ude00</p>"
+    },
+    {
+      "id": 3037942,
+      "authorName": "stonebell",
+      "votes": 2,
+      "postDate": "2024-11-06T11:50:02.963000",
+      "content": "<p>Congratulations. I have a question about the code of <a href=\"https://www.kaggle.com/ahmedelfazouan\" target=\"_blank\">@ahmedelfazouan</a> 's part. It seems that you use the separately processed 'coords_rsna_improved.csv' file. When it is Sagittal T2/STIR, you create a side column and use it. Could you please explain how to create this file?</p>"
+    },
+    {
+      "id": 3038344,
+      "authorName": "Ahmed El Fazouani",
+      "votes": 1,
+      "postDate": "2024-11-06T21:13:00.937000",
+      "content": "<p>It was shared in this public dataset <a href=\"https://www.kaggle.com/datasets/brendanartley/lumbar-coordinate-pretraining-dataset\" target=\"_blank\">here</a></p>"
+    },
+    {
+      "id": 3015451,
+      "authorName": "I2nfinit3y",
+      "votes": 2,
+      "postDate": "2024-10-12T12:39:43.697000",
+      "content": "<p>Congradulations! <br>\nThanks for your sharing! Could you introduce your loss function of the stage_1 in the code to me breifly?I am a rookie and know little about Unet :)</p>"
+    },
+    {
+      "id": 3015487,
+      "authorName": "Ahmed El Fazouani",
+      "votes": 2,
+      "postDate": "2024-10-12T13:35:24.833000",
+      "content": "<p>thanks, stage 1 model is composed of two main modules, the first one is used to detect areas where x and y are present, and the other to detect z,<br>\nthe loss is also divided into two parts, the first half to measure the performance of x and y and the other for z.</p>"
+    },
+    {
+      "id": 3014683,
+      "authorName": "karelbecerra",
+      "votes": 2,
+      "postDate": "2024-10-11T13:38:36.667000",
+      "content": "<p>Congratulations! Thanks a lot for adding all details. I opened our inference notebook but there are 2 privates datasets, any plan to make those public <img src=\"https://www.googleapis.com/download/storage/v1/b/kaggle-forum-message-attachments/o/inbox%2F15158801%2F345de06e4da305f6f3ae3445647974d9%2FScreenshot%202024-10-11%20at%209.36.51AM.png?generation=1728653909629306&amp;alt=media\" alt=\"\"></p>"
+    },
+    {
+      "id": 3014692,
+      "authorName": "Ahmed El Fazouani",
+      "votes": 1,
+      "postDate": "2024-10-11T13:46:46.453000",
+      "content": "<p>The datasets are public now.</p>"
+    }
+  ]
+}

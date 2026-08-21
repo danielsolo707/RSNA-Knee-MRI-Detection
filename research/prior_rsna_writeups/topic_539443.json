@@ -1,0 +1,166 @@
+﻿{
+  "topic": {
+    "id": 539443,
+    "title": "4th place solution",
+    "authorName": "tattaka",
+    "commentCount": 22,
+    "votes": 76,
+    "postDate": "2024-10-09T00:21:51.816000"
+  },
+  "comments": [
+    {
+      "id": 3017635,
+      "authorName": "kaerururu",
+      "votes": 1,
+      "postDate": "2024-10-15T04:40:25.970000",
+      "content": "<p><a href=\"https://www.kaggle.com/tattaka\" target=\"_blank\">@tattaka</a> <a href=\"https://www.kaggle.com/ren4yu\" target=\"_blank\">@ren4yu</a><br>\nCongrats for prize and Share your solution ! \ud83c\udf89</p>\n<p>We can't have access to your MLP stacking codes. Please check access setting \ud83d\ude4f</p>"
+    },
+    {
+      "id": 3018031,
+      "authorName": "tattaka",
+      "votes": 0,
+      "postDate": "2024-10-15T13:16:43.533000",
+      "content": "<p>Thank you, I have changed the permissions of the notebook for MLP stacking to public.</p>"
+    },
+    {
+      "id": 3012740,
+      "authorName": "Ivan Vybornov",
+      "votes": 2,
+      "postDate": "2024-10-09T09:57:27.453000",
+      "content": "<p><a href=\"https://www.kaggle.com/tattaka\" target=\"_blank\">@tattaka</a> Thanks for sharing! Your Multi-view input, multi-condition output is truly inspiring \ud83e\udde0\ud83e\udde0\ud83e\udde0</p>\n<p>How hard is it to make your multi-view, multi-condition architecture up and running? How many iterations on the architecture/experiments worth of time does it take? And do you recommend less experienced kagglers to try and construct something similar or do you think it requires much more intuiton about the cv domain and thorough knowledge of valid computer vision achitectures and it would be better to focus on careful data processing and other basic things rather than assembling such \"monsters\"?</p>"
+    },
+    {
+      "id": 3013378,
+      "authorName": "tattaka",
+      "votes": 3,
+      "postDate": "2024-10-10T02:38:57.680000",
+      "content": "<blockquote>\n  <p>How hard is it to make your multi-view, multi-condition architecture up and running?   </p>\n</blockquote>\n<p>In my setup, the model was sensitive to hyperparameters and did not work with all backbones.</p>\n<blockquote>\n  <p>How many iterations on the architecture/experiments worth of time does it take?</p>\n</blockquote>\n<p>Experiments with multi-view architectures took at least 6 hours to complete a 5-fold experiment. Most of the time, I validated the effectiveness using only 1 fold.</p>\n<blockquote>\n  <p>And do you recommend less experienced kagglers to try and construct something similar or do you think it requires much more intuiton about the cv domain and thorough knowledge of valid computer vision achitectures and it would be better to focus on careful data processing and other basic things rather than assembling such \"monsters\"?</p>\n</blockquote>\n<p>This is just my personal opinion, but I recommend starting by building a simple model or pipeline and checking if it works. You can then use this pipeline as a starting point for experiments. By testing hypotheses and exploring things that go against your intuition, you can improve the pipeline.</p>"
+    },
+    {
+      "id": 3012358,
+      "authorName": "Harshit Sheoran",
+      "votes": 2,
+      "postDate": "2024-10-09T00:43:42.013000",
+      "content": "<p>Congratulations <a href=\"https://www.kaggle.com/tattaka\" target=\"_blank\">@tattaka</a> <a href=\"https://www.kaggle.com/ren4yu\" target=\"_blank\">@ren4yu</a>, the solution is very elegant, I liked your use of so many heads for study-level predictions to ensemble the approaches, what was your OOF CV and did it follow the LB well?</p>"
+    },
+    {
+      "id": 3012364,
+      "authorName": "tattaka",
+      "votes": 3,
+      "postDate": "2024-10-09T00:59:36.560000",
+      "content": "<p>The final CV scores were:</p>\n<pre><code> score: .\n score: .\n score: .\n score: .\n</code></pre>\n<p>In our solution, the correlation between CV and LB was good.</p>"
+    },
+    {
+      "id": 3012369,
+      "authorName": "Harshit Sheoran",
+      "votes": 0,
+      "postDate": "2024-10-09T01:16:09.010000",
+      "content": "<p>My CV is like this (mine alone, ensembled is 0.380):</p>\n<pre><code>(,\n {: ,\n  : ,\n  : ,\n  : })\n</code></pre>\n<p>Could you double check my OOF submission file by calculating the score on your function, thank you!</p>\n<p>For us 0.446 CV was 0.39 LB and 0.380 CV was 0.4 LB</p>\n<p><a href=\"https://www.kaggle.com/datasets/harshitsheoran/rsna-2024-oof\" target=\"_blank\">https://www.kaggle.com/datasets/harshitsheoran/rsna-2024-oof</a></p>"
+    },
+    {
+      "id": 3012375,
+      "authorName": "tattaka",
+      "votes": 0,
+      "postDate": "2024-10-09T01:38:20.573000",
+      "content": "<p>When you calculate your score using <a href=\"https://github.com/tattaka/rsna-2024-lumbar-spine-degenerative-classification-public/blob/main/src/stage2/exp107/scoring.ipynb\" target=\"_blank\">our notebook</a> , you get</p>\n<pre><code>\"Score (0.38779225210879453, {: 0.251212030446364, : 0.4966134331970362, : 0.5588322928130882, : 0.24451125197868967})\".\n</code></pre>\n<p>There are some slight differences, but it seems that the oof score is not incorrect.</p>"
+    },
+    {
+      "id": 3012377,
+      "authorName": "Harshit Sheoran",
+      "votes": 0,
+      "postDate": "2024-10-09T01:41:55.373000",
+      "content": "<p>Thank you, so, it was just us missing something huge on subarticular, and LB not following the rest, its stupidly frustrating</p>"
+    },
+    {
+      "id": 3012403,
+      "authorName": "Quan Vu",
+      "votes": 1,
+      "postDate": "2024-10-09T02:38:17.643000",
+      "content": "<p>My team single model CV: 0.4, subarticular: 0.57, spinal: 0.27, foraminal: 0.51 \ud83e\udd72</p>"
+    },
+    {
+      "id": 3035188,
+      "authorName": "homiecal",
+      "votes": 0,
+      "postDate": "2024-11-03T05:37:50.660000",
+      "content": "<p><a href=\"https://www.kaggle.com/tattaka\" target=\"_blank\">@tattaka</a> <a href=\"https://www.kaggle.com/ren4yu\" target=\"_blank\">@ren4yu</a> may I ask with the classification and keypoint detection models, do you use pre-trained weights in the backbones? or do you train from scratch?</p>\n<p>What is the typical approach when training models in a different domain, i.e. medical data MRIs, when the weights were trained on ImageNet?</p>"
+    },
+    {
+      "id": 3019908,
+      "authorName": "Darwin Berrio",
+      "votes": 0,
+      "postDate": "2024-10-17T02:40:53.603000",
+      "content": "<p>Congratulations on this impressive development! I would like to know if you think that using a classic machine learning model could have achieved similar performance to your solution, and in which cases you consider it better to use traditional machine learning models versus deep learning models.</p>"
+    },
+    {
+      "id": 3015234,
+      "authorName": "Humayra Khanom Rime",
+      "votes": 0,
+      "postDate": "2024-10-12T05:41:13.467000",
+      "content": "<p>Great! Congratulations. I haven't participated in any competition yet. Can you please share some tips so that I can do well?</p>"
+    },
+    {
+      "id": 3015047,
+      "authorName": "Bartley",
+      "votes": 0,
+      "postDate": "2024-10-11T23:08:38.780000",
+      "content": "<p>Interesting use of \"Nelder-Mead guided stacking\". Did you compare the performance between this method and a single MLP head?</p>"
+    },
+    {
+      "id": 3015107,
+      "authorName": "tattaka",
+      "votes": 1,
+      "postDate": "2024-10-12T02:26:00.710000",
+      "content": "<p>It deteriorates by 0.01 compared to a single MLP head (worse than the simple Nelder-Mead).</p>"
+    },
+    {
+      "id": 3014607,
+      "authorName": "MrSimple",
+      "votes": 0,
+      "postDate": "2024-10-11T12:15:08.997000",
+      "content": "<p>Thanks for sharing! Your Multi-view input, multi-condition output is truly inspiring !!!!</p>"
+    },
+    {
+      "id": 3013050,
+      "authorName": "C R Suthikshn Kumar",
+      "votes": 0,
+      "postDate": "2024-10-09T15:59:56.417000",
+      "content": "<p>Congratulations on winning the 4th prize in this competition. Thanks for sharing the explanation about your approach with good diagrams.</p>"
+    },
+    {
+      "id": 3016527,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2024-10-13T22:51:23.550000",
+      "content": ""
+    },
+    {
+      "id": 3013127,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2024-10-09T17:06:31.767000",
+      "content": ""
+    },
+    {
+      "id": 3012381,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2024-10-09T01:54:00.953000",
+      "content": ""
+    },
+    {
+      "id": 3012630,
+      "authorName": "Abdullah Al-Shami",
+      "votes": 0,
+      "postDate": "2024-10-09T08:15:10.367000",
+      "content": "<p>thank you so much  for sharing</p>"
+    },
+    {
+      "id": 3012580,
+      "authorName": "Deepak",
+      "votes": 0,
+      "postDate": "2024-10-09T07:35:17.883000",
+      "content": "<p>Thank you for sharing.Helpful</p>"
+    }
+  ]
+}

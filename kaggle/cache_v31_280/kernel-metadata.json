@@ -1,0 +1,21 @@
+{
+  "id": "danielsolo1770/rsna-knee-v31-cache-280",
+  "title": "rsna-knee-v31-cache-280",
+  "code_file": "rsna-knee-v31-cache-280.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [
+    "pilkwang/rsna-knee-llm-labels",
+    "stevenleehans/rsna-knee-llm-report-labels",
+    "lixin73/rsna-knee-llm-report-labels-sol56"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": []
+}

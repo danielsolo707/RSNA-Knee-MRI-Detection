@@ -1,0 +1,231 @@
+{
+  "aggressive_gold_macro": 0.8580641440078041,
+  "b3_gold_macro": 0.8003682048982839,
+  "dino_gold_macro": 0.8400089312435326,
+  "gold_n": 58,
+  "note": "Soft-label OOF rejected B3; gold LOO supports sparse rank blend. Public LB may differ.",
+  "per_target": {
+    "ACL": {
+      "full_b3": 0.7549019607843137,
+      "full_dino": 0.8688725490196079,
+      "loo": {
+        "b3": 0.7549019607843136,
+        "dino": 0.8688725490196078,
+        "equal_rank": 0.8370098039215685
+      },
+      "pick": "dino"
+    },
+    "Baker's": {
+      "full_b3": 0.9601449275362319,
+      "full_dino": 0.9547101449275363,
+      "loo": {
+        "b3": 0.9601449275362318,
+        "dino": 0.9547101449275364,
+        "equal_rank": 0.9710144927536232
+      },
+      "pick": "equal_rank"
+    },
+    "Contusion": {
+      "full_b3": 0.835357624831309,
+      "full_dino": 0.8421052631578947,
+      "loo": {
+        "b3": 0.835357624831309,
+        "dino": 0.8421052631578947,
+        "equal_rank": 0.8488529014844806
+      },
+      "pick": "equal_rank"
+    },
+    "Effusion": {
+      "full_b3": 0.9329192546583851,
+      "full_dino": 0.9428571428571428,
+      "loo": {
+        "b3": 0.9329192546583852,
+        "dino": 0.9428571428571428,
+        "equal_rank": 0.9739130434782609
+      },
+      "pick": "equal_rank"
+    },
+    "Fracture": {
+      "full_b3": 0.725,
+      "full_dino": 0.8944444444444445,
+      "loo": {
+        "b3": 0.725,
+        "dino": 0.8944444444444444,
+        "equal_rank": 0.8416666666666667
+      },
+      "pick": "dino"
+    },
+    "Lateral Meniscus": {
+      "full_b3": 0.7267080745341615,
+      "full_dino": 0.6422360248447205,
+      "loo": {
+        "b3": 0.7267080745341615,
+        "dino": 0.6422360248447204,
+        "equal_rank": 0.7304347826086957
+      },
+      "pick": "equal_rank"
+    },
+    "Lateral OA": {
+      "full_b3": 0.7427466150870407,
+      "full_dino": 0.7079303675048356,
+      "loo": {
+        "b3": 0.7427466150870404,
+        "dino": 0.7079303675048356,
+        "equal_rank": 0.7427466150870405
+      },
+      "pick": "equal_rank"
+    },
+    "MCL": {
+      "full_b3": 0.6961451247165533,
+      "full_dino": 0.8843537414965986,
+      "loo": {
+        "b3": 0.6961451247165533,
+        "dino": 0.8843537414965986,
+        "equal_rank": 0.8321995464852608
+      },
+      "pick": "dino"
+    },
+    "Medial Meniscus": {
+      "full_b3": 0.8076923076923077,
+      "full_dino": 0.8497596153846154,
+      "loo": {
+        "b3": 0.8076923076923076,
+        "dino": 0.8497596153846153,
+        "equal_rank": 0.859375
+      },
+      "pick": "equal_rank"
+    },
+    "Medial OA": {
+      "full_b3": 0.9271317829457364,
+      "full_dino": 0.9503875968992248,
+      "loo": {
+        "b3": 0.9271317829457364,
+        "dino": 0.9503875968992249,
+        "equal_rank": 0.9674418604651164
+      },
+      "pick": "equal_rank"
+    },
+    "PF OA": {
+      "full_b3": 0.797940797940798,
+      "full_dino": 0.8005148005148005,
+      "loo": {
+        "b3": 0.797940797940798,
+        "dino": 0.8005148005148006,
+        "equal_rank": 0.8133848133848133
+      },
+      "pick": "equal_rank"
+    },
+    "Synovitis": {
+      "full_b3": 0.6977299880525687,
+      "full_dino": 0.7419354838709677,
+      "loo": {
+        "b3": 0.6977299880525687,
+        "dino": 0.7419354838709677,
+        "equal_rank": 0.7323775388291517
+      },
+      "pick": "dino"
+    }
+  },
+  "policy": "gold_loo_gain_ge_0.005",
+  "policy_gold_macro": 0.8580641440078041,
+  "weights": {
+    "ACL": {
+      "b3": 0.0,
+      "dino": 1.0
+    },
+    "Baker's": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "Contusion": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "Effusion": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "Fracture": {
+      "b3": 0.0,
+      "dino": 1.0
+    },
+    "Lateral Meniscus": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "Lateral OA": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "MCL": {
+      "b3": 0.0,
+      "dino": 1.0
+    },
+    "Medial Meniscus": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "Medial OA": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "PF OA": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "Synovitis": {
+      "b3": 0.0,
+      "dino": 1.0
+    }
+  },
+  "weights_aggressive": {
+    "ACL": {
+      "b3": 0.0,
+      "dino": 1.0
+    },
+    "Baker's": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "Contusion": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "Effusion": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "Fracture": {
+      "b3": 0.0,
+      "dino": 1.0
+    },
+    "Lateral Meniscus": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "Lateral OA": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "MCL": {
+      "b3": 0.0,
+      "dino": 1.0
+    },
+    "Medial Meniscus": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "Medial OA": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "PF OA": {
+      "b3": 0.5,
+      "dino": 0.5
+    },
+    "Synovitis": {
+      "b3": 0.0,
+      "dino": 1.0
+    }
+  }
+}

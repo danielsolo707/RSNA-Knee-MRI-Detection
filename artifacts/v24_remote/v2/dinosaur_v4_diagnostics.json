@@ -1,0 +1,29 @@
+{
+  "anchor": "submission_0914_anchor.csv",
+  "candidates": [
+    "submission_0914_anchor.csv",
+    "submission_e10_robust.csv",
+    "submission_e11_020.csv",
+    "submission_e11_adaptive.csv",
+    "submission_safe.csv",
+    "submission_main.csv",
+    "submission_probe.csv"
+  ],
+  "default": "submission_main.csv",
+  "e11_alpha": {
+    "ACL": 0.2,
+    "Baker's": 0.0,
+    "Contusion": 0.2,
+    "Effusion": 0.2,
+    "Fracture": 0.0,
+    "Lateral Meniscus": 0.2,
+    "Lateral OA": 0.2,
+    "MCL": 0.2,
+    "Medial Meniscus": 0.2,
+    "Medial OA": 0.2,
+    "PF OA": 0.2,
+    "Synovitis": 0.2
+  },
+  "e11_heads": 5,
+  "name": "RSNA Knee | DINOsaur V4"
+}

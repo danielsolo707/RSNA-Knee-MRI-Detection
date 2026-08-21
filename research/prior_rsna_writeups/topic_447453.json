@@ -1,0 +1,208 @@
+﻿{
+  "topic": {
+    "id": 447453,
+    "title": "2nd Place Solution",
+    "authorName": "Theo Viel",
+    "commentCount": 28,
+    "votes": 105,
+    "postDate": "2023-10-16T00:23:09.742000"
+  },
+  "comments": [
+    {
+      "id": 2483871,
+      "authorName": "hengck23",
+      "votes": 3,
+      "postDate": "2023-10-16T04:02:04",
+      "content": "<p>thanks for the write up!<br>\ncongratulations for the good work!</p>\n<p>would it be possible to release your code, i would like to do a experiment repeat this week.<br>\nThanks!</p>\n<p>(dirty code is ok)</p>"
+    },
+    {
+      "id": 2484105,
+      "authorName": "Theo Viel",
+      "votes": 4,
+      "postDate": "2023-10-16T08:20:42.923000",
+      "content": "<p>Thanks ! I will release clean code during the week </p>"
+    },
+    {
+      "id": 2483767,
+      "authorName": "devchopin",
+      "votes": 3,
+      "postDate": "2023-10-16T01:19:14.327000",
+      "content": "<p>Hello, I used your PNG Dataset during the competition. thank you !!</p>\n<p>I have two questions.</p>\n<ol>\n<li><p>\u201cOnly the RNN loss is weighted, other parts of the model aim to maximize AUC.\u201d<br>\nDoes this mean that you freeze the CNN model, extracted only the features, and then training only the LSTM?</p></li>\n<li><p>Organs have a depth of at least 100 sheets and up to 600sheets. How many sheets did you use in 2D + RNN?</p></li>\n</ol>"
+    },
+    {
+      "id": 2484101,
+      "authorName": "Theo Viel",
+      "votes": 2,
+      "postDate": "2023-10-16T08:17:45.283000",
+      "content": "<p>You're welcome !</p>\n<ol>\n<li>RNN only sees probabilities precomputed by the CNN, so training is done in 2 stages.</li>\n<li>Crop to ~600 sheets, then resize to 200 with linear interpolation.</li>\n</ol>"
+    },
+    {
+      "id": 2484396,
+      "authorName": "Gooring",
+      "votes": 1,
+      "postDate": "2023-10-16T13:09:29.710000",
+      "content": "<p>Thanks for your sharing! Great work you have finished\uff01 <br>\nI notice that you used 2 different optimizer for training Crpped model and 2D model, are there any specific reasons for doing so ?<br>\nAnd could please share some tips on how to choose the suitable optimizer, learing rate and the learning sheduler. These parameters really annoyed me a lot \ud83d\ude2e\u200d\ud83d\udca8.</p>"
+    },
+    {
+      "id": 2484430,
+      "authorName": "Theo Viel",
+      "votes": 2,
+      "postDate": "2023-10-16T13:36:02.307000",
+      "content": "<p>I use Ranger for both crop and 2D models. AdamW is used for the RNN though.</p>\n<p>For the scheduler I always use linear scheduling, sometimes with some warmup. I tweak the lr to maximise performance, and usually try both Ranger and AdamW. Ranger has been working well with CNNs for me lately.</p>"
+    },
+    {
+      "id": 2484052,
+      "authorName": "Markrvtx",
+      "votes": 1,
+      "postDate": "2023-10-16T07:30:40.887000",
+      "content": "<p>Congrats for the gold!! and thx for providing the PNG conversion dataset and the notebook. I have a question about the loss.  Imbalance exists in the given dataset and want to know how did you handle it. </p>"
+    },
+    {
+      "id": 2484104,
+      "authorName": "Theo Viel",
+      "votes": 1,
+      "postDate": "2023-10-16T08:20:24.017000",
+      "content": "<p>Nothing was done to fight imbalance. Strong models could handle it :)</p>"
+    },
+    {
+      "id": 2484265,
+      "authorName": "C R Suthikshn Kumar",
+      "votes": 2,
+      "postDate": "2023-10-16T10:57:05.723000",
+      "content": "<p>Congratulations on winning the competition with 2nd place. Thanks for sharing the solution. </p>"
+    },
+    {
+      "id": 2552128,
+      "authorName": "john",
+      "votes": 0,
+      "postDate": "2023-12-07T08:05:30.567000",
+      "content": "<p>Question about Segmentation. Why you use resnet18 as encoder, instead of using unet directly.<br>\nThanks</p>"
+    },
+    {
+      "id": 2514053,
+      "authorName": "dfdavii2",
+      "votes": 0,
+      "postDate": "2023-11-06T01:58:55.407000",
+      "content": "<p>Great work. I can't find where you got some of the csv files in the preparation.py file, \"df_train.csv\", \"df_images_train.csv\", and \"df_images_train_with_seg.csv\". I am going through the whole code to understand the process. Thank you</p>"
+    },
+    {
+      "id": 2514425,
+      "authorName": "Theo Viel",
+      "votes": 0,
+      "postDate": "2023-11-06T09:38:59.273000",
+      "content": "<p>If you look in the master branch of the repo the code is in one of the notebooks. It's not interesting though, which is why I shared the files here : <br>\n<a href=\"https://www.kaggle.com/datasets/theoviel/rsna-abdominal-prepro-data\" target=\"_blank\">https://www.kaggle.com/datasets/theoviel/rsna-abdominal-prepro-data</a></p>"
+    },
+    {
+      "id": 2514989,
+      "authorName": "dfdavii2",
+      "votes": 0,
+      "postDate": "2023-11-06T16:44:54.557000",
+      "content": "<p>great, thanks</p>"
+    },
+    {
+      "id": 2485814,
+      "authorName": "naocanzouyihui",
+      "votes": 0,
+      "postDate": "2023-10-17T13:23:04.420000",
+      "content": "<p>Congratulations on winning the competition with 2nd place. Thanks for sharing the solution.</p>"
+    },
+    {
+      "id": 2485778,
+      "authorName": "ynhuhu",
+      "votes": 0,
+      "postDate": "2023-10-17T13:02:10.587000",
+      "content": "<p>Congratulations, thanks for sharing a lot of work.</p>"
+    },
+    {
+      "id": 2485018,
+      "authorName": "JSGandora",
+      "votes": 0,
+      "postDate": "2023-10-16T21:07:00.327000",
+      "content": "<p>Congratulations on the great result and thank you for the write up!</p>\n<p>How much memory did each part if the pipeline require and what workstation setup did you use? I\u2019m curious if the Kaggle machines could run your training and inference pipelines? I couldn\u2019t find a way to use much more than a batch size of 8 samples of dimension 150x150x100 floats onto the GPU memory for training.</p>\n<p>I also found that ensembling models did not result in an improvement over the single best model presumably due to the high correlation between the models.</p>"
+    },
+    {
+      "id": 2485020,
+      "authorName": "Theo Viel",
+      "votes": 0,
+      "postDate": "2023-10-16T21:10:26.577000",
+      "content": "<p>Thanks ! I train models on 8x 32GB V100, RAM is not the bottleneck for most models. I use at most 11 frames per input though, biggest batches I am handling are of size 8x11x3x 224x224 and the GPU is not full.</p>"
+    },
+    {
+      "id": 2484903,
+      "authorName": "Mark",
+      "votes": 0,
+      "postDate": "2023-10-16T18:39:41.763000",
+      "content": "<p>Thanks for the great write up (and also the datasets)!</p>\n<p>For the 2D organ classifier that you trained, am I correct in reading that this was trained separately? If so, what training data did you use? </p>\n<blockquote>\n  <p>kidney / liver / spleen / negative bowel : Pick a random frame inside the organ.<br>\n  Did you use the provided 'segmentations' alone for this?</p>\n</blockquote>"
+    },
+    {
+      "id": 2484919,
+      "authorName": "Theo Viel",
+      "votes": 1,
+      "postDate": "2023-10-16T18:58:55.930000",
+      "content": "<p>You're welcome !</p>\n<p>Yep, it's trained on the provided segmentations.</p>"
+    },
+    {
+      "id": 2484873,
+      "authorName": "David Roberts",
+      "votes": 0,
+      "postDate": "2023-10-16T18:19:48.217000",
+      "content": "<p>Simple and elegant. Nice work <a href=\"https://www.kaggle.com/theoviel\" target=\"_blank\">@theoviel</a>, Thanks for sharing the datasets too. </p>"
+    },
+    {
+      "id": 2484507,
+      "authorName": "ls",
+      "votes": 0,
+      "postDate": "2023-10-16T14:32:24.123000",
+      "content": "<p>congratulations and thanks for sharing the good work!</p>"
+    },
+    {
+      "id": 2483844,
+      "authorName": "Gyula Maloveczky4",
+      "votes": 0,
+      "postDate": "2023-10-16T03:28:32.047000",
+      "content": "<p>Great work! I feel for you regarding the last minute extension. Truly upsetting\u2026</p>"
+    },
+    {
+      "id": 2483782,
+      "authorName": "dragon zhang",
+      "votes": 0,
+      "postDate": "2023-10-16T01:47:38.170000",
+      "content": "<p>thx for sharing. great work.</p>"
+    },
+    {
+      "id": 2937394,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2024-07-27T03:51:52.520000",
+      "content": ""
+    },
+    {
+      "id": 2937399,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2024-07-27T04:04:01.100000",
+      "content": ""
+    },
+    {
+      "id": 2506963,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2023-10-31T16:58:02.567000",
+      "content": ""
+    },
+    {
+      "id": 2484044,
+      "authorName": "",
+      "votes": 0,
+      "postDate": "2023-10-16T07:22:58.777000",
+      "content": "<p>Felicitations !! Merci pour le partage, toujours tr\u00e8s instructif. Au boulot !</p>"
+    },
+    {
+      "id": 2485390,
+      "authorName": "Fubuki",
+      "votes": 0,
+      "postDate": "2023-10-17T06:47:15.650000",
+      "content": "<p>Thanks for sharing  great work!!</p>"
+    }
+  ]
+}

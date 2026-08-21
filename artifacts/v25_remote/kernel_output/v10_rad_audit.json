@@ -1,0 +1,65 @@
+{
+  "cross_alpha_choices": [
+    0.4,
+    0.505,
+    0.3,
+    0.505,
+    0.505
+  ],
+  "dino_gold_rank_macro": 0.8400089312435326,
+  "dino_sha256": "f9fb57b7bac8489a5d5285b3984b06df57f142572be6417eac6341c43e96707a",
+  "dino_soft_macro": 0.8524299531360121,
+  "encoder_sha256": "08629f7e7bd3e29b8ee9522ca3f65ce4d010a7ddf74f0ea3c7e3f3d0bbab0734",
+  "evidence_boundary": "Nested 58-label OOF is local diagnostic only. submission.csv overwritten only when promote=true vs V9 parent.",
+  "final_alphas": {
+    "ACL": 0.505,
+    "Baker's": 0.2,
+    "Contusion": 0.2,
+    "Effusion": 0.2,
+    "Fracture": 0.2,
+    "Lateral Meniscus": 0.2,
+    "Lateral OA": 0.2,
+    "MCL": 0.2,
+    "Medial Meniscus": 0.2,
+    "Medial OA": 0.2,
+    "PF OA": 0.2,
+    "Synovitis": 0.505
+  },
+  "final_cross_alpha": 0.505,
+  "final_gold_macro": 0.8549852504364729,
+  "fold_gains_vs_v9": [
+    0.015873015873015817,
+    -0.0029761904761905766,
+    0.003968253968253954,
+    0.0,
+    -0.005555555555555536
+  ],
+  "head_source": "public_e9",
+  "head_tag": "e9",
+  "nested_gold_macro": 0.8529760760976811,
+  "parent_recipe": "V9 DINO+Rad global alpha=0.20",
+  "per_target_nonneg_folds": {
+    "ACL": 4,
+    "Synovitis": 4
+  },
+  "positive_outer": 2,
+  "promote": true,
+  "public_heads": "/kaggle/input/datasets/antoinegg1/rsna-knee-e9-radimagenet-heads-v15/v52_radimagenet_heads.pt",
+  "public_parent_score_reference": 0.906,
+  "rad_gold_macro_auc": 0.8543239133509962,
+  "rad_gold_rank_macro": 0.8543239133509962,
+  "rad_soft_macro": 0.8278266073242156,
+  "rad_soft_macro_auc": 0.8278266073242156,
+  "remaining_seconds_at_start": 17924.267988681793,
+  "selected_path": "/kaggle/working/rsna_rad_v10/submission_v10_cross_505.csv",
+  "selected_sha256": "29a1ae14b5610d5056b9ce06d19442d7378a3915e31c67377d615b99477e4e29",
+  "selection_supported": true,
+  "soft_gate_ok": true,
+  "status": "CANDIDATE_SELECTED",
+  "test_targets_rank_changed": [
+    "ACL",
+    "Synovitis"
+  ],
+  "v9_parent_gold_macro": 0.8515822091124163,
+  "v9_parent_sha256": "0638ece531a90ae54d2f7cd37f6294aedaad005b2a451442231382bf3652cc14"
+}

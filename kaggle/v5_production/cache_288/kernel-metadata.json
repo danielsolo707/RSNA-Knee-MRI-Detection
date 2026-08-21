@@ -1,0 +1,16 @@
+{
+  "id": "danielsolo1770/rsna-knee-v5-parallel-uint8-cache-288",
+  "title": "rsna-knee-v5-parallel-uint8-cache-288",
+  "code_file": "rsna-knee-v5-cache-288.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": false,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [],
+  "dataset_sources": [],
+  "kernel_sources": [],
+  "competition_sources": ["rsna-knee-abnormality-detection"],
+  "model_sources": []
+}

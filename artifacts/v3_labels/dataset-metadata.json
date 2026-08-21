@@ -1,0 +1,10 @@
+{
+  "title": "RSNA Knee V3 Cross-Fitted Labels and Folds",
+  "id": "danielsolo1770/rsna-knee-v3-labels-folds",
+  "licenses": [
+    {
+      "name": "CC0-1.0"
+    }
+  ],
+  "description": "Private V3 training artifact: target-selected soft report labels, uncertainty weights, duplicate-report-safe five-fold assignments, gold/LOO audit metrics, and SHA-256 provenance for RSNA Knee Abnormality Detection."
+}

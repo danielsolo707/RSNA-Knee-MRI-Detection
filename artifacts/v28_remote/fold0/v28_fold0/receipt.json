@@ -1,0 +1,12 @@
+{
+  "fold": 0,
+  "best_val_auc": 0.7857464140762388,
+  "smoke": false,
+  "img": 224,
+  "crop_mm": 160.0,
+  "unfreeze_last": 4,
+  "epochs": 6,
+  "n_train": 3525,
+  "n_val": 882,
+  "seconds": 14438.026972055435
+}

@@ -1,0 +1,26 @@
+﻿{
+  "topic": {
+    "id": 427233,
+    "title": "Previous RSNA Kaggle Challenges and Winning Solutions Compilation",
+    "authorName": "gradientBoost",
+    "commentCount": 2,
+    "votes": 39,
+    "postDate": "2023-07-27T01:17:22.603000"
+  },
+  "comments": [
+    {
+      "id": 2361139,
+      "authorName": "C R Suthikshn Kumar",
+      "votes": 1,
+      "postDate": "2023-07-27T07:54:33.457000",
+      "content": "<p>Thanks for sharing the useful  info about previous competitions in  the RSNA challenge series.</p>\n<ul>\n<li>Main differences between previous challenge and current competition in terms of <br>\ndata sets and evaluation metrics need to be brought out. </li>\n<li>Getting started notebooks, models for ML training will be useful resources for competitors. </li>\n</ul>"
+    },
+    {
+      "id": 2387088,
+      "authorName": "Tom\u00e1s Luna",
+      "votes": 0,
+      "postDate": "2023-08-12T12:07:39.143000",
+      "content": "<p>Thank you for sharing this information <a href=\"https://www.kaggle.com/quarkspark\" target=\"_blank\">@quarkspark</a>! It will be really useful for us all.</p>"
+    }
+  ]
+}
