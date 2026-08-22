@@ -59,33 +59,73 @@ if out_path.exists():
 bnb = BitsAndBytesConfig(load_in_4bit=True, bnb_4bit_compute_dtype=torch.float16,
                          bnb_4bit_quant_type="nf4", bnb_4bit_use_double_quant=True)
 tok = AutoTokenizer.from_pretrained(MODEL_ID)
+tok.padding_side = "left"   # REQUIRED for decoder-only batched generate
 model = AutoModelForCausalLM.from_pretrained(
     MODEL_ID, quantization_config=bnb, device_map="auto",
     torch_dtype=torch.float16)
 model.eval()
 log("model loaded")
 
-SYS = """You are a musculoskeletal radiologist. Extract knee-MRI findings from the report.
-Return STRICT JSON only, keys exactly these 12 targets, each value one of:
-1.0 definite finding | 0.6 probable | 0.3 borderline/minor mention | 0.0 normal or clearly absent.
-Rules:
-- Laterality matters: "medial meniscus tear" sets Medial Meniscus only; "lateral compartment degeneration" sets Lateral OA only.
-- Ligaments/menisci: tear/rupture/grade II-III sprain/displacement => 1.0; "normal/intact/unremarkable" => 0.0.
-- OA targets (Medial/Lateral/PF): cartilage thinning or loss, full-thickness defect, chondromalacia grade 2+, joint-space narrowing, osteophytes in that compartment => 1.0; "preserved/normal cartilage" => 0.0; "mild chondromalacia grade 1" or trivial thinning => 0.3.
-- Effusion: any effusion (small/large) => 1.0; "no effusion" => 0.0.
-- Synovitis: synovitis/synovial thickening/enhancement/inflammatory synovial change => 1.0; effusion ALONE does NOT imply synovitis => then use 0.0 unless mentioned.
-- Baker's cyst: popliteal/Baker cyst named => 1.0; else 0.0.
-- Contusion: bone marrow edema/contusion/bruise/fracture-related edema => 1.0; else 0.0.
-- Fracture: acute fracture line => 1.0; old/healed/surgical changes => 0.0; "no fracture" => 0.0.
-- If a structure is not addressed at all, use 0.0 (radiologists flag pathology when present).
-JSON only, no prose."""
+SYS = """You are a musculoskeletal radiologist. From the knee-MRI report, rate 12 findings.
+Output ONLY 12 numbers between 0 and 1 separated by commas, in EXACTLY this order:
+ACL, MCL, Medial Meniscus, Lateral Meniscus, Medial OA, Lateral OA, PF OA, Effusion, Synovitis, Baker cyst, Contusion, Fracture
+Scale: 1.0 = definite finding | 0.6 = probable | 0.3 = borderline/minor | 0.0 = normal/absent/not addressed.
+Rules: laterality matters ("medial meniscus tear" affects Medial Meniscus only); ligament/meniscus tears grade II-III => 1.0;
+cartilage thinning/chondromalacia grade>=2/joint-space narrowing => OA 1.0, preserved cartilage => 0.0, mild grade-1 => 0.3;
+any effusion => 1.0; synovitis/synovial thickening => 1.0 but effusion alone => 0.0; bone marrow edema/contusion => Contusion 1.0;
+acute fracture line => 1.0, old/healed => 0.0.
+Example output format: 1.0, 0.0, 0.6, 0.0, 0.3, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0"""
 
 todo = [(u, r) for u, r in zip(uids, reports) if u not in done_rows]
 log(f"to label: {len(todo)}")
 
-BS = 8
+# DEBUG: print two raw generations before the real loop
+_dbg = todo[:2]
+_prompts_dbg = []
+for u, rep in _dbg:
+    msgs = [{"role":"system","content":SYS},
+            {"role":"user","content": f"REPORT:\n{rep[:4000]}\n\nOutput the 12 comma-separated numbers only."}]
+    prompts_dbg = tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True)
+    _prompts_dbg.append(prompts_dbg)
+enc_d = tok(_prompts_dbg, return_tensors="pt", padding=True, truncation=True,
+            max_length=2048).to(model.device)
+with torch.no_grad():
+    gen_d = model.generate(**enc_d, max_new_tokens=40, do_sample=False,
+                           pad_token_id=tok.eos_token_id)
+for j,(u,_r) in enumerate(_dbg):
+    txt = tok.decode(gen_d[j][enc_d["input_ids"].shape[1]:], skip_special_tokens=True)
+    log(f"DEBUG RAW [{j}] {u[:20]}... -> {txt[:200]}")
+
+BS = 16
+
+BS = 16
+n_fail = 0
 buf = []
 flush_at = 150
+
+
+def parse_vals(txt: str):
+    """Two-pass parser. Returns dict of 12 targets or None if unreliable."""
+    t = txt.replace("--", " ")
+    # Pass A: labeled format  "ACL: 1.0" / "ACL = 0.6"
+    lab = {}
+    ok_lab = True
+    for tgt in TARGETS:
+        m = re.search(re.escape(tgt) + r"\s*[:=]\s*([01](?:\.\d+)?)", t, re.I)
+        if not m:
+            ok_lab = False
+            break
+        lab[tgt] = float(m.group(1))
+    if ok_lab:
+        return lab
+    # Pass B: positional numbers (allow missing leading zero like ".6")
+    nums = [float(s) for s in re.findall(r"(?<![\d.])((?:[01])?\.\d+|[01])(?![\d.])", t)]
+    nums = [v for v in nums if 0.0 <= v <= 1.0]
+    if len(nums) >= len(TARGETS):
+        return dict(zip(TARGETS, [min(max(v, 0.0), 1.0) for v in nums[:len(TARGETS)]]))
+    return None
+
+
 t_batch = time.time()
 for bi in range(0, len(todo), BS):
     if time.time() - T0 > ALIVE:
@@ -94,32 +134,21 @@ for bi in range(0, len(todo), BS):
     prompts = []
     for u, rep in chunk:
         msgs = [{"role":"system","content":SYS},
-                {"role":"user","content": f"REPORT:\n{rep[:4000]}\n\nJSON:"}]
+                {"role":"user","content": f"REPORT:\n{rep[:4000]}\n\nOutput the 12 comma-separated numbers only."}]
         prompts.append(tok.apply_chat_template(msgs, tokenize=False, add_generation_prompt=True))
     enc = tok(prompts, return_tensors="pt", padding=True, truncation=True,
               max_length=2048).to(model.device)
     with torch.no_grad():
-        gen = model.generate(**enc, max_new_tokens=220, do_sample=False,
+        gen = model.generate(**enc, max_new_tokens=80, do_sample=False,
                              pad_token_id=tok.eos_token_id)
     for j,(u,_r) in enumerate(chunk):
         txt = tok.decode(gen[j][enc["input_ids"].shape[1]:], skip_special_tokens=True)
-        vals = {t: 0.0 for t in TARGETS}
-        mtxt = re.search(r"\{.*\}", txt, re.S)
-        if mtxt:
-            try:
-                js = json.loads(mtxt.group(0))
-                for t in TARGETS:
-                    v = js.get(t, None)
-                    try:
-                        vals[t] = float(min(max(float(v), 0.0), 1.0))
-                    except Exception:
-                        pass
-            except Exception:
-                nums = re.findall(r"-?\d?\.?\d+", txt)
-                if len(nums) >= len(TARGETS):
-                    for t, n in zip(TARGETS, nums[:len(TARGETS)]):
-                        try: vals[t] = float(min(max(float(n),0.0),1.0))
-                        except Exception: pass
+        vals = parse_vals(txt)
+        if vals is None:
+            n_fail += 1
+            if n_fail <= 5:
+                log(f"parse-fail raw={txt[:140]!r}")
+            vals = {t: 0.0 for t in TARGETS}
         buf.append({"StudyInstanceUID": u, **vals})
     if len(buf) >= flush_at:
         pd.DataFrame(buf).to_csv(out_path, mode="a", header=not out_path.exists(), index=False)
