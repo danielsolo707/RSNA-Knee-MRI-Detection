@@ -48,6 +48,7 @@ def set_seed(seed=SEED):
 class Cfg:
     cache_dir: str = "/content/v30_cache"
     out_dir: str = "/content/drive/MyDrive/rsna-knee-v31/fold0_fullft"
+    labels_csv: str = ""   # optional: overrides y.npy inside the cache
     fold: int = 0
     epochs: int = 30
     batch: int = 8
@@ -237,6 +238,19 @@ def main(cfg=Cfg()):
     out = Path(cfg.out_dir)
     out.mkdir(parents=True, exist_ok=True)
     man, x, mask, y, uids = load_cache(Path(cfg.cache_dir))
+    if getattr(cfg, "labels_csv", ""):
+        ext = pd.read_csv(cfg.labels_csv, dtype={"StudyInstanceUID": str}).set_index("StudyInstanceUID")
+        rows = []
+        for u in uids:
+            if u in ext.index:
+                rows.append(ext.loc[u, TARGETS].to_numpy(np.float32))
+            else:
+                rows.append(np.zeros(len(TARGETS), np.float32))
+        y_new = np.clip(np.stack(rows), 0, 1)
+        n_changed = int((np.abs(y_new - y) > 0.05).any(axis=1).sum())
+        log(f"labels override from {cfg.labels_csv}: {len(ext)} rows, {n_changed} studies changed >0.05", t0)
+        assert not np.isnan(y_new).any()
+        y = y_new
     log(f"cache n={len(uids)} shape={tuple(x.shape)} recipe={man.get('recipe')}", t0)
     groups = np.array([report_group(u) for u in uids])
     folds = list(GroupKFold(N_FOLDS).split(np.arange(len(uids)), groups=groups))
