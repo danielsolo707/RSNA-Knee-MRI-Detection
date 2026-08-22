@@ -74,7 +74,11 @@ Rules: laterality matters ("medial meniscus tear" affects Medial Meniscus only);
 cartilage thinning/chondromalacia grade>=2/joint-space narrowing => OA 1.0, preserved cartilage => 0.0, mild grade-1 => 0.3;
 any effusion => 1.0; synovitis/synovial thickening => 1.0 but effusion alone => 0.0; bone marrow edema/contusion => Contusion 1.0;
 acute fracture line => 1.0, old/healed => 0.0.
-Example output format: 1.0, 0.0, 0.6, 0.0, 0.3, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0"""
+Example output format: 1.0, 0.0, 0.6, 0.0, 0.3, 0.0, 1.0, 1.0, 0.0, 0.0, 0.0, 0.0
+IMPORTANT: Reports may be written in ANY language (English, Greek, German, Turkish, Dutch...).
+Internally understand the report, but ALWAYS answer with exactly 12 plain decimal numbers
+in English notation as specified above - NEVER explain, NEVER translate your output,
+NEVER use another language, NEVER use dashes or placeholders."""
 
 todo = [(u, r) for u, r in zip(uids, reports) if u not in done_rows]
 log(f"to label: {len(todo)}")
@@ -90,7 +94,7 @@ for u, rep in _dbg:
 enc_d = tok(_prompts_dbg, return_tensors="pt", padding=True, truncation=True,
             max_length=2048).to(model.device)
 with torch.no_grad():
-    gen_d = model.generate(**enc_d, max_new_tokens=40, do_sample=False,
+    gen_d = model.generate(**enc_d, max_new_tokens=80, do_sample=False,
                            pad_token_id=tok.eos_token_id)
 for j,(u,_r) in enumerate(_dbg):
     txt = tok.decode(gen_d[j][enc_d["input_ids"].shape[1]:], skip_special_tokens=True)
