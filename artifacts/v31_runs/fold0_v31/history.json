@@ -142,5 +142,14 @@
   "val_auc": 0.8065,
   "ep_min": 12.5,
   "used_ema": true
+ },
+ {
+  "epoch": 16,
+  "loss": 0.5887,
+  "val_auc_raw": 0.8001,
+  "val_auc_ema": 0.8074,
+  "val_auc": 0.8074,
+  "ep_min": 12.4,
+  "used_ema": true
  }
 ]

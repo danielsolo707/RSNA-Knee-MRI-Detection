@@ -1,7 +1,7 @@
 {
  "fold": 0,
  "best_val_auc": 0.8087741653690119,
- "last_epoch": 15,
+ "last_epoch": 16,
  "status": "running",
  "cfg": {
   "cache_dir": "C:\\Users\\ASUS\\Desktop\\DanielEmpire\\ML\\RSNA Knee Abnormality Detection\\artifacts\\v31_cache\\v31_cache",

@@ -15,10 +15,14 @@ DST = Path(__file__).resolve().parents[1] / "kaggle" / "llm_labels_v4"
 
 SOURCE = r'''
 # RSNA Knee labels_v4 — Qwen2.5-7B-Instruct 4bit over all reports. No submission.csv.
-import json, os, re, time
+import json, os, re, subprocess, sys, time
 from pathlib import Path
 import pandas as pd
 import torch
+
+subprocess.run([sys.executable, "-m", "pip", "install", "-q", "-U",
+                "bitsandbytes>=0.46.1"], check=True)
+
 from transformers import AutoModelForCausalLM, AutoTokenizer, BitsAndBytesConfig
 
 T0 = time.time()
@@ -31,7 +35,14 @@ ALIVE = 8.6 * 3600
 
 def log(m): print(f"[{time.time()-T0:7.1f}s] {m}", flush=True)
 
-df = pd.read_csv("/kaggle/input/rsna-knee-abnormality-detection/train.csv",
+def find_file(name):
+    root = Path("/kaggle/input")
+    for p in root.rglob(name):
+        if p.is_file():
+            return str(p)
+    raise FileNotFoundError(name)
+
+df = pd.read_csv(find_file("train.csv"),
                  dtype={"StudyInstanceUID": str})
 uids = df["StudyInstanceUID"].astype(str).tolist()
 reports = df["Report"].astype(str).tolist()
