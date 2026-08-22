@@ -1,0 +1,146 @@
+[
+ {
+  "epoch": 0,
+  "loss": 0.7799,
+  "val_auc_raw": 0.7146,
+  "val_auc_ema": 0.6307,
+  "val_auc": 0.7146,
+  "ep_min": 12.1,
+  "used_ema": false
+ },
+ {
+  "epoch": 1,
+  "loss": 0.7372,
+  "val_auc_raw": 0.7345,
+  "val_auc_ema": 0.7015,
+  "val_auc": 0.7345,
+  "ep_min": 11.8,
+  "used_ema": false
+ },
+ {
+  "epoch": 2,
+  "loss": 0.7252,
+  "val_auc_raw": 0.7533,
+  "val_auc_ema": 0.7153,
+  "val_auc": 0.7533,
+  "ep_min": 11.8,
+  "used_ema": false
+ },
+ {
+  "epoch": 3,
+  "loss": 0.7146,
+  "val_auc_raw": 0.7745,
+  "val_auc_ema": 0.7273,
+  "val_auc": 0.7745,
+  "ep_min": 11.8,
+  "used_ema": false
+ },
+ {
+  "epoch": 4,
+  "loss": 0.7057,
+  "val_auc_raw": 0.7759,
+  "val_auc_ema": 0.7382,
+  "val_auc": 0.7759,
+  "ep_min": 11.8,
+  "used_ema": false
+ },
+ {
+  "epoch": 5,
+  "loss": 0.6996,
+  "val_auc_raw": 0.7851,
+  "val_auc_ema": 0.7496,
+  "val_auc": 0.7851,
+  "ep_min": 11.8,
+  "used_ema": false
+ },
+ {
+  "epoch": 6,
+  "loss": 0.6925,
+  "val_auc_raw": 0.7874,
+  "val_auc_ema": 0.7613,
+  "val_auc": 0.7874,
+  "ep_min": 11.8,
+  "used_ema": false
+ },
+ {
+  "epoch": 7,
+  "loss": 0.6838,
+  "val_auc_raw": 0.7901,
+  "val_auc_ema": 0.7725,
+  "val_auc": 0.7901,
+  "ep_min": 11.8,
+  "used_ema": false
+ },
+ {
+  "epoch": 8,
+  "loss": 0.6716,
+  "val_auc_raw": 0.7976,
+  "val_auc_ema": 0.7812,
+  "val_auc": 0.7976,
+  "ep_min": 11.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 9,
+  "loss": 0.6658,
+  "val_auc_raw": 0.8031,
+  "val_auc_ema": 0.7875,
+  "val_auc": 0.8031,
+  "ep_min": 11.6,
+  "used_ema": false
+ },
+ {
+  "epoch": 10,
+  "loss": 0.6555,
+  "val_auc_raw": 0.8045,
+  "val_auc_ema": 0.7927,
+  "val_auc": 0.8045,
+  "ep_min": 12.6,
+  "used_ema": false
+ },
+ {
+  "epoch": 11,
+  "loss": 0.642,
+  "val_auc_raw": 0.8053,
+  "val_auc_ema": 0.797,
+  "val_auc": 0.8053,
+  "ep_min": 12.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 12,
+  "loss": 0.6333,
+  "val_auc_raw": 0.8075,
+  "val_auc_ema": 0.8005,
+  "val_auc": 0.8075,
+  "ep_min": 14.4,
+  "used_ema": false
+ },
+ {
+  "epoch": 13,
+  "loss": 0.6214,
+  "val_auc_raw": 0.8088,
+  "val_auc_ema": 0.8032,
+  "val_auc": 0.8088,
+  "ep_min": 17.3,
+  "used_ema": false
+ },
+ {
+  "epoch": 14,
+  "loss": 0.6108,
+  "val_auc_raw": 0.8033,
+  "val_auc_ema": 0.8051,
+  "val_auc": 0.8051,
+  "ep_min": 12.5,
+  "used_ema": true
+ },
+ {
+  "epoch": 15,
+  "loss": 0.5963,
+  "val_auc_raw": 0.8047,
+  "val_auc_ema": 0.8065,
+  "val_auc": 0.8065,
+  "ep_min": 12.5,
+  "used_ema": true
+ }
+]

@@ -1,0 +1,16 @@
+{
+  "id": "danielsolo1770/rsna-knee-llm-labels-v4-qwen7b",
+  "title": "rsna-knee-llm-labels-v4-qwen7b",
+  "code_file": "rsna-knee-llm-labels-v4-qwen7b.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "dataset_sources": [],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": []
+}
