@@ -7,6 +7,7 @@ import hashlib
 import json
 import math
 import random
+import threading
 import time
 from dataclasses import asdict, dataclass
 from pathlib import Path
@@ -113,6 +114,31 @@ class FullFT(nn.Module):
         from transformers import AutoModel
 
         self.enc = AutoModel.from_pretrained(dino_id)
+        # HF Dinov2 has no SDPA implementation -> eager attention stores
+        # [B,heads,401,401] matrices and blows past 8 GB (WDDM then pages to
+        # system RAM at ~10x slowdown). Monkeypatch every block's attention
+        # with torch SDPA (flash/mem-efficient) - mathematically identical.
+        for blk in self.enc.encoder.layer:
+            att_module = blk.attention
+            inner = att_module.attention
+            out_proj = att_module.output.dense
+            n_heads = inner.num_attention_heads
+            scale = inner.attention_head_size ** -0.5
+
+            def sdpa_forward(hidden_state, head_mask=None, output_attentions=False,
+                             _inner=inner, _out=out_proj, _nh=n_heads, _sc=scale, **kw):
+                B, T, _ = hidden_state.shape
+                q = _inner.query(hidden_state).reshape(B, T, _nh, -1).transpose(1, 2)
+                k = _inner.key(hidden_state).reshape(B, T, _nh, -1).transpose(1, 2)
+                v = _inner.value(hidden_state).reshape(B, T, _nh, -1).transpose(1, 2)
+                ctx = F.scaled_dot_product_attention(q, k, v, scale=_sc)
+                ctx = ctx.transpose(1, 2).reshape(B, T, -1)
+                return (_out(ctx),)
+
+            blk.attention.forward = sdpa_forward
+        # Recompute activations instead of storing them: MLP intermediates for a
+        # 336-image step would alone need >12 GB. Costs ~+30% compute, saves ~10 GB.
+        self.enc.gradient_checkpointing_enable()
         dim = int(self.enc.config.hidden_size)
         self.n_blocks = len(self.enc.encoder.layer)
         self.slot_proj = nn.Linear(dim, 256)
@@ -219,6 +245,19 @@ def main(cfg=Cfg()):
     ds_va = CacheDS(x, mask, y, uids, va_idx, augment=False)
     log(f"fold{cfg.fold} train={len(ds_tr)} val={len(ds_va)}", t0)
     dev = torch.device("cuda")
+    # Laptop-driver clock governor fix: keep a trickle of CUDA work alive so the
+    # GPU stays in P0 instead of dropping to ~1 GHz between data-prep gaps.
+    stop_warm = threading.Event()
+    _aw = torch.randn(2048, 2048, device=dev, dtype=torch.float16)
+    _bw = torch.randn(2048, 2048, device=dev, dtype=torch.float16)
+
+    def _warmer():
+        while not stop_warm.is_set():
+            torch.matmul(_aw, _bw)
+            time.sleep(0.12)
+
+    threading.Thread(target=_warmer, daemon=True).start()
+    log("GPU clock-warmer started", t0)
     net = FullFT(cfg.dino_id, cfg.dropout).to(dev)
     for p in net.enc.parameters():
         p.requires_grad = True
@@ -252,6 +291,8 @@ def main(cfg=Cfg()):
         loader = DataLoader(ds_tr, batch_size=cfg.batch, shuffle=True, num_workers=nw,
                             pin_memory=True, drop_last=False, persistent_workers=nw > 0)
         opt.zero_grad(set_to_none=True)
+        n_oom = 0
+        t_loop = time.time()
         for it, (xb, mb, tb, _u) in enumerate(loader):
             xb = xb.to(dev, non_blocking=True)
             mb = mb.to(dev, non_blocking=True)
@@ -261,31 +302,58 @@ def main(cfg=Cfg()):
                 perm = torch.randperm(xb.size(0), device=dev)
                 xb = lam * xb + (1 - lam) * xb[perm]
                 tb = lam * tb + (1 - lam) * tb[perm]
-            with autocast():
-                lg, aux = net(xb, mb)
-                loss = (F.binary_cross_entropy_with_logits(lg, tb)
-                        + AUX_W * F.binary_cross_entropy_with_logits(aux, tb)) / cfg.accum
-            scaler.scale(loss).backward()
-            if (it + 1) % cfg.accum == 0 or (it + 1) == len(loader):
-                scaler.step(opt)
-                scaler.update()
+            try:
+                with autocast():
+                    lg, aux = net(xb, mb)
+                    loss = (F.binary_cross_entropy_with_logits(lg, tb)
+                            + AUX_W * F.binary_cross_entropy_with_logits(aux, tb)) / cfg.accum
+                scaler.scale(loss).backward()
+                if (it + 1) % cfg.accum == 0 or (it + 1) == len(loader):
+                    scaler.step(opt)
+                    scaler.update()
+                    opt.zero_grad(set_to_none=True)
+                    ema.update(net)
+            except torch.cuda.OutOfMemoryError:
                 opt.zero_grad(set_to_none=True)
-                ema.update(net)
+                torch.cuda.empty_cache()
+                n_oom += 1
+                log(f"ep{ep} step{it}: CUDA OOM - batch skipped ({n_oom} so far)", t0)
+                continue
             losses.append(float(loss.detach()) * cfg.accum)
+            if (it + 1) % 50 == 0 or (it + 1) == len(loader):
+                el = time.time() - t_loop
+                done = it + 1
+                eta = el / done * (len(loader) - done)
+                mem = torch.cuda.memory_allocated() / 1e9
+                log(f"ep{ep} step {done}/{len(loader)} "
+                    f"loss~{float(np.mean(losses[-50:])):.4f} "
+                    f"{done/el:.2f} it/s ETA {eta/60:.1f}min alloc={mem:.2f}GB", t0)
 
         def evaluate(model):
             model.eval()
             ys, ps = [], []
+            torch.cuda.empty_cache()
             with torch.no_grad():
                 for xb, mb, tb, _u in DataLoader(ds_va, batch_size=cfg.batch, shuffle=False,
-                                                 num_workers=nw, pin_memory=True):
+                                                 num_workers=0, pin_memory=True):
                     xb = xb.to(dev)
                     mb = mb.to(dev)
-                    with autocast():
-                        pr = torch.sigmoid(model(xb, mb)[0])
-                        if cfg.tta:
-                            pr = 0.5 * (pr + torch.sigmoid(model(torch.flip(xb, dims=[-1]), mb)[0]))
-                        ps.append(pr.float().cpu().numpy())
+                    try:
+                        with autocast():
+                            pr = torch.sigmoid(model(xb, mb)[0])
+                            if cfg.tta:
+                                pr = 0.5 * (pr + torch.sigmoid(model(torch.flip(xb, dims=[-1]), mb)[0]))
+                            ps.append(pr.float().cpu().numpy())
+                    except torch.cuda.OutOfMemoryError:
+                        torch.cuda.empty_cache()
+                        log("eval OOM - falling back to per-item", t0)
+                        for i in range(xb.size(0)):
+                            with autocast():
+                                pr = torch.sigmoid(model(xb[i:i+1], mb[i:i+1])[0])
+                                if cfg.tta:
+                                    pr = 0.5 * (pr + torch.sigmoid(
+                                        model(torch.flip(xb[i:i+1], dims=[-1]), mb[i:i+1])[0]))
+                                ps.append(pr.float().cpu().numpy())
                     ys.append(tb.numpy())
             return macro_auc(np.concatenate(ys), np.concatenate(ps))
 
