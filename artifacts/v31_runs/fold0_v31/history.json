@@ -151,5 +151,32 @@
   "val_auc": 0.8074,
   "ep_min": 12.4,
   "used_ema": true
+ },
+ {
+  "epoch": 17,
+  "loss": 0.5812,
+  "val_auc_raw": 0.8024,
+  "val_auc_ema": 0.8078,
+  "val_auc": 0.8078,
+  "ep_min": 12.3,
+  "used_ema": true
+ },
+ {
+  "epoch": 18,
+  "loss": 0.585,
+  "val_auc_raw": 0.8016,
+  "val_auc_ema": 0.8079,
+  "val_auc": 0.8079,
+  "ep_min": 11.9,
+  "used_ema": true
+ },
+ {
+  "epoch": 19,
+  "loss": 0.5892,
+  "val_auc_raw": 0.7996,
+  "val_auc_ema": 0.8077,
+  "val_auc": 0.8077,
+  "ep_min": 12.7,
+  "used_ema": true
  }
 ]
