@@ -29,6 +29,21 @@ epochs = int(sys.argv[2]) if len(sys.argv) > 2 else 24
 
 out_dir = REPO / "artifacts" / "v31_runs" / f"fold{fold}_hard"
 out_dir.mkdir(parents=True, exist_ok=True)
+
+# single-writer guard (two concurrent writers corrupted fold1 once)
+lock = out_dir / ".train.lock"
+if lock.exists():
+    pid_txt = lock.read_text().strip()
+    try:
+        import psutil
+
+        alive = psutil.pid_exists(int(pid_text := pid_txt))
+    except Exception:
+        alive = False
+    if alive:
+        raise SystemExit(f"trainer for fold{fold} already running (pid {pid_txt}); refusing double start")
+    lock.unlink()
+lock.write_text(str(os.getpid()))
 _log = open(out_dir / "console.log", "a", buffering=1, encoding="utf-8")
 sys.stdout = Tee(sys.__stdout__, _log)
 sys.stderr = Tee(sys.__stderr__, _log)
