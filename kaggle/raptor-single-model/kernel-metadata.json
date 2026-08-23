@@ -1,0 +1,18 @@
+{
+  "id": "danielsolo1770/rsna-knee-raptor-single-model",
+  "title": "rsna-knee-raptor-single-model",
+  "code_file": "rsna-knee-raptor-single-model.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "dataset_sources": [
+    "dreaddevelopment/raptor-knee-widedense"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": []
+}

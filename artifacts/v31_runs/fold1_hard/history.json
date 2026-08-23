@@ -1,0 +1,65 @@
+[
+ {
+  "epoch": 0,
+  "loss": 0.6808,
+  "val_auc_raw": 0.7353,
+  "val_auc_ema": 0.6883,
+  "val_auc": 0.7353,
+  "ep_min": 12.2,
+  "used_ema": false
+ },
+ {
+  "epoch": 1,
+  "loss": 0.6213,
+  "val_auc_raw": 0.7524,
+  "val_auc_ema": 0.7114,
+  "val_auc": 0.7524,
+  "ep_min": 12.3,
+  "used_ema": false
+ },
+ {
+  "epoch": 2,
+  "loss": 0.6018,
+  "val_auc_raw": 0.7733,
+  "val_auc_ema": 0.7266,
+  "val_auc": 0.7733,
+  "ep_min": 12.5,
+  "used_ema": false
+ },
+ {
+  "epoch": 3,
+  "loss": 0.5862,
+  "val_auc_raw": 0.7745,
+  "val_auc_ema": 0.7416,
+  "val_auc": 0.7745,
+  "ep_min": 12.6,
+  "used_ema": false
+ },
+ {
+  "epoch": 4,
+  "loss": 0.5685,
+  "val_auc_raw": 0.7954,
+  "val_auc_ema": 0.7566,
+  "val_auc": 0.7954,
+  "ep_min": 12.6,
+  "used_ema": false
+ },
+ {
+  "epoch": 5,
+  "loss": 0.554,
+  "val_auc_raw": 0.8112,
+  "val_auc_ema": 0.7713,
+  "val_auc": 0.8112,
+  "ep_min": 12.6,
+  "used_ema": false
+ },
+ {
+  "epoch": 6,
+  "loss": 0.528,
+  "val_auc_raw": 0.8129,
+  "val_auc_ema": 0.7842,
+  "val_auc": 0.8129,
+  "ep_min": 12.6,
+  "used_ema": false
+ }
+]
