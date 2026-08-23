@@ -1,0 +1,29 @@
+{
+ "fold": 0,
+ "best_val_auc": 0.8185073921946793,
+ "status": "complete",
+ "epochs_done": 24,
+ "cfg": {
+  "cache_dir": "C:\\Users\\ASUS\\Desktop\\DanielEmpire\\ML\\RSNA Knee Abnormality Detection\\artifacts\\v31_cache\\v31_cache",
+  "out_dir": "C:\\Users\\ASUS\\Desktop\\DanielEmpire\\ML\\RSNA Knee Abnormality Detection\\artifacts\\v31_runs\\fold0_hard",
+  "labels_csv": "",
+  "hard_labels": true,
+  "fold": 0,
+  "epochs": 24,
+  "batch": 16,
+  "accum": 1,
+  "lr_head": 0.0003,
+  "lr_bb_top": 5e-05,
+  "llrd": 0.7,
+  "weight_decay": 0.0001,
+  "patience": 99,
+  "warmup": 1,
+  "dropout": 0.3,
+  "mixup": 0.2,
+  "ema_decay": 0.999,
+  "tta": true,
+  "num_workers": 0,
+  "seed": 20260821,
+  "dino_id": "facebook/dinov2-small"
+ }
+}
