@@ -1,5 +1,24 @@
 # HANDOFF — start here (next AI / next session)
 
+**MAJOR UPDATE: 2026-08-23 evening**
+
+| Item | Value |
+|---|---|
+| NEW INCUMBENT | **Raptor solo 55722146 = 0.924** (ref 55722146), rank **169/2246** |
+| Old soup | V27 = 0.914 (backup) |
+| Fold-0 HARD | **0.8185** done locally (artifacts/v31_runs/fold0_hard) |
+| Fold-1 HARD | running locally pid via WMI, best 0.8288 @ep14 of 24 |
+| KEY DISCOVERY | dreaddevelopment/knee-mri-twelve-findings-from-a-single-model = public 0.924 solo CoAtNet-384 recipe + PUBLIC WEIGHTS dataset raptor-knee-widedense; our fork kernel rsna-knee-raptor-single-model |
+| Recipe intel | 64 slices/study in 5 slots (SAG_FS18/SAG14/COR_FS12/COR8/AX12), coverage 6-94 percent (outer slices matter for MCL/LatMeniscus), 140mm crop, 336px, CoAtNet384, per-target attention head |
+| Label verdict | hard labels beat soft by ~1pt (0.8185 vs 0.8088); Qwen7B labels FAILED twice (0.57 then 0.71 macro vs gold) - do not retry 7B; bank stays 0.8919 |
+| Infra lessons | WMI Win32_Process.Create launches survive shell job-kills (Start-Process children get killed); single-writer .train.lock; left-padding required for batched Qwen generate; kaggle CLI output has no resume -> tools/download_v31_cache.py pattern |
+| Kaggle quota | ~21h GPU remaining (refresh Fri) |
+| Next | folds 2-3 local queue, fold-4 Kaggle, blend raptor+V27 members, adopt 6-94pct coverage into own cache v32 |
+
+Older sections below are history.
+
+# HANDOFF — start here (next AI / next session)
+
 **Updated:** 2026-08-21 (evening) · supersedes all older sections below it where they conflict
 **Competition:** `rsna-knee-abnormality-detection` (code competition, hidden test, 9 h notebook)
 **Owner:** `danielsolo1770` · team **Daniel solo**
