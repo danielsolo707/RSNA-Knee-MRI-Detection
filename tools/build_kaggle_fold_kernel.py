@@ -13,14 +13,12 @@ TRAINER_SRC = _trainer.replace('if __name__=="__main__":\n    main()', "").repla
     'if __name__ == "__main__":\n    main()', "")
 
 LAUNCH = '''
-import sys, glob
-sys.path.insert(0, "/kaggle/working")
-import v31probe
+import glob
 cands = glob.glob("/kaggle/input/*/v31_cache") + glob.glob("/kaggle/input/*/*/v31_cache")
 assert cands, "V31 cache not found in inputs"
 cache_dir = cands[0]
 print("cache at", cache_dir, flush=True)
-cfg = v31probe.Cfg(
+cfg = Cfg(
     cache_dir=cache_dir,
     out_dir="/kaggle/working/fold4_out",
     labels_csv="",
@@ -37,7 +35,7 @@ cfg = v31probe.Cfg(
     ema_decay=0.999,
     num_workers=2,
 )
-v31probe.main(cfg)
+main(cfg)
 '''
 
 CELL = TRAINER_SRC + "\n\n" + LAUNCH
