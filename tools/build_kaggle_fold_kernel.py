@@ -13,10 +13,17 @@ TRAINER_SRC = _trainer.replace('if __name__=="__main__":\n    main()', "").repla
     'if __name__ == "__main__":\n    main()', "")
 
 LAUNCH = '''
-import glob
-cands = glob.glob("/kaggle/input/*/v31_cache") + glob.glob("/kaggle/input/*/*/v31_cache")
-assert cands, "V31 cache not found in inputs"
-cache_dir = cands[0]
+import glob, os
+print("inputs:", os.listdir("/kaggle/input"), flush=True)
+for d in os.listdir("/kaggle/input"):
+    p = f"/kaggle/input/{d}"
+    try:
+        print(" ", d, "->", os.listdir(p)[:8], flush=True)
+    except Exception as e:
+        print(" ", d, "ERR", e, flush=True)
+hits = glob.glob("/kaggle/input/**/x_f16.dat", recursive=True)
+assert hits, "V31 cache (x_f16.dat) not found anywhere under /kaggle/input"
+cache_dir = os.path.dirname(hits[0])
 print("cache at", cache_dir, flush=True)
 cfg = Cfg(
     cache_dir=cache_dir,
@@ -38,7 +45,11 @@ cfg = Cfg(
 main(cfg)
 '''
 
-CELL = TRAINER_SRC + "\n\n" + LAUNCH
+CELL = ("import subprocess, sys\n"
+        "subprocess.run([sys.executable,'-m','pip','install','-q',"
+        "'transformers==4.44.2','accelerate<1.0'], check=True)\n"
+        "print('pinned transformers 4.44.2')\n"
+        "\n" + TRAINER_SRC + "\n\n" + LAUNCH)
 
 
 def main() -> None:
@@ -48,8 +59,10 @@ def main() -> None:
         "nbformat": 4,
         "nbformat_minor": 5,
         "metadata": {"kernelspec": {"display_name": "Python 3", "language": "python", "name": "python3"}},
-        "cells": [{"cell_type": "code", "metadata": {}, "source": CELL.splitlines(keepends=True),
-                   "outputs": [], "execution_count": None}],
+        "cells": [
+            {"cell_type": "code", "metadata": {}, "source": CELL.splitlines(keepends=True),
+             "outputs": [], "execution_count": None},
+        ],
     }
     (DST / "rsna-knee-v31-fold4-hard.ipynb").write_text(json.dumps(nb), encoding="utf-8")
     meta = {
