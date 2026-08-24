@@ -1,8 +1,8 @@
 {
  "fold": 1,
- "best_val_auc": 0.8288412007938039,
- "last_epoch": 13,
- "status": "running",
+ "best_val_auc": 0.829900116483027,
+ "status": "complete",
+ "epochs_done": 24,
  "cfg": {
   "cache_dir": "C:\\Users\\ASUS\\Desktop\\DanielEmpire\\ML\\RSNA Knee Abnormality Detection\\artifacts\\v31_cache\\v31_cache",
   "out_dir": "C:\\Users\\ASUS\\Desktop\\DanielEmpire\\ML\\RSNA Knee Abnormality Detection\\artifacts\\v31_runs\\fold1_hard",

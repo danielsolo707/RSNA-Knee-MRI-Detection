@@ -1,0 +1,17 @@
+{
+  "id": "danielsolo1770/rsna-knee-v31-fold4-hard",
+  "title": "rsna-knee-v31-fold4-hard",
+  "code_file": "rsna-knee-v31-fold4-hard.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "kernel_sources": [
+    "danielsolo1770/rsna-knee-v31-cache-280"
+  ],
+  "dataset_sources": [],
+  "competition_sources": [],
+  "model_sources": []
+}
