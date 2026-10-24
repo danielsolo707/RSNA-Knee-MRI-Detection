@@ -1,0 +1,18 @@
+{
+  "id": "danielsolo1770/probe-concurrency-2",
+  "title": "probe-concurrency-2",
+  "code_file": "probe-2.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [],
+  "competition_sources": [],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

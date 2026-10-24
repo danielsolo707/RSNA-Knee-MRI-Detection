@@ -1,0 +1,236 @@
+[
+ {
+  "epoch": 0,
+  "loss": 0.8407,
+  "val_auc_raw": 0.6839,
+  "val_auc_ema": 0.6347,
+  "val_auc": 0.6839,
+  "ep_min": 13.6,
+  "used_ema": false
+ },
+ {
+  "epoch": 1,
+  "loss": 0.8202,
+  "val_auc_raw": 0.6901,
+  "val_auc_ema": 0.6692,
+  "val_auc": 0.6901,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 2,
+  "loss": 0.8101,
+  "val_auc_raw": 0.7216,
+  "val_auc_ema": 0.6811,
+  "val_auc": 0.7216,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 3,
+  "loss": 0.7988,
+  "val_auc_raw": 0.7755,
+  "val_auc_ema": 0.6897,
+  "val_auc": 0.7755,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 4,
+  "loss": 0.7921,
+  "val_auc_raw": 0.7845,
+  "val_auc_ema": 0.7067,
+  "val_auc": 0.7845,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 5,
+  "loss": 0.7836,
+  "val_auc_raw": 0.8052,
+  "val_auc_ema": 0.7267,
+  "val_auc": 0.8052,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 6,
+  "loss": 0.7773,
+  "val_auc_raw": 0.8285,
+  "val_auc_ema": 0.7481,
+  "val_auc": 0.8285,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 7,
+  "loss": 0.7684,
+  "val_auc_raw": 0.8454,
+  "val_auc_ema": 0.7699,
+  "val_auc": 0.8454,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 8,
+  "loss": 0.7652,
+  "val_auc_raw": 0.8587,
+  "val_auc_ema": 0.7936,
+  "val_auc": 0.8587,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 9,
+  "loss": 0.7604,
+  "val_auc_raw": 0.8632,
+  "val_auc_ema": 0.8107,
+  "val_auc": 0.8632,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 10,
+  "loss": 0.7596,
+  "val_auc_raw": 0.8621,
+  "val_auc_ema": 0.8275,
+  "val_auc": 0.8621,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 11,
+  "loss": 0.7512,
+  "val_auc_raw": 0.8682,
+  "val_auc_ema": 0.8406,
+  "val_auc": 0.8682,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 12,
+  "loss": 0.7513,
+  "val_auc_raw": 0.8737,
+  "val_auc_ema": 0.854,
+  "val_auc": 0.8737,
+  "ep_min": 13.6,
+  "used_ema": false
+ },
+ {
+  "epoch": 13,
+  "loss": 0.7478,
+  "val_auc_raw": 0.8744,
+  "val_auc_ema": 0.8631,
+  "val_auc": 0.8744,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 14,
+  "loss": 0.7432,
+  "val_auc_raw": 0.871,
+  "val_auc_ema": 0.8684,
+  "val_auc": 0.871,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 15,
+  "loss": 0.7388,
+  "val_auc_raw": 0.8745,
+  "val_auc_ema": 0.8739,
+  "val_auc": 0.8745,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 16,
+  "loss": 0.737,
+  "val_auc_raw": 0.8754,
+  "val_auc_ema": 0.8752,
+  "val_auc": 0.8754,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 17,
+  "loss": 0.7383,
+  "val_auc_raw": 0.8759,
+  "val_auc_ema": 0.878,
+  "val_auc": 0.878,
+  "ep_min": 13.7,
+  "used_ema": true
+ },
+ {
+  "epoch": 18,
+  "loss": 0.7353,
+  "val_auc_raw": 0.8764,
+  "val_auc_ema": 0.8765,
+  "val_auc": 0.8765,
+  "ep_min": 13.7,
+  "used_ema": true
+ },
+ {
+  "epoch": 19,
+  "loss": 0.7359,
+  "val_auc_raw": 0.8792,
+  "val_auc_ema": 0.8776,
+  "val_auc": 0.8792,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 20,
+  "loss": 0.7344,
+  "val_auc_raw": 0.874,
+  "val_auc_ema": 0.8772,
+  "val_auc": 0.8772,
+  "ep_min": 13.7,
+  "used_ema": true
+ },
+ {
+  "epoch": 21,
+  "loss": 0.731,
+  "val_auc_raw": 0.8751,
+  "val_auc_ema": 0.8764,
+  "val_auc": 0.8764,
+  "ep_min": 13.7,
+  "used_ema": true
+ },
+ {
+  "epoch": 22,
+  "loss": 0.7315,
+  "val_auc_raw": 0.8768,
+  "val_auc_ema": 0.8762,
+  "val_auc": 0.8768,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 23,
+  "loss": 0.7324,
+  "val_auc_raw": 0.877,
+  "val_auc_ema": 0.8769,
+  "val_auc": 0.877,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 24,
+  "loss": 0.7302,
+  "val_auc_raw": 0.8781,
+  "val_auc_ema": 0.8773,
+  "val_auc": 0.8781,
+  "ep_min": 13.7,
+  "used_ema": false
+ },
+ {
+  "epoch": 25,
+  "loss": 0.7298,
+  "val_auc_raw": 0.8772,
+  "val_auc_ema": 0.8774,
+  "val_auc": 0.8774,
+  "ep_min": 13.7,
+  "used_ema": true
+ }
+]

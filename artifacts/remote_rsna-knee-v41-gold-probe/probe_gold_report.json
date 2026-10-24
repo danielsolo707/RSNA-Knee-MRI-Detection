@@ -1,0 +1,90 @@
+{
+ "n_gold": 58,
+ "stages": {
+  "stage1_dinov2": {
+   "macro": 0.9958,
+   "per_target": {
+    "ACL": 1.0,
+    "MCL": 1.0,
+    "Medial Meniscus": 1.0,
+    "Lateral Meniscus": 0.9938,
+    "Medial OA": 1.0,
+    "Lateral OA": 0.9845,
+    "PF OA": 0.9768,
+    "Effusion": 1.0,
+    "Synovitis": 0.9952,
+    "Baker's": 1.0,
+    "Contusion": 0.9987,
+    "Fracture": 1.0
+   }
+  },
+  "stage2_mil": {
+   "macro": 0.9594,
+   "per_target": {
+    "ACL": 0.9706,
+    "MCL": 0.9615,
+    "Medial Meniscus": 0.9724,
+    "Lateral Meniscus": 0.9043,
+    "Medial OA": 0.9891,
+    "Lateral OA": 0.9574,
+    "PF OA": 0.9189,
+    "Effusion": 0.9938,
+    "Synovitis": 0.9522,
+    "Baker's": 0.9855,
+    "Contusion": 0.9541,
+    "Fracture": 0.9528
+   }
+  },
+  "stage3_rad": {
+   "macro": 0.9741,
+   "per_target": {
+    "ACL": 0.9792,
+    "MCL": 0.9671,
+    "Medial Meniscus": 0.9952,
+    "Lateral Meniscus": 0.9528,
+    "Medial OA": 0.9938,
+    "Lateral OA": 0.9526,
+    "PF OA": 0.9466,
+    "Effusion": 0.9975,
+    "Synovitis": 0.9701,
+    "Baker's": 0.9946,
+    "Contusion": 0.973,
+    "Fracture": 0.9667
+   }
+  },
+  "coatnet": {
+   "macro": 0.9202,
+   "per_target": {
+    "ACL": 0.9755,
+    "MCL": 0.9841,
+    "Medial Meniscus": 0.9651,
+    "Lateral Meniscus": 0.8783,
+    "Medial OA": 0.969,
+    "Lateral OA": 0.8453,
+    "PF OA": 0.8456,
+    "Effusion": 0.9814,
+    "Synovitis": 0.8017,
+    "Baker's": 0.9457,
+    "Contusion": 0.9325,
+    "Fracture": 0.9181
+   }
+  },
+  "stage4_final": {
+   "macro": 0.958,
+   "per_target": {
+    "ACL": 0.9828,
+    "MCL": 0.9864,
+    "Medial Meniscus": 0.9916,
+    "Lateral Meniscus": 0.928,
+    "Medial OA": 0.9814,
+    "Lateral OA": 0.9052,
+    "PF OA": 0.9022,
+    "Effusion": 0.9975,
+    "Synovitis": 0.9176,
+    "Baker's": 0.9792,
+    "Contusion": 0.9669,
+    "Fracture": 0.9569
+   }
+  }
+ }
+}

@@ -1,4 +1,8 @@
-# Competition strategy
+# Competition strategy (historical, 2026-08-10)
+
+> **Superseded as a live plan.** Current incumbent, rank, and next steps are in
+> repo-root `HANDOFF.md`. This file is the original research synthesis; do not
+> treat its leaderboard cutoffs or submission-1 plan as current.
 
 Last updated: 2026-08-10. Leaderboard thresholds move; the observed public
 leaderboard was about **0.900 for top 50** and **0.924 for top 10** when this plan

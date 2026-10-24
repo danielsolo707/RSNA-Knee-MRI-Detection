@@ -1,0 +1,45 @@
+{
+  "allavg_macro": 0.8207885726700161,
+  "arm_scores": {
+    "v31": {
+      "ACL": 0.8566176470588235,
+      "Baker's": 0.8913043478260869,
+      "Contusion": 0.9311740890688259,
+      "Effusion": 0.8285714285714286,
+      "Fracture": 0.8236111111111111,
+      "Lateral Meniscus": 0.7639751552795031,
+      "Lateral OA": 0.8220502901353965,
+      "MCL": 0.800453514739229,
+      "Medial Meniscus": 0.7716346153846154,
+      "Medial OA": 0.937984496124031,
+      "PF OA": 0.8095238095238095,
+      "Synovitis": 0.7287933094384708,
+      "macro": 0.8304744845217775
+    },
+    "v34": {
+      "ACL": 0.7389705882352942,
+      "Baker's": 0.8405797101449275,
+      "Contusion": 0.7273954116059379,
+      "Effusion": 0.8397515527950311,
+      "Fracture": 0.7819444444444444,
+      "Lateral Meniscus": 0.6857142857142857,
+      "Lateral OA": 0.8027079303675049,
+      "MCL": 0.5963718820861678,
+      "Medial Meniscus": 0.7283653846153846,
+      "Medial OA": 0.8635658914728682,
+      "PF OA": 0.7734877734877735,
+      "Synovitis": 0.7359617682198327,
+      "macro": 0.7595680519324545
+    }
+  },
+  "arms": {
+    "v31": "C:\\Users\\ASUS\\Desktop\\DanielEmpire\\ML\\RSNA Knee Abnormality Detection\\artifacts\\v31_runs\\gold_oof.csv",
+    "v34": "C:\\Users\\ASUS\\Desktop\\DanielEmpire\\ML\\RSNA Knee Abnormality Detection\\artifacts\\v34_remote\\raptor_gold_v34f0.npz"
+  },
+  "best_single_macro": 0.8304744845217775,
+  "greedy_macro": 0.8304744845217775,
+  "greedy_subset": [
+    "v31"
+  ],
+  "n_eval": 58
+}

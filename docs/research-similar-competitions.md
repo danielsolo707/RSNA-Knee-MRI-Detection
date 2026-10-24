@@ -1,4 +1,6 @@
-# Transferable lessons from similar competitions
+# Transferable lessons from similar competitions (historical)
+
+> Live state is `HANDOFF.md`. This note was compiled 2026-08-10.
 
 Compiled 2026-08-10 for RSNA Knee Abnormality Detection.
 

@@ -1,0 +1,25 @@
+{
+  "id": "danielsolo1770/rsna-knee-v45-smallcnn-224",
+  "title": "rsna-knee-v45-smallcnn-224",
+  "code_file": "rsna-knee-v45-smallcnn-224.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "dreaddevelopment/knee-raptor-corpus",
+    "dreaddevelopment/knee-raptor-corpus-ext",
+    "tasmeemreza/rsna-knee-refined-llm-labels"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

@@ -1,0 +1,119 @@
+{
+ "bundle_id": "fe055406fad6a12f",
+ "tag": "cnx_r6fm_c352",
+ "arm": "E_lrprior",
+ "models": [
+  "E_lrprior_s0_f0.pt",
+  "E_lrprior_s0_f1.pt",
+  "E_lrprior_s0_f2.pt",
+  "E_lrprior_s0_f3.pt"
+ ],
+ "sha256": {
+  "E_lrprior_s0_f0.pt": "59cc88a197bc80c7fa5faa89e69ae7bec04f69cab5259a23a0d0ceb9431e53f6",
+  "E_lrprior_s0_f1.pt": "3d9dd8d6a1667935ea25e85b2fcfc80c7ae7dd37fe1bb587f8dad9d720fd8066",
+  "E_lrprior_s0_f2.pt": "8d32fa2c57efc8e1c9159cf2b22f38cee0f05dce46aab2f000095847f537b1ea",
+  "E_lrprior_s0_f3.pt": "ea147aac4c30fe5a616b966018446e04bd6815c9965f2ac9b0a4702fa9f32710",
+  "state_spec.json": "3914242b0c404aee625ea65801f14f60adfee326c1ddd6fb96c48ed7050b7ff3",
+  "side_cls.pt": "ab623e2b619db4917639220fed15202e8c8aedd07c8e298a66a2afc0f153650a",
+  "fluid_stacker.json": "9fbd6f652470c5ef131f997edb4e358038937dd45e6f6b65a4afed80e10cf35d",
+  "state_stacker.json": "b05147bb463a389a66a4a0d7ff0555efd2bde6f486718f79e9d7fa3d90b24522"
+ },
+ "backbone": "convnext_small",
+ "size": 384,
+ "crop": 352,
+ "source_run": "D:\\rsna_align_probe\\runs\\cnx_r6fm",
+ "run_config": {
+  "arms": "E_lrprior=lr:lr_prior:w",
+  "backbone": "convnext_small",
+  "init": "/root/autodl-tmp/rsna_align_s0/pretrained/convnext_small_in22k_ft_in1k.safetensors",
+  "seeds": 1,
+  "folds": 4,
+  "epochs": 16,
+  "batch": 2,
+  "train_windows": 176,
+  "crop": 352,
+  "lr": 0.0001,
+  "head_lr": 0.001,
+  "wd": 0.05,
+  "pool_studies": 4344,
+  "gold_studies": 58,
+  "px": "/root/autodl-tmp/rsna_align_s0/px384_v4",
+  "targets": "/root/autodl-tmp/rsna_align_s0/targets/probe_targets_opusv11b_rr6_plr6_cdr.csv"
+ },
+ "src_sha256": {
+  "px_cache.py": "b13e38a7ad3bd496f8027e02209653e224b0926db4f0853eeb0d076a2d6e2632",
+  "compact_train.py": "04df7e2e154b2c2521696908f272940c63ce17e9b6337b85847fee64504eeaba",
+  "knee_anchor_bank_v2.py": "e564807a129dfcd3c984348917436ee6083066a4d685340587ebd1d3ea14f309",
+  "side_common.py": "bbcc5d027834e6a6fd48c4a8cf228e25661b7522c792587c840fe4d7cd5c0566"
+ },
+ "trainer_file": "D:\\rsna_align_probe\\kaggle\\src\\compact_train_v98.py",
+ "trainer_md5": "8622009e3db0414124d5614ed252d7a2",
+ "syn_decomp_models": 4,
+ "syn_decomp_models2": null,
+ "compile": true,
+ "crop2": null,
+ "run_config2": null,
+ "anchor_weights_sha256": "5904dd16eb9a4fd7a1caf90ac977f8fe2ef364908598c23c209db3fe7fd1563e",
+ "gold_in_training": 0,
+ "official_labels_read_by_trainer": false,
+ "model": "compact fine-tuned image model on the pixel cache, report-derived targets",
+ "freeze_blocks": 16,
+ "eval_stride": 1,
+ "state_spec": "state_spec.json",
+ "slices": 3,
+ "phys_mm": 3.5,
+ "views": "v4",
+ "side_model": "side_cls.pt",
+ "side_threshold": 2.0,
+ "side_position_mm": 20.0,
+ "side_max_x": 0.0,
+ "models2": null,
+ "arm2": null,
+ "backbone2": null,
+ "w2": null,
+ "source_run2": null,
+ "init_weights_sha256": null,
+ "init_note": null,
+ "built": "2026-10-11 15:48:38",
+ "fluid_stacker": "fluid_stacker.json",
+ "fluid_stacker_md5": "910ce9aa91342f3dce08b9d2a2fa45bc",
+ "fluid_stacker_sha256": "9fbd6f652470c5ef131f997edb4e358038937dd45e6f6b65a4afed80e10cf35d",
+ "fluid_stacker_adopt": [
+  "Effusion"
+ ],
+ "fluid_stacker_source": "D:\\rsna_align_probe\\runs\\r6_meta_cnx\\fluid_stacker.json",
+ "fluid_stacker_coefficients": {
+  "Effusion": {
+   "b0": -3.7717628528495424,
+   "b_z": 0.3298462654573529,
+   "b_lv": 0.6397309153574466,
+   "b_miss": 2.297714582104971,
+   "volume_column": "eff_sag_p99_open",
+   "weights": [
+    1.0
+   ]
+  }
+ },
+ "state_stacker": "state_stacker.json",
+ "state_stacker_md5": "f0acccbcce7eb68bc5df23aed98aa5fb",
+ "state_stacker_sha256": "b05147bb463a389a66a4a0d7ff0555efd2bde6f486718f79e9d7fa3d90b24522",
+ "state_stacker_adopt": [
+  "Baker's"
+ ],
+ "state_stacker_source": "D:\\rsna_align_probe\\runs\\r6_meta_cnx\\state_stacker.json",
+ "state_stacker_runs": [
+  "cnx_r6fm"
+ ],
+ "state_stacker_needs_volume": false,
+ "state_stacker_features": {
+  "Baker's": [
+   "z",
+   "state:none",
+   "state:small",
+   "state:present_unspecified",
+   "state:moderate",
+   "state:large",
+   "state:ruptured_or_leaking"
+  ]
+ }
+}

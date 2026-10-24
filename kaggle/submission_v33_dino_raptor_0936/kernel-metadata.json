@@ -1,0 +1,29 @@
+{
+  "id": "danielsolo1770/rsna-knee-v33-dino-raptor-0936",
+  "title": "rsna-knee-v33-dino-raptor-0936",
+  "code_file": "rsna-knee-v33-dino-raptor-0936.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "dreaddevelopment/raptor-knee-maxspan",
+    "dreaddevelopment/raptor-knee-widedense",
+    "tonylica/rsna-knee-bend-dinov3-0917-repro-assets"
+  ],
+  "kernel_sources": [
+    "romantamrazov/rsna-knee-dinosaur-v3-train"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [
+    "metaresearch/dinov2/PyTorch/small/1"
+  ],
+  "machine_shape": "NvidiaTeslaT4"
+}

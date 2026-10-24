@@ -1,0 +1,25 @@
+{
+  "id": "danielsolo1770/arm-gold-probe",
+  "title": "arm-gold-probe",
+  "code_file": "arm-gold-probe.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "dreaddevelopment/knee-raptor-corpus",
+    "dreaddevelopment/knee-raptor-corpus-ext",
+    "dreaddevelopment/raptor-knee-maxspan",
+    "dreaddevelopment/raptor-knee-widedense"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

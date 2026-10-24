@@ -1,22 +1,38 @@
+# Local-only data & third-party references (kept on disk, never committed)
 data/
 references/
+artifacts/handoff_lb/
+artifacts/raptor_labels/
+artifacts/hpo_label_audit/
+
+# Kaggle kernel outputs (regenerated per run)
 kaggle/**/output/
+
+# Model weights & large binary arrays (weights deleted 2026-10-25 after close)
 *.pt
 *.pth
 *.ckpt
+*.npy
 *.npz
+
+# Caches & scratch
 __pycache__/
 .pytest_cache/
-.modal.toml
-modal.env
-**/*.secret
-**/token_id
-**/token_secret
-artifacts/v28_cache/
-.playwright-mcp/
+artifacts/_tmp*
 *.log
 *.zip
 *.dat
 *.dat.corrupt
 .download.lock
 
+# Tool state
+.firecrawl/
+.workbuddy-ai/
+.playwright-mcp/
+
+# Secrets
+.modal.toml
+modal.env
+**/*.secret
+**/token_id
+**/token_secret

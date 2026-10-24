@@ -1,0 +1,29 @@
+{
+  "id": "danielsolo1770/rsna-knee-v50-public-0-9586-fork",
+  "title": "RSNA Knee V50 public 0.9586 fork",
+  "code_file": "rsna-knee-v50-public-09586.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "goodpjw2008/rsna-knee-2-5d-convnext-reader",
+    "nartaa/rsna-knee-publication-swa-weights-20261007",
+    "heliosli/rsna-orthofoundation-fold0-epoch7-20261004",
+    "rostigor/rsna-knee-r6-fe055406"
+  ],
+  "kernel_sources": [
+    "goodpjw2008/rsna-knee-coatnet-r6-2-5d-mil-lb-0-958"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+  "machine_shape": "NvidiaTeslaT4"
+}

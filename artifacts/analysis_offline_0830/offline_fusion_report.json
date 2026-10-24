@@ -1,0 +1,456 @@
+{
+ "n_gold": 58,
+ "arms": {
+  "v5_full_swa": {
+   "macro": 0.9131,
+   "per_target": {
+    "ACL": 0.9645,
+    "MCL": 0.9773,
+    "Medial Meniscus": 0.9639,
+    "Lateral Meniscus": 0.8671,
+    "Medial OA": 0.9643,
+    "Lateral OA": 0.8395,
+    "PF OA": 0.8507,
+    "Effusion": 0.9826,
+    "Synovitis": 0.8076,
+    "Baker's": 0.904,
+    "Contusion": 0.9136,
+    "Fracture": 0.9222
+   }
+  },
+  "v4_full": {
+   "macro": 0.9139,
+   "per_target": {
+    "ACL": 0.9804,
+    "MCL": 0.9728,
+    "Medial Meniscus": 0.9519,
+    "Lateral Meniscus": 0.8509,
+    "Medial OA": 0.9783,
+    "Lateral OA": 0.8279,
+    "PF OA": 0.8237,
+    "Effusion": 0.9851,
+    "Synovitis": 0.7766,
+    "Baker's": 0.9601,
+    "Contusion": 0.9339,
+    "Fracture": 0.925
+   }
+  },
+  "v4_full_swa": {
+   "macro": 0.912,
+   "per_target": {
+    "ACL": 0.9816,
+    "MCL": 0.9615,
+    "Medial Meniscus": 0.9435,
+    "Lateral Meniscus": 0.8472,
+    "Medial OA": 0.9814,
+    "Lateral OA": 0.8279,
+    "PF OA": 0.8275,
+    "Effusion": 0.9839,
+    "Synovitis": 0.7742,
+    "Baker's": 0.9638,
+    "Contusion": 0.9258,
+    "Fracture": 0.9264
+   }
+  },
+  "v38_base": {
+   "macro": 0.9131,
+   "per_target": {
+    "ACL": 0.9645,
+    "MCL": 0.9773,
+    "Medial Meniscus": 0.9639,
+    "Lateral Meniscus": 0.8671,
+    "Medial OA": 0.9643,
+    "Lateral OA": 0.8395,
+    "PF OA": 0.8507,
+    "Effusion": 0.9826,
+    "Synovitis": 0.8076,
+    "Baker's": 0.904,
+    "Contusion": 0.9136,
+    "Fracture": 0.9222
+   }
+  },
+  "v38_ep16": {
+   "macro": 0.9012,
+   "per_target": {
+    "ACL": 0.9534,
+    "MCL": 0.966,
+    "Medial Meniscus": 0.97,
+    "Lateral Meniscus": 0.8758,
+    "Medial OA": 0.9597,
+    "Lateral OA": 0.8453,
+    "PF OA": 0.8366,
+    "Effusion": 0.9602,
+    "Synovitis": 0.7957,
+    "Baker's": 0.904,
+    "Contusion": 0.8934,
+    "Fracture": 0.8542
+   }
+  },
+  "v38_swa": {
+   "macro": 0.9034,
+   "per_target": {
+    "ACL": 0.9534,
+    "MCL": 0.9705,
+    "Medial Meniscus": 0.9639,
+    "Lateral Meniscus": 0.8634,
+    "Medial OA": 0.9628,
+    "Lateral OA": 0.8337,
+    "PF OA": 0.8443,
+    "Effusion": 0.9652,
+    "Synovitis": 0.8029,
+    "Baker's": 0.9221,
+    "Contusion": 0.9001,
+    "Fracture": 0.8583
+   }
+  },
+  "v38_epens": {
+   "macro": 0.9043,
+   "per_target": {
+    "ACL": 0.9534,
+    "MCL": 0.9728,
+    "Medial Meniscus": 0.9639,
+    "Lateral Meniscus": 0.8646,
+    "Medial OA": 0.9628,
+    "Lateral OA": 0.8356,
+    "PF OA": 0.8443,
+    "Effusion": 0.9652,
+    "Synovitis": 0.8017,
+    "Baker's": 0.9221,
+    "Contusion": 0.9001,
+    "Fracture": 0.8653
+   }
+  },
+  "v38_best": {
+   "macro": 0.9131,
+   "per_target": {
+    "ACL": 0.9645,
+    "MCL": 0.9773,
+    "Medial Meniscus": 0.9639,
+    "Lateral Meniscus": 0.8671,
+    "Medial OA": 0.9643,
+    "Lateral OA": 0.8395,
+    "PF OA": 0.8507,
+    "Effusion": 0.9826,
+    "Synovitis": 0.8076,
+    "Baker's": 0.904,
+    "Contusion": 0.9136,
+    "Fracture": 0.9222
+   }
+  },
+  "v31_oof": {
+   "macro": 0.8305,
+   "per_target": {
+    "ACL": 0.8566,
+    "MCL": 0.8005,
+    "Medial Meniscus": 0.7716,
+    "Lateral Meniscus": 0.764,
+    "Medial OA": 0.938,
+    "Lateral OA": 0.8221,
+    "PF OA": 0.8095,
+    "Effusion": 0.8286,
+    "Synovitis": 0.7288,
+    "Baker's": 0.8913,
+    "Contusion": 0.9312,
+    "Fracture": 0.8236
+   }
+  }
+ },
+ "fusions": [
+  {
+   "label": "v5+v4+v31 (v31 w=0.2)",
+   "arms": {
+    "v5_full_swa": 0.32000000000000006,
+    "v4_full": 0.48,
+    "v31_oof": 0.2
+   },
+   "macro": 0.9196
+  },
+  {
+   "label": "v5+v4+v31 (v31 w=0.1)",
+   "arms": {
+    "v5_full_swa": 0.36000000000000004,
+    "v4_full": 0.54,
+    "v31_oof": 0.1
+   },
+   "macro": 0.9185
+  },
+  {
+   "label": "all four equal",
+   "arms": {
+    "v5_full_swa": 1,
+    "v4_full": 1,
+    "v4_full_swa": 1,
+    "v31_oof": 1
+   },
+   "macro": 0.9176
+  },
+  {
+   "label": "v5+v4 w60 (V37 config)",
+   "arms": {
+    "v5_full_swa": 0.4,
+    "v4_full": 0.6
+   },
+   "macro": 0.9172
+  },
+  {
+   "label": "v5+v4+v31 (v31 w=0.3)",
+   "arms": {
+    "v5_full_swa": 0.27999999999999997,
+    "v4_full": 0.42,
+    "v31_oof": 0.3
+   },
+   "macro": 0.9172
+  },
+  {
+   "label": "v5+v4 equal",
+   "arms": {
+    "v5_full_swa": 0.5,
+    "v4_full": 0.5
+   },
+   "macro": 0.9169
+  },
+  {
+   "label": "v4+v38_best",
+   "arms": {
+    "v4_full": 0.5,
+    "v38_best": 0.5
+   },
+   "macro": 0.9169
+  },
+  {
+   "label": "v5+v4+v38_best",
+   "arms": {
+    "v5_full_swa": 0.4,
+    "v4_full": 0.6,
+    "v38_best": 0.5
+   },
+   "macro": 0.9159
+  },
+  {
+   "label": "v5+v4+v38_epens",
+   "arms": {
+    "v5_full_swa": 0.4,
+    "v4_full": 0.6,
+    "v38_epens": 0.5
+   },
+   "macro": 0.9143
+  },
+  {
+   "label": "v5+v4+v38_swa",
+   "arms": {
+    "v5_full_swa": 0.4,
+    "v4_full": 0.6,
+    "v38_swa": 0.5
+   },
+   "macro": 0.9142
+  },
+  {
+   "label": "v4 solo",
+   "arms": {
+    "v4_full": 1
+   },
+   "macro": 0.9139
+  },
+  {
+   "label": "v4+v38_epens",
+   "arms": {
+    "v4_full": 0.5,
+    "v38_epens": 0.5
+   },
+   "macro": 0.9133
+  },
+  {
+   "label": "v5 solo",
+   "arms": {
+    "v5_full_swa": 1
+   },
+   "macro": 0.9131
+  },
+  {
+   "label": "v38_best solo",
+   "arms": {
+    "v38_best": 1
+   },
+   "macro": 0.9131
+  },
+  {
+   "label": "v5+v38_best",
+   "arms": {
+    "v5_full_swa": 0.5,
+    "v38_best": 0.5
+   },
+   "macro": 0.9131
+  },
+  {
+   "label": "v5+v4+v38_ep16",
+   "arms": {
+    "v5_full_swa": 0.4,
+    "v4_full": 0.6,
+    "v38_ep16": 0.5
+   },
+   "macro": 0.913
+  },
+  {
+   "label": "v4+v38_swa",
+   "arms": {
+    "v4_full": 0.5,
+    "v38_swa": 0.5
+   },
+   "macro": 0.9126
+  },
+  {
+   "label": "v4+v38_ep16",
+   "arms": {
+    "v4_full": 0.5,
+    "v38_ep16": 0.5
+   },
+   "macro": 0.9118
+  },
+  {
+   "label": "v5+v38_epens",
+   "arms": {
+    "v5_full_swa": 0.5,
+    "v38_epens": 0.5
+   },
+   "macro": 0.911
+  },
+  {
+   "label": "v5+v38_swa",
+   "arms": {
+    "v5_full_swa": 0.5,
+    "v38_swa": 0.5
+   },
+   "macro": 0.9104
+  },
+  {
+   "label": "v5+v38_ep16",
+   "arms": {
+    "v5_full_swa": 0.5,
+    "v38_ep16": 0.5
+   },
+   "macro": 0.9085
+  },
+  {
+   "label": "v38_epens solo",
+   "arms": {
+    "v38_epens": 1
+   },
+   "macro": 0.9043
+  },
+  {
+   "label": "v38_swa solo",
+   "arms": {
+    "v38_swa": 1
+   },
+   "macro": 0.9034
+  },
+  {
+   "label": "v5+v4+v31 (v31 w=0.5)",
+   "arms": {
+    "v5_full_swa": 0.2,
+    "v4_full": 0.3,
+    "v31_oof": 0.5
+   },
+   "macro": 0.9031
+  },
+  {
+   "label": "v5+v31 50/50",
+   "arms": {
+    "v5_full_swa": 0.5,
+    "v31_oof": 0.5
+   },
+   "macro": 0.9016
+  },
+  {
+   "label": "v38_ep16 solo",
+   "arms": {
+    "v38_ep16": 1
+   },
+   "macro": 0.9012
+  },
+  {
+   "label": "v4+v31 50/50",
+   "arms": {
+    "v4_full": 0.5,
+    "v31_oof": 0.5
+   },
+   "macro": 0.9
+  }
+ ],
+ "corrs": {
+  "v5_full_swa~v4_full": 0.9288,
+  "v5_full_swa~v4_full_swa": 0.9305,
+  "v5_full_swa~v38_base": 1.0,
+  "v5_full_swa~v38_ep16": 0.9592,
+  "v5_full_swa~v38_swa": 0.9648,
+  "v5_full_swa~v38_epens": 0.9649,
+  "v5_full_swa~v38_best": 1.0,
+  "v5_full_swa~v31_oof": 0.6568,
+  "v4_full~v4_full_swa": 0.9952,
+  "v4_full~v38_base": 0.9288,
+  "v4_full~v38_ep16": 0.9246,
+  "v4_full~v38_swa": 0.932,
+  "v4_full~v38_epens": 0.9323,
+  "v4_full~v38_best": 0.9288,
+  "v4_full~v31_oof": 0.6597,
+  "v4_full_swa~v38_base": 0.9305,
+  "v4_full_swa~v38_ep16": 0.9263,
+  "v4_full_swa~v38_swa": 0.933,
+  "v4_full_swa~v38_epens": 0.9337,
+  "v4_full_swa~v38_best": 0.9305,
+  "v4_full_swa~v31_oof": 0.6531,
+  "v38_base~v38_ep16": 0.9592,
+  "v38_base~v38_swa": 0.9648,
+  "v38_base~v38_epens": 0.9649,
+  "v38_base~v38_best": 1.0,
+  "v38_base~v31_oof": 0.6568,
+  "v38_ep16~v38_swa": 0.9939,
+  "v38_ep16~v38_epens": 0.9937,
+  "v38_ep16~v38_best": 0.9592,
+  "v38_ep16~v31_oof": 0.659,
+  "v38_swa~v38_epens": 0.9995,
+  "v38_swa~v38_best": 0.9648,
+  "v38_swa~v31_oof": 0.662,
+  "v38_epens~v38_best": 0.9649,
+  "v38_epens~v31_oof": 0.6629,
+  "v38_best~v31_oof": 0.6568
+ },
+ "loo_teacher_gate": {
+  "soft_only": 0.8927073353343263,
+  "v4_only": 0.9141420421980243,
+  "v5_only": 0.912910332401342,
+  "fused_teacher(v4+v5)": 0.917122994331747,
+  "sweeps": [
+   {
+    "blend_w": 0.4,
+    "LOO_v4+soft": 0.9219,
+    "v5+soft (V38 teacher style)": 0.921,
+    "fused+soft (V38 actual)": 0.9232
+   },
+   {
+    "blend_w": 0.5,
+    "LOO_v4+soft": 0.9251,
+    "v5+soft (V38 teacher style)": 0.9244,
+    "fused+soft (V38 actual)": 0.9265
+   },
+   {
+    "blend_w": 0.6,
+    "LOO_v4+soft": 0.9269,
+    "v5+soft (V38 teacher style)": 0.9256,
+    "fused+soft (V38 actual)": 0.9292
+   },
+   {
+    "blend_w": 0.7,
+    "LOO_v4+soft": 0.9257,
+    "v5+soft (V38 teacher style)": 0.9261,
+    "fused+soft (V38 actual)": 0.9284
+   },
+   {
+    "blend_w": 0.8,
+    "LOO_v4+soft": 0.9225,
+    "v5+soft (V38 teacher style)": 0.9223,
+    "fused+soft (V38 actual)": 0.9254
+   }
+  ]
+ }
+}

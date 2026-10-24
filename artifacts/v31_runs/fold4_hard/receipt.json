@@ -1,0 +1,16 @@
+{
+ "fold": 4,
+ "best_val_auc": 0.8261384755934525,
+ "status": "complete",
+ "epochs_done": 24,
+ "used_ema": true,
+ "best_epoch": 15,
+ "note": "trained on Kaggle T4; best.pt downloaded 2026-08-25; last.pt was 0-byte (interrupted) and discarded",
+ "cfg": {
+  "hard_labels": true,
+  "fold": 4,
+  "epochs": 24,
+  "batch": 16,
+  "dino_id": "facebook/dinov2-small"
+ }
+}

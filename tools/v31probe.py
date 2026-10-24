@@ -50,6 +50,8 @@ class Cfg:
     out_dir: str = "/content/drive/MyDrive/rsna-knee-v31/fold0_fullft"
     labels_csv: str = ""   # optional: overrides y.npy inside the cache
     hard_labels: bool = False  # binarize targets (>0.5 -> 1.0)
+    gold_holdout: bool = False  # train on labels_csv studies only; validate on the 58 gold
+    gold_csv: str = ""     # competition train.csv (true gold labels) for gold_holdout mode
     fold: int = 0
     epochs: int = 30
     batch: int = 8
@@ -67,6 +69,8 @@ class Cfg:
     num_workers: int = 4
     seed: int = SEED
     dino_id: str = "facebook/dinov2-small"
+    max_wall_h: float = 0.0      # Kaggle: stop gracefully before this wall budget (0=off)
+    ckpt_every_min: float = 0.0  # Kaggle: mid-epoch resumable checkpoint period (0=off)
 
 
 class CacheDS(Dataset):
@@ -239,6 +243,7 @@ def main(cfg=Cfg()):
     out = Path(cfg.out_dir)
     out.mkdir(parents=True, exist_ok=True)
     man, x, mask, y, uids = load_cache(Path(cfg.cache_dir))
+    ext = None
     if getattr(cfg, "labels_csv", ""):
         ext = pd.read_csv(cfg.labels_csv, dtype={"StudyInstanceUID": str}).set_index("StudyInstanceUID")
         rows = []
@@ -256,12 +261,31 @@ def main(cfg=Cfg()):
         y = (y > 0.5).astype(np.float32)
         log("HARD labels active (binarized at 0.5)", t0)
     log(f"cache n={len(uids)} shape={tuple(x.shape)} recipe={man.get('recipe')}", t0)
-    groups = np.array([report_group(u) for u in uids])
-    folds = list(GroupKFold(N_FOLDS).split(np.arange(len(uids)), groups=groups))
-    tr_idx, va_idx = folds[cfg.fold]
-    ds_tr = CacheDS(x, mask, y, uids, tr_idx, augment=True)
-    ds_va = CacheDS(x, mask, y, uids, va_idx, augment=False)
-    log(f"fold{cfg.fold} train={len(ds_tr)} val={len(ds_va)}", t0)
+    if getattr(cfg, "gold_holdout", False):
+        # Clean arm: train ONLY on the pseudo-labelled studies; the 58 gold studies are
+        # the validation set with their TRUE labels (gold never enters training).
+        assert ext is not None, "gold_holdout requires labels_csv"
+        gdf = pd.read_csv(cfg.gold_csv, dtype={"StudyInstanceUID": str})
+        gdf = gdf[gdf[TARGETS].notna().all(axis=1)].set_index("StudyInstanceUID")
+        uid2i = {u: i for i, u in enumerate(uids)}
+        gold_idx = [uid2i[u] for u in gdf.index if u in uid2i]
+        assert len(gold_idx) == len(gdf), "some gold studies missing from the cache"
+        y[gold_idx] = gdf.loc[[uids[i] for i in gold_idx], TARGETS].to_numpy(np.float32)
+        gold_set = set(gold_idx)
+        tr_idx = np.array([i for i in range(len(uids))
+                           if uids[i] in ext.index and i not in gold_set])
+        va_idx = np.array(sorted(gold_idx))
+        ds_tr = CacheDS(x, mask, y, uids, tr_idx, augment=True)
+        ds_va = CacheDS(x, mask, y, uids, va_idx, augment=False)
+        log(f"gold_holdout: train={len(ds_tr)} gold-val={len(ds_va)}", t0)
+    else:
+        groups = np.array([report_group(u) for u in uids])
+        folds = list(GroupKFold(N_FOLDS).split(np.arange(len(uids)), groups=groups))
+        tr_idx, va_idx = folds[cfg.fold]
+        ds_tr = CacheDS(x, mask, y, uids, tr_idx, augment=True)
+        ds_va = CacheDS(x, mask, y, uids, va_idx, augment=False)
+        log(f"fold{cfg.fold} train={len(ds_tr)} val={len(ds_va)}", t0)
+    va_uids = np.array([uids[int(i)] for i in va_idx])
     dev = torch.device("cuda")
     # Laptop-driver clock governor fix: keep a trickle of CUDA work alive so the
     # GPU stays in P0 instead of dropping to ~1 GHz between data-prep gaps.
@@ -300,8 +324,30 @@ def main(cfg=Cfg()):
         if "ema" in ck:
             ema.shadow = {k: v.to(dev) for k, v in ck["ema"].items()}
         log(f"resume ep={start_ep} best={best:.4f}", t0)
+    stopped_early = False
+
+    def out_of_time(reserve_s=0.0):
+        return cfg.max_wall_h > 0 and (time.time() - t0) + reserve_s > cfg.max_wall_h * 3600.0
+
+    def save_resume(note="running"):
+        torch.save({"model": net.state_dict(), "opt": opt.state_dict(), "epoch": ep,
+                    "best": best, "bad": bad, "history": history,
+                    "ema": {k: v.cpu() for k, v in ema.shadow.items()},
+                    "cfg": asdict(cfg)}, last_p)
+        (out / "history.json").write_text(json.dumps(history, indent=1))
+        (out / "receipt.json").write_text(json.dumps(
+            {"fold": cfg.fold, "best_val_auc": best, "last_epoch": ep,
+             "status": note, "cfg": asdict(cfg)}, indent=1))
+        log(f"[{note}] resume ckpt saved (ep{ep}, best={best:.4f})", t0)
+
+    t_last_ckpt = time.time()
     nw = cfg.num_workers
     for ep in range(start_ep, cfg.epochs):
+        if ep > start_ep and out_of_time(reserve_s=1800):
+            log(f"[wall] {cfg.max_wall_h}h budget; stopping before ep{ep} "
+                f"({(time.time() - t0) / 3600:.2f}h elapsed)", t0)
+            stopped_early = True
+            break
         cosine_lr(opt, ep, cfg.epochs, cfg.warmup, base_lrs)
         net.train()
         losses = []
@@ -346,6 +392,17 @@ def main(cfg=Cfg()):
                 log(f"ep{ep} step {done}/{len(loader)} "
                     f"loss~{float(np.mean(losses[-50:])):.4f} "
                     f"{done/el:.2f} it/s ETA {eta/60:.1f}min alloc={mem:.2f}GB", t0)
+            if cfg.ckpt_every_min > 0 and time.time() - t_last_ckpt > cfg.ckpt_every_min * 60:
+                save_resume("mid")
+                t_last_ckpt = time.time()
+            if out_of_time(reserve_s=480):
+                save_resume("wallstop")
+                log("[wall] hard budget hit mid-epoch; stopping cleanly", t0)
+                stopped_early = True
+                break
+
+        if stopped_early:
+            break
 
         def evaluate(model):
             model.eval()
@@ -373,11 +430,13 @@ def main(cfg=Cfg()):
                                         model(torch.flip(xb[i:i+1], dims=[-1]), mb[i:i+1])[0]))
                                 ps.append(pr.float().cpu().numpy())
                     ys.append(tb.numpy())
-            return macro_auc(np.concatenate(ys), np.concatenate(ps))
+            Y = np.concatenate(ys)
+            P = np.concatenate(ps)
+            return macro_auc(Y, P), Y, P
 
-        auc_raw = evaluate(net)
+        auc_raw, Y_va, P_raw = evaluate(net)
         ema.copy_to(ema_net)
-        auc_ema = evaluate(ema_net)
+        auc_ema, _Y2, P_ema = evaluate(ema_net)
         auc = max(auc_raw, auc_ema)
         use_ema = auc_ema >= auc_raw
         row = {"epoch": ep, "loss": round(float(np.mean(losses)), 4),
@@ -393,21 +452,18 @@ def main(cfg=Cfg()):
             src = ema_net if use_ema else net
             torch.save({"model": src.state_dict(), "auc": best, "epoch": ep,
                         "fold": cfg.fold, "used_ema": use_ema}, best_p)
+            if cfg.gold_holdout:
+                np.savez(out / "gold_preds.npz", pred=P_ema if use_ema else P_raw,
+                         truth=Y_va, ids=va_uids)
         else:
             bad += 1
-        torch.save({"model": net.state_dict(), "opt": opt.state_dict(), "epoch": ep,
-                    "best": best, "bad": bad, "history": history,
-                    "ema": {k: v.cpu() for k, v in ema.shadow.items()},
-                    "cfg": asdict(cfg)}, last_p)
-        (out / "history.json").write_text(json.dumps(history, indent=1))
-        (out / "receipt.json").write_text(json.dumps(
-            {"fold": cfg.fold, "best_val_auc": best, "last_epoch": ep,
-             "status": "running", "cfg": asdict(cfg)}, indent=1))
+        save_resume("running")
         if bad >= cfg.patience:
             log(f"early stop best={best:.4f}", t0)
             break
     (out / "receipt.json").write_text(json.dumps(
-        {"fold": cfg.fold, "best_val_auc": best, "status": "complete",
+        {"fold": cfg.fold, "best_val_auc": best,
+         "status": "wall-stopped" if stopped_early else "complete",
          "epochs_done": len(history), "cfg": asdict(cfg)}, indent=1))
     log(f"DONE best={best:.4f}", t0)
 

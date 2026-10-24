@@ -1,0 +1,56 @@
+{
+  "bag_raw_path": "/kaggle/working/public0033_bag_raw.csv",
+  "bag_raw_sha256": "f8360efe61cd8dcc6acdb52861172f6658a549b0b3f79db8ec619f77755222b3",
+  "csv_vs_memory_max_abs": 0.0,
+  "custom_route": {
+    "bag_rank_weight": 0.1,
+    "final_rerank": true,
+    "raptor_rank_weight": 0.6,
+    "target": "Medial Meniscus",
+    "transformer_rank_weight": 0.3,
+    "weights_sum": 0.9999999999999999
+  },
+  "legacy_post_parent_residual": {
+    "bag_rank_weight": 0.0,
+    "enabled": false,
+    "parent_rank_weight": 1.0
+  },
+  "output_path": "/kaggle/working/submission.csv",
+  "output_sha256": "11bb66f2bc7ca21d4282de3696f5ea5531f90c6c2958164b6ad6931811af2213",
+  "parent_authority": "/kaggle/working/submission_parent_exact.csv",
+  "parent_submission_sha256": "1b03ce7f093efaffdf9acb9e8af05946bdd60b4fec1e0b1fc536b8198abb513b",
+  "parent_uid_sha256": "f8308447b47011121885d31b754b690b1bd3b51a78e8f07c0b148161f8396ea0",
+  "rank": "float64_average_tie_percentile_rank_over_all_test_studies",
+  "schema_version": "public0033_medial_t30_r60_b10_overlay_v1",
+  "status": "passed",
+  "targets_changed": [
+    "Medial Meniscus"
+  ],
+  "untouched_target_raw_token_sha256": {
+    "ACL": "0dc03ed0a5abc92ddc0b225952fda07248096c675f5e117cadf4c6dd06dad391",
+    "Baker's": "a26f07b727da54d5106efb4688f26c038826deab66ef610a32257be49dcd9244",
+    "Contusion": "ba35d1532942557eb9e3dc37e3e7d2a4291c2ae38dc0956cf30c55619f47e188",
+    "Effusion": "f0f658202946aea749d1e59c0e141d327568d63e59629831fae8cb3747a74001",
+    "Fracture": "ba35d1532942557eb9e3dc37e3e7d2a4291c2ae38dc0956cf30c55619f47e188",
+    "Lateral Meniscus": "ba35d1532942557eb9e3dc37e3e7d2a4291c2ae38dc0956cf30c55619f47e188",
+    "Lateral OA": "0dc03ed0a5abc92ddc0b225952fda07248096c675f5e117cadf4c6dd06dad391",
+    "MCL": "ba35d1532942557eb9e3dc37e3e7d2a4291c2ae38dc0956cf30c55619f47e188",
+    "Medial OA": "f0f658202946aea749d1e59c0e141d327568d63e59629831fae8cb3747a74001",
+    "PF OA": "0dc03ed0a5abc92ddc0b225952fda07248096c675f5e117cadf4c6dd06dad391",
+    "Synovitis": "ba35d1532942557eb9e3dc37e3e7d2a4291c2ae38dc0956cf30c55619f47e188"
+  },
+  "untouched_targets": [
+    "ACL",
+    "MCL",
+    "Lateral Meniscus",
+    "Medial OA",
+    "Lateral OA",
+    "PF OA",
+    "Effusion",
+    "Synovitis",
+    "Baker's",
+    "Contusion",
+    "Fracture"
+  ],
+  "visible_parent_sha_gate_applied": true
+}

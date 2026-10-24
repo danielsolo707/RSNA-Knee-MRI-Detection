@@ -1,0 +1,27 @@
+{
+  "id": "prvsiyan/the-bee-s-knees-final-rsna-push",
+  "id_no": 133138832,
+  "title": "The bee's knees - final RSNA push",
+  "code_file": "the-bee-s-knees-final-rsna-push.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": false,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "rostigor/rsna-knee-r6-fe055406",
+    "nartaa/rsna-knee-publication-swa-weights-20261007",
+    "heliosli/rsna-orthofoundation-fold0-epoch7-20261004"
+  ],
+  "kernel_sources": [],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [],
+  "docker_image": "gcr.io/kaggle-private-byod/python@sha256:2757e0c7d1e0a9cb43da657b97e223c321a98f5014bdf64f44f2f6b083ad2b2f",
+  "machine_shape": "NvidiaTeslaT4"
+}

@@ -1,0 +1,30 @@
+[    2.3s] labels override from C:\Users\ASUS\Desktop\DanielEmpire\ML\RSNA Knee Abnormality Detection\artifacts\pseudo_labels\pseudo_labels_LOO_v4_w60.csv: 4349 rows, 4407 studies changed >0.05
+[    2.3s] cache n=4407 shape=(4407, 21, 1, 280, 280) recipe=v31-280-7anchor-3fs-planes
+[    2.4s] gold_holdout: train=4349 gold-val=58
+[    3.1s] GPU clock-warmer started
+[    9.8s] dino dim=384 blocks=12 UNFROZEN=ALL(LLRD 0.7)
+[   13.4s] resume ep=1 best=0.6774
+[   47.4s] ep1 step 50/1088 loss~0.8290 1.47 it/s ETA 11.8min alloc=0.75GB
+[   80.1s] ep1 step 100/1088 loss~0.8175 1.50 it/s ETA 11.0min alloc=0.66GB
+[  113.4s] ep1 step 150/1088 loss~0.8297 1.50 it/s ETA 10.4min alloc=0.75GB
+[  145.8s] ep1 step 200/1088 loss~0.8205 1.51 it/s ETA 9.8min alloc=0.66GB
+[  178.5s] ep1 step 250/1088 loss~0.8173 1.51 it/s ETA 9.2min alloc=0.75GB
+[  211.1s] ep1 step 300/1088 loss~0.8200 1.52 it/s ETA 8.7min alloc=0.66GB
+[  246.5s] ep1 step 350/1088 loss~0.8148 1.50 it/s ETA 8.2min alloc=0.75GB
+[  279.0s] ep1 step 400/1088 loss~0.8200 1.51 it/s ETA 7.6min alloc=0.66GB
+[  314.5s] ep1 step 450/1088 loss~0.8111 1.49 it/s ETA 7.1min alloc=0.75GB
+[  347.4s] ep1 step 500/1088 loss~0.8237 1.50 it/s ETA 6.5min alloc=0.66GB
+[  382.9s] ep1 step 550/1088 loss~0.8190 1.49 it/s ETA 6.0min alloc=0.75GB
+[  417.3s] ep1 step 600/1088 loss~0.8228 1.49 it/s ETA 5.5min alloc=0.66GB
+[  451.1s] ep1 step 650/1088 loss~0.8108 1.48 it/s ETA 4.9min alloc=0.75GB
+[  484.0s] ep1 step 700/1088 loss~0.8237 1.49 it/s ETA 4.3min alloc=0.66GB
+[  517.3s] ep1 step 750/1088 loss~0.8150 1.49 it/s ETA 3.8min alloc=0.75GB
+[  550.1s] ep1 step 800/1088 loss~0.8251 1.49 it/s ETA 3.2min alloc=0.66GB
+[  585.3s] ep1 step 850/1088 loss~0.8083 1.49 it/s ETA 2.7min alloc=0.75GB
+[  618.4s] ep1 step 900/1088 loss~0.8175 1.49 it/s ETA 2.1min alloc=0.66GB
+[  651.1s] ep1 step 950/1088 loss~0.8221 1.49 it/s ETA 1.5min alloc=0.75GB
+[  683.8s] ep1 step 1000/1088 loss~0.8070 1.49 it/s ETA 1.0min alloc=0.66GB
+[  717.0s] ep1 step 1050/1088 loss~0.8172 1.49 it/s ETA 0.4min alloc=0.75GB
+[  744.1s] ep1 step 1088/1088 loss~0.8084 1.49 it/s ETA 0.0min alloc=0.60GB
+[  753.1s] {"epoch": 1, "loss": 0.8183, "val_auc_raw": 0.6828, "val_auc_ema": 0.6761, "val_auc": 0.6828, "ep_min": 12.3, "used_ema": false}
+[  753.6s] DONE best=0.6828

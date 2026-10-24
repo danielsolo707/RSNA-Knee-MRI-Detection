@@ -1,0 +1,46 @@
+{
+  "n_gold_train_csv": 58,
+  "n_gold_in_cache": 58,
+  "n_oof": 58,
+  "fold_gold_n": [
+    13,
+    10,
+    14,
+    13,
+    8
+  ],
+  "oof_macro_auc": 0.8304744845217776,
+  "fivefold_mean_macro_auc": 0.9326951213737287,
+  "oof_per_target": {
+    "ACL": 0.8566176470588236,
+    "MCL": 0.800453514739229,
+    "Medial Meniscus": 0.7716346153846154,
+    "Lateral Meniscus": 0.7639751552795031,
+    "Medial OA": 0.937984496124031,
+    "Lateral OA": 0.8220502901353965,
+    "PF OA": 0.8095238095238095,
+    "Effusion": 0.8285714285714285,
+    "Synovitis": 0.7287933094384706,
+    "Baker's": 0.891304347826087,
+    "Contusion": 0.9311740890688259,
+    "Fracture": 0.8236111111111111
+  },
+  "fivefold_mean_per_target": {
+    "ACL": 0.9473039215686275,
+    "MCL": 0.8321995464852607,
+    "Medial Meniscus": 0.9326923076923077,
+    "Lateral Meniscus": 0.9031055900621117,
+    "Medial OA": 0.9720930232558139,
+    "Lateral OA": 0.8936170212765957,
+    "PF OA": 0.8777348777348778,
+    "Effusion": 0.9739130434782609,
+    "Synovitis": 0.9091995221027479,
+    "Baker's": 0.9981884057971014,
+    "Contusion": 0.9689608636977058,
+    "Fracture": 0.9833333333333334
+  },
+  "missing_from_cache": [],
+  "seconds": 29.6,
+  "recipe": "v31-280-7anchor-3fs-planes",
+  "note": "OOF = each gold study predicted by the fold that held it out. fivefold_mean = average of all 5 models on every gold row."
+}

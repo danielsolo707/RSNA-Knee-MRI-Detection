@@ -1,0 +1,25 @@
+{
+  "id": "danielsolo1770/pseudo-labels-v5",
+  "title": "pseudo-labels-v5",
+  "code_file": "pseudo-labels-v5.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": false,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "dreaddevelopment/knee-raptor-corpus",
+    "dreaddevelopment/knee-raptor-corpus-ext",
+    "dreaddevelopment/raptor-knee-maxspan",
+    "dreaddevelopment/raptor-knee-widedense"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}

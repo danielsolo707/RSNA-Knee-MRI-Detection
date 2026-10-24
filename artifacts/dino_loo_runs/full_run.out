@@ -1,0 +1,25 @@
+[    2.6s] labels override from C:\Users\ASUS\Desktop\DanielEmpire\ML\RSNA Knee Abnormality Detection\artifacts\pseudo_labels\pseudo_labels_LOO_v4_w60.csv: 4349 rows, 4407 studies changed >0.05
+[    2.6s] cache n=4407 shape=(4407, 21, 1, 280, 280) recipe=v31-280-7anchor-3fs-planes
+[    2.7s] gold_holdout: train=4349 gold-val=58
+[    3.4s] GPU clock-warmer started
+[    8.9s] dino dim=384 blocks=12 UNFROZEN=ALL(LLRD 0.7)
+[   77.0s] ep0 step 50/544 loss~0.8746 0.75 it/s ETA 10.9min alloc=0.65GB
+[  142.2s] ep0 step 100/544 loss~0.8691 0.76 it/s ETA 9.7min alloc=0.65GB
+[  206.6s] ep0 step 150/544 loss~0.8494 0.77 it/s ETA 8.6min alloc=0.65GB
+[  273.0s] ep0 step 200/544 loss~0.8390 0.76 it/s ETA 7.5min alloc=0.65GB
+[  338.6s] ep0 step 250/544 loss~0.8367 0.76 it/s ETA 6.4min alloc=0.65GB
+[  403.0s] ep0 step 300/544 loss~0.8327 0.76 it/s ETA 5.3min alloc=0.65GB
+[  470.0s] ep0 step 350/544 loss~0.8288 0.76 it/s ETA 4.2min alloc=0.65GB
+[  535.6s] ep0 step 400/544 loss~0.8279 0.76 it/s ETA 3.1min alloc=0.65GB
+[  601.9s] ep0 step 450/544 loss~0.8279 0.76 it/s ETA 2.1min alloc=0.65GB
+[  665.8s] ep0 step 500/544 loss~0.8239 0.76 it/s ETA 1.0min alloc=0.65GB
+[  722.0s] ep0 step 544/544 loss~0.8194 0.76 it/s ETA 0.0min alloc=0.59GB
+[  733.2s] {"epoch": 0, "loss": 0.8392, "val_auc_raw": 0.6882, "val_auc_ema": 0.642, "val_auc": 0.6882, "ep_min": 12.0, "used_ema": false}
+[  799.2s] ep1 step 50/544 loss~0.8270 0.76 it/s ETA 10.8min alloc=0.65GB
+[  867.9s] ep1 step 100/544 loss~0.8213 0.74 it/s ETA 9.9min alloc=0.65GB
+[  937.4s] ep1 step 150/544 loss~0.8260 0.74 it/s ETA 8.9min alloc=0.65GB
+[ 1004.9s] ep1 step 200/544 loss~0.8157 0.74 it/s ETA 7.8min alloc=0.65GB
+[ 1074.5s] ep1 step 250/544 loss~0.8215 0.73 it/s ETA 6.7min alloc=0.65GB
+[ 1145.9s] ep1 step 300/544 loss~0.8167 0.73 it/s ETA 5.6min alloc=0.65GB
+[ 1212.1s] ep1 step 350/544 loss~0.8183 0.73 it/s ETA 4.4min alloc=0.65GB
+[ 1285.1s] ep1 step 400/544 loss~0.8226 0.73 it/s ETA 3.3min alloc=0.65GB

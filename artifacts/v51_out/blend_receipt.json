@@ -1,0 +1,49 @@
+{
+ "weights": {
+  "raptor": 0.5,
+  "ours": 0.5,
+  "raptor_per_class": {
+   "Medial OA": 0.5,
+   "Lateral OA": 0.2,
+   "PF OA": 0.6,
+   "Synovitis": 0.8,
+   "Baker's": 0.35
+  }
+ },
+ "rows": 3,
+ "raptor_failed": 0,
+ "ours_failed": 0,
+ "raptor_seconds": 72.9,
+ "total_seconds": 526.6,
+ "spearman_raptor_raw_vs_sub": {
+  "ACL": 1.0,
+  "MCL": 1.0,
+  "Medial Meniscus": 1.0,
+  "Lateral Meniscus": 1.0,
+  "Medial OA": 1.0,
+  "Lateral OA": 1.0,
+  "PF OA": 1.0,
+  "Effusion": 1.0,
+  "Synovitis": 1.0,
+  "Baker's": 1.0,
+  "Contusion": 1.0,
+  "Fracture": 1.0
+ },
+ "spearman_raptor_vs_ours": {
+  "ACL": 1.0,
+  "MCL": 1.0,
+  "Medial Meniscus": 1.0,
+  "Lateral Meniscus": -0.5,
+  "Medial OA": -0.5,
+  "Lateral OA": 0.5,
+  "PF OA": 1.0,
+  "Effusion": 0.5,
+  "Synovitis": 1.0,
+  "Baker's": 1.0,
+  "Contusion": 1.0,
+  "Fracture": 1.0
+ },
+ "mode": "blend",
+ "both_failed": 0,
+ "rank_basis": "each model over its own non-failed rows"
+}

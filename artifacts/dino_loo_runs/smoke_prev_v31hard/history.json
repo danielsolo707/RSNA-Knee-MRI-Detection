@@ -1,0 +1,20 @@
+[
+ {
+  "epoch": 0,
+  "loss": 0.8425,
+  "val_auc_raw": 0.6774,
+  "val_auc_ema": 0.6308,
+  "val_auc": 0.6774,
+  "ep_min": 13.2,
+  "used_ema": false
+ },
+ {
+  "epoch": 1,
+  "loss": 0.8183,
+  "val_auc_raw": 0.6828,
+  "val_auc_ema": 0.6761,
+  "val_auc": 0.6828,
+  "ep_min": 12.3,
+  "used_ema": false
+ }
+]

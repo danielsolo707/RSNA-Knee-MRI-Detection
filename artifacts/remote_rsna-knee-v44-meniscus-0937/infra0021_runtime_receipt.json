@@ -1,0 +1,113 @@
+{
+  "competition_submission_performed": false,
+  "completed_at_utc": "2026-09-05T00:35:02.032245+00:00",
+  "environment": {
+    "cuda_available": true,
+    "gpu_count": 2,
+    "gpu_names": [
+      "Tesla T4",
+      "Tesla T4"
+    ],
+    "numpy": "2.0.2",
+    "pandas": "2.3.3",
+    "python": "3.12.13",
+    "torch": "2.10.0+cu128"
+  },
+  "gates": {
+    "a5": {
+      "all_studies_complete": true,
+      "model_count": 5,
+      "prediction_shape": [
+        5,
+        3,
+        12
+      ]
+    },
+    "dino": {
+      "manifest_sha256": "496949a3a3e789bc1f4ccff595205c911e471c5b5ef669366a2dd0a58e125844",
+      "member_count": 20
+    },
+    "gpu_t4x2": true,
+    "rad": {
+      "calibrator_applied": true,
+      "gate": [
+        "ACL",
+        "Baker's",
+        "Contusion",
+        "Effusion",
+        "Lateral OA",
+        "Medial OA",
+        "PF OA"
+      ]
+    },
+    "raptor": {
+      "arm_contract": [
+        {
+          "name": "maxspan-v5",
+          "weight": 0.55,
+          "windows": 62
+        },
+        {
+          "name": "native384dense-v10",
+          "weight": 0.1,
+          "windows": 62
+        },
+        {
+          "name": "maxspan-v5-reverse",
+          "weight": 0.15,
+          "windows": 62
+        },
+        {
+          "name": "native384-v8",
+          "weight": 0.2,
+          "windows": 42
+        }
+      ],
+      "branch_output_present": true,
+      "final_shape": [
+        3,
+        12
+      ],
+      "outer_weight": 0.6
+    },
+    "submission_schema_uid_range": true,
+    "visible_exact_sha256": true
+  },
+  "infra_id": "infra0021_public0936_exact_clone_audit",
+  "input": {
+    "competition_root": "/kaggle/input/competitions/rsna-knee-abnormality-detection",
+    "mode": "visible_reference",
+    "mounts": [
+      "/kaggle/input/competitions",
+      "/kaggle/input/datasets",
+      "/kaggle/input/models"
+    ],
+    "study_count": 3,
+    "test_csv_sha256": "7539466fe487069345c233352b2632edeec1dd24128b08eda318de99ff7650ff",
+    "test_series_csv_sha256": "d8b0402ccd4d1383bf8b154b781e53f156a5438778fadca04fca3c64592f4f2d",
+    "uid_sha256": "f8308447b47011121885d31b754b690b1bd3b51a78e8f07c0b148161f8396ea0",
+    "visible_static_output_sha_gate_applied": true
+  },
+  "output": {
+    "backup_path": "/kaggle/working/submission_parent_exact.csv",
+    "backup_sha256": "1b03ce7f093efaffdf9acb9e8af05946bdd60b4fec1e0b1fc536b8198abb513b",
+    "max_abs_csv_vs_memory": 0.0,
+    "shape": [
+      3,
+      13
+    ],
+    "submission_path": "/kaggle/working/submission.csv",
+    "submission_sha256": "1b03ce7f093efaffdf9acb9e8af05946bdd60b4fec1e0b1fc536b8198abb513b"
+  },
+  "parent": {
+    "kernel": "prvsiyan/head-and-shoulders-knees-and-toes",
+    "public_score_provenance_only": 0.936,
+    "script_version_id": 344807997,
+    "source_sha256": "af519f52b2473bf7622957c8802da368b5d67cbb899500e8bb944f0b2f2ab0e1",
+    "version": 38
+  },
+  "prediction_recipe_changed": false,
+  "schema_version": "infra0021_runtime_receipt_v1",
+  "started_at_utc": "2026-09-05T00:35:02.022622+00:00",
+  "status": "passed"
+}

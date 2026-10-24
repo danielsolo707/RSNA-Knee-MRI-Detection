@@ -1,0 +1,85 @@
+{
+ "arms": {
+  "v5_full_swa": {
+   "macro": 0.9131173717388162,
+   "per_target": {
+    "ACL": 0.9644607843137255,
+    "MCL": 0.9773242630385487,
+    "Medial Meniscus": 0.9639423076923077,
+    "Lateral Meniscus": 0.8670807453416148,
+    "Medial OA": 0.9643410852713178,
+    "Lateral OA": 0.839458413926499,
+    "PF OA": 0.8507078507078507,
+    "Effusion": 0.982608695652174,
+    "Synovitis": 0.8076463560334528,
+    "Baker's": 0.9039855072463768,
+    "Contusion": 0.9136302294197032,
+    "Fracture": 0.9222222222222223
+   },
+   "arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+   "res": 384,
+   "file": "raptor_ft_coatnet_v5_full_swa.pt"
+  },
+  "v4_full": {
+   "macro": 0.9138798913438183,
+   "per_target": {
+    "ACL": 0.9803921568627451,
+    "MCL": 0.9727891156462585,
+    "Medial Meniscus": 0.9519230769230769,
+    "Lateral Meniscus": 0.8509316770186335,
+    "Medial OA": 0.9782945736434109,
+    "Lateral OA": 0.827852998065764,
+    "PF OA": 0.8236808236808236,
+    "Effusion": 0.9850931677018633,
+    "Synovitis": 0.7765830346475507,
+    "Baker's": 0.9601449275362318,
+    "Contusion": 0.9338731443994602,
+    "Fracture": 0.925
+   },
+   "arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+   "res": 384,
+   "file": "raptor_ft_coatnet_v4_full.pt"
+  },
+  "v4_full_swa": {
+   "macro": 0.9120459263583719,
+   "per_target": {
+    "ACL": 0.9816176470588235,
+    "MCL": 0.9614512471655329,
+    "Medial Meniscus": 0.9435096153846154,
+    "Lateral Meniscus": 0.8472049689440995,
+    "Medial OA": 0.9813953488372094,
+    "Lateral OA": 0.8278529980657641,
+    "PF OA": 0.8275418275418275,
+    "Effusion": 0.9838509316770185,
+    "Synovitis": 0.7741935483870968,
+    "Baker's": 0.963768115942029,
+    "Contusion": 0.9257759784075573,
+    "Fracture": 0.9263888888888889
+   },
+   "arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+   "res": 384,
+   "file": "raptor_ft_coatnet_v4_full_swa.pt"
+  }
+ },
+ "n_gold": 58,
+ "k_eval": 24,
+ "lab": [
+  "ACL",
+  "MCL",
+  "Medial Meniscus",
+  "Lateral Meniscus",
+  "Medial OA",
+  "Lateral OA",
+  "PF OA",
+  "Effusion",
+  "Synovitis",
+  "Baker's",
+  "Contusion",
+  "Fracture"
+ ],
+ "summary_macro": {
+  "v5_full_swa": 0.9131173717388162,
+  "v4_full": 0.9138798913438183,
+  "v4_full_swa": 0.9120459263583719
+ }
+}

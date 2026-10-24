@@ -1,0 +1,102 @@
+{
+  "autocast": false,
+  "batch_studies": 32,
+  "bundle_manifest_sha256": "b610229f046fe0f27ec8dcf661c5532d4991427428378975d0443da671607945",
+  "bundle_schema_version": "public0033_meniscus10_bundle_v1",
+  "cache": {
+    "dtype": "uint8",
+    "shape": [
+      3,
+      6,
+      12,
+      336,
+      336
+    ]
+  },
+  "checkpoint": {
+    "bytes": 347965736,
+    "sha256": "e1443bb0f518418a31428cd7eb153f15af4c48c7175baf1f9d21c84f1c2a93e7",
+    "state_tensor_count": 233,
+    "strict_load": true
+  },
+  "devices": [
+    {
+      "device_index": 0,
+      "device_name": "Tesla T4"
+    },
+    {
+      "device_index": 1,
+      "device_name": "Tesla T4"
+    }
+  ],
+  "fallback": 0,
+  "mask_sha256": "4d0af434c48ab614bf586297b1bed146fbf32dacb86fdaf15cd4fd26580639bd",
+  "neutralized_predictions": 0,
+  "partitions": [
+    {
+      "checkpoint_replicated": true,
+      "device_index": 0,
+      "device_name": "Tesla T4",
+      "index_start": 0,
+      "index_stop_exclusive": 2,
+      "runtime_seconds": 6.722168668999984,
+      "strict_load": true,
+      "study_count": 2
+    },
+    {
+      "checkpoint_replicated": true,
+      "device_index": 1,
+      "device_name": "Tesla T4",
+      "index_start": 2,
+      "index_stop_exclusive": 3,
+      "runtime_seconds": 4.485728391999828,
+      "strict_load": true,
+      "study_count": 1
+    }
+  ],
+  "precision": "fp32",
+  "raw_output": {
+    "columns": [
+      "StudyInstanceUID",
+      "Medial Meniscus",
+      "Lateral Meniscus"
+    ],
+    "max": {
+      "Lateral Meniscus": 0.4955921769142151,
+      "Medial Meniscus": 0.6597661972045898
+    },
+    "min": {
+      "Lateral Meniscus": 0.08940203487873077,
+      "Medial Meniscus": 0.5609511733055115
+    },
+    "path": "/kaggle/working/public0033_bag_raw.csv",
+    "sha256": "f8360efe61cd8dcc6acdb52861172f6658a549b0b3f79db8ec619f77755222b3"
+  },
+  "runtime_seconds": 11.130417226999953,
+  "runtime_sha256": "9541f82a993d7dc2942ca2a5112e110471285f8d80701846079a3dc708761683",
+  "schema_version": "public0033_cached_inference_receipt_v1",
+  "source_hashes": {
+    "checkpoint_sidecar": "42d1e4de3c19b00d891732441e8cd8be155848c1558ba7963361098986c7126c",
+    "dinov2_config": "f7ff4cfa73d2f70647dbf6950541ad25d73082d54c2e7e9bded160c7656b2a70",
+    "fullfit_config": "142dc28a42d419583bd1355877b17d02154b8df391a71b6361320b2c3c1e9c71",
+    "public0033_config": "460442d3c093b8d393b344b2ccca989621482f650de5d8966599086b6d9e5e11",
+    "run_contract": "107ef5133238dc514eb990bf75e05a0c5d8262873c95158957565bdc7278e11f",
+    "task_complete": "ec97ee4064d8b3219b8ba677719d80d31b25968d3737100887a88da7610a9528"
+  },
+  "status": "passed",
+  "study_count": 3,
+  "study_uid_sha256": "f8308447b47011121885d31b754b690b1bd3b51a78e8f07c0b148161f8396ea0",
+  "window_pooling": "overlap10_probability_mean",
+  "window_starts": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9
+  ]
+}

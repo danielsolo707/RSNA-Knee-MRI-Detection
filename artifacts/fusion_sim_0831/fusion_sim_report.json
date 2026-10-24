@@ -1,0 +1,122 @@
+{
+ "n_gold": 58,
+ "singles": {
+  "stage1_dinov2": 0.9958,
+  "stage2_mil": 0.9594,
+  "stage3_rad": 0.9741,
+  "coatnet": 0.9202,
+  "stage4_final": 0.958,
+  "v5_full_swa": 0.9131,
+  "v4_full": 0.9139,
+  "v4_full_swa": 0.912,
+  "v31_oof": 0.8305
+ },
+ "candidates": [
+  {
+   "label": "stage1_dinov2 + v31_oof w=0.15",
+   "macro": 0.9887,
+   "delta": 0.0307,
+   "split_half_mean": 0.9898,
+   "split_half_std": 0.0032,
+   "split_half_delta": 0.0318
+  },
+  {
+   "label": "stage3_rad + v31_oof w=0.15",
+   "macro": 0.9691,
+   "delta": 0.0111,
+   "split_half_mean": 0.9696,
+   "split_half_std": 0.0065,
+   "split_half_delta": 0.0116
+  },
+  {
+   "label": "stage4_final + v4_full w=0.05",
+   "macro": 0.9579,
+   "delta": -0.0001
+  },
+  {
+   "label": "stage4_final + v31_oof w=0.05",
+   "macro": 0.9575,
+   "delta": -0.0005
+  },
+  {
+   "label": "stage4_final + v5_full_swa w=0.05",
+   "macro": 0.9574,
+   "delta": -0.0006
+  },
+  {
+   "label": "stage4_final + v4_full w=0.10",
+   "macro": 0.9571,
+   "delta": -0.0009
+  },
+  {
+   "label": "stage4_final + v5_full_swa w=0.10",
+   "macro": 0.9559,
+   "delta": -0.0021
+  },
+  {
+   "label": "stage4_final + v31_oof w=0.10",
+   "macro": 0.9557,
+   "delta": -0.0023
+  },
+  {
+   "label": "stage2_mil + v31_oof w=0.15",
+   "macro": 0.9555,
+   "delta": -0.0025
+  },
+  {
+   "label": "stage4_final + v5_full_swa w=0.15",
+   "macro": 0.9547,
+   "delta": -0.0033
+  },
+  {
+   "label": "stage4_final + v4_full w=0.15",
+   "macro": 0.9544,
+   "delta": -0.0036
+  },
+  {
+   "label": "stage4_final + v31_oof w=0.15",
+   "macro": 0.9535,
+   "delta": -0.0045
+  },
+  {
+   "label": "stage4_final + v4_full w=0.20",
+   "macro": 0.9529,
+   "delta": -0.0051
+  },
+  {
+   "label": "stage4_final + v5_full_swa w=0.20",
+   "macro": 0.9527,
+   "delta": -0.0053
+  },
+  {
+   "label": "stage4_final + v31_oof w=0.20",
+   "macro": 0.9515,
+   "delta": -0.0065
+  },
+  {
+   "label": "stage4_final + v4_full w=0.30",
+   "macro": 0.9502,
+   "delta": -0.0078
+  },
+  {
+   "label": "stage4_final + v5_full_swa w=0.30",
+   "macro": 0.948,
+   "delta": -0.01
+  },
+  {
+   "label": "stage4_final + v31_oof w=0.30",
+   "macro": 0.9448,
+   "delta": -0.0132
+  },
+  {
+   "label": "coatnet branch: v5+v4 w=0.6 (vs probe coatnet)",
+   "macro": 0.9172,
+   "delta": -0.0408
+  },
+  {
+   "label": "coatnet branch: v5+v4 w=0.5 (vs probe coatnet)",
+   "macro": 0.9169,
+   "delta": -0.0411
+  }
+ ]
+}

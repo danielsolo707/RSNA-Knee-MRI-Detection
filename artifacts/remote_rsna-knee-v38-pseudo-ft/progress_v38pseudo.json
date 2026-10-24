@@ -1,0 +1,19 @@
+{
+ "tag": "v38pseudo",
+ "note": "mid",
+ "epoch": 17,
+ "step": 2151,
+ "steps_per_epoch": 2174,
+ "elapsed_h": 7.127,
+ "best_gold": 0.9131173717388162,
+ "hist": [
+  {
+   "ep": 16,
+   "loss": 0.5883635596167416,
+   "gold_auc": 0.9011779024063965
+  }
+ ],
+ "src": "resume",
+ "arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+ "res": 384
+}

@@ -1,0 +1,41 @@
+{
+ "tag": "v38pseudo",
+ "src": "resume",
+ "best_gold_auc": 0.9131173717388162,
+ "aucs": {
+  "ACL": 0.9644607843137255,
+  "MCL": 0.9773242630385487,
+  "Medial Meniscus": 0.9639423076923077,
+  "Lateral Meniscus": 0.8670807453416148,
+  "Medial OA": 0.9643410852713178,
+  "Lateral OA": 0.839458413926499,
+  "PF OA": 0.8507078507078507,
+  "Effusion": 0.982608695652174,
+  "Synovitis": 0.8076463560334528,
+  "Baker's": 0.9039855072463768,
+  "Contusion": 0.9136302294197032,
+  "Fracture": 0.9222222222222223
+ },
+ "hist": [
+  {
+   "ep": 16,
+   "loss": 0.5883635596167416,
+   "gold_auc": 0.9011779024063965
+  },
+  {
+   "ep": 17,
+   "loss": 0.5806772373856595,
+   "gold_auc": 0.9026421961114023
+  }
+ ],
+ "res": 384,
+ "epochs": 18,
+ "bb_lr": 1e-05,
+ "head_lr": 0.0001,
+ "n_train": 4349,
+ "n_gold": 58,
+ "roi": false,
+ "roi_mode": "compartment",
+ "partial": false,
+ "epochs_done": 18
+}

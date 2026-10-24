@@ -1,0 +1,5 @@
+HOME=/c/Users/ASUS
+USERPROFILE=C:\Users\ASUS
+KAGGLE_API_TOKEN_set=
+proxy_var_count= 0
+danielsolo1770/rsna-knee-v43-owned-train has status "KernelWorkerStatus.RUNNING"

@@ -1,0 +1,13 @@
+{
+ "selfcheck_max_diff": 0.0,
+ "blend_w": 0.6,
+ "w_v5": 0.4,
+ "w_v4": 0.6,
+ "gold58_label_auc": {
+  "labels_only": 0.8927,
+  "v5_only": 0.9129,
+  "v4_only": 0.9141,
+  "two_arm_fusion": 0.9171,
+  "final_blend": 0.9292
+ }
+}

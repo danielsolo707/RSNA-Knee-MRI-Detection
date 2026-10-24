@@ -1,0 +1,54 @@
+[    0.5s] labels override from C:\Users\ASUS\Desktop\DanielEmpire\ML\RSNA Knee Abnormality Detection\artifacts\pseudo_labels\pseudo_labels_LOO_v4_w60.csv: 4349 rows, 4407 studies changed >0.05
+[    0.5s] cache n=4407 shape=(4407, 21, 1, 280, 280) recipe=v31-280-7anchor-3fs-planes
+[    0.6s] gold_holdout: train=4349 gold-val=58
+[    0.7s] GPU clock-warmer started
+[    5.4s] dino dim=384 blocks=12 UNFROZEN=ALL(LLRD 0.7)
+[   40.0s] ep0 step 50/1088 loss~0.8979 1.50 it/s ETA 11.5min alloc=0.66GB
+[   71.7s] ep0 step 100/1088 loss~0.8702 1.54 it/s ETA 10.7min alloc=0.57GB
+[  103.5s] ep0 step 150/1088 loss~0.8740 1.55 it/s ETA 10.1min alloc=0.66GB
+[  135.1s] ep0 step 200/1088 loss~0.8662 1.56 it/s ETA 9.5min alloc=0.57GB
+[  166.3s] ep0 step 250/1088 loss~0.8531 1.57 it/s ETA 8.9min alloc=0.66GB
+[  197.7s] ep0 step 300/1088 loss~0.8510 1.57 it/s ETA 8.4min alloc=0.57GB
+[  228.7s] ep0 step 350/1088 loss~0.8458 1.58 it/s ETA 7.8min alloc=0.66GB
+[  259.8s] ep0 step 400/1088 loss~0.8401 1.58 it/s ETA 7.3min alloc=0.57GB
+[  293.9s] ep0 step 450/1088 loss~0.8228 1.57 it/s ETA 6.8min alloc=0.66GB
+[  325.2s] ep0 step 500/1088 loss~0.8411 1.57 it/s ETA 6.2min alloc=0.57GB
+[  359.4s] ep0 step 550/1088 loss~0.8370 1.56 it/s ETA 5.7min alloc=0.66GB
+[  390.7s] ep0 step 600/1088 loss~0.8389 1.56 it/s ETA 5.2min alloc=0.57GB
+[  424.6s] ep0 step 650/1088 loss~0.8330 1.56 it/s ETA 4.7min alloc=0.66GB
+[  455.8s] ep0 step 700/1088 loss~0.8419 1.56 it/s ETA 4.1min alloc=0.57GB
+[  489.9s] ep0 step 750/1088 loss~0.8256 1.55 it/s ETA 3.6min alloc=0.66GB
+[  522.9s] ep0 step 800/1088 loss~0.8334 1.55 it/s ETA 3.1min alloc=0.57GB
+[  556.8s] ep0 step 850/1088 loss~0.8236 1.55 it/s ETA 2.6min alloc=0.66GB
+[  590.9s] ep0 step 900/1088 loss~0.8334 1.54 it/s ETA 2.0min alloc=0.57GB
+[  625.0s] ep0 step 950/1088 loss~0.8315 1.54 it/s ETA 1.5min alloc=0.66GB
+[  659.2s] ep0 step 1000/1088 loss~0.8206 1.53 it/s ETA 1.0min alloc=0.57GB
+[  690.4s] ep0 step 1050/1088 loss~0.8290 1.54 it/s ETA 0.4min alloc=0.66GB
+[  716.7s] ep0 step 1088/1088 loss~0.8199 1.53 it/s ETA 0.0min alloc=0.51GB
+[  725.4s] {"epoch": 0, "loss": 0.8425, "val_auc_raw": 0.6775, "val_auc_ema": 0.6308, "val_auc": 0.6775, "ep_min": 12.0, "used_ema": false}
+[  725.9s] [running] resume ckpt saved (ep0, best=0.6775)
+[  759.9s] ep1 step 50/1088 loss~0.8289 1.47 it/s ETA 11.8min alloc=0.66GB
+[  793.7s] ep1 step 100/1088 loss~0.8191 1.48 it/s ETA 11.2min alloc=0.57GB
+[  825.8s] ep1 step 150/1088 loss~0.8236 1.50 it/s ETA 10.4min alloc=0.66GB
+[  858.0s] ep1 step 200/1088 loss~0.8264 1.51 it/s ETA 9.8min alloc=0.57GB
+[  891.7s] ep1 step 250/1088 loss~0.8227 1.51 it/s ETA 9.3min alloc=0.66GB
+[  925.4s] ep1 step 300/1088 loss~0.8220 1.50 it/s ETA 8.7min alloc=0.57GB
+[  958.8s] ep1 step 350/1088 loss~0.8204 1.50 it/s ETA 8.2min alloc=0.66GB
+[  992.7s] ep1 step 400/1088 loss~0.8192 1.50 it/s ETA 7.6min alloc=0.57GB
+[ 1026.4s] ep1 step 450/1088 loss~0.8199 1.50 it/s ETA 7.1min alloc=0.66GB
+[ 1060.2s] ep1 step 500/1088 loss~0.8163 1.50 it/s ETA 6.6min alloc=0.57GB
+[ 1093.9s] ep1 step 550/1088 loss~0.8057 1.49 it/s ETA 6.0min alloc=0.66GB
+[ 1128.8s] ep1 step 600/1088 loss~0.8315 1.49 it/s ETA 5.5min alloc=0.57GB
+[ 1163.5s] ep1 step 650/1088 loss~0.8243 1.49 it/s ETA 4.9min alloc=0.66GB
+[ 1197.8s] ep1 step 700/1088 loss~0.8166 1.48 it/s ETA 4.4min alloc=0.57GB
+[ 1232.2s] ep1 step 750/1088 loss~0.8115 1.48 it/s ETA 3.8min alloc=0.66GB
+[ 1263.9s] ep1 step 800/1088 loss~0.8179 1.49 it/s ETA 3.2min alloc=0.57GB
+[ 1299.0s] ep1 step 850/1088 loss~0.8126 1.48 it/s ETA 2.7min alloc=0.66GB
+[ 1333.7s] ep1 step 900/1088 loss~0.8228 1.48 it/s ETA 2.1min alloc=0.57GB
+[ 1365.7s] ep1 step 950/1088 loss~0.8112 1.48 it/s ETA 1.5min alloc=0.66GB
+[ 1401.5s] ep1 step 1000/1088 loss~0.8122 1.48 it/s ETA 1.0min alloc=0.57GB
+[ 1437.2s] ep1 step 1050/1088 loss~0.8201 1.48 it/s ETA 0.4min alloc=0.66GB
+[ 1460.9s] ep1 step 1088/1088 loss~0.8134 1.48 it/s ETA 0.0min alloc=0.51GB
+[ 1472.0s] {"epoch": 1, "loss": 0.8192, "val_auc_raw": 0.6881, "val_auc_ema": 0.6733, "val_auc": 0.6881, "ep_min": 12.4, "used_ema": false}
+[ 1472.5s] [running] resume ckpt saved (ep1, best=0.6881)
+[ 1472.5s] DONE best=0.6881

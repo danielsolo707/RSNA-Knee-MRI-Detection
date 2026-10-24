@@ -1,0 +1,22 @@
+{
+  "id": "danielsolo1770/rsna-knee-v43-owned-train",
+  "title": "rsna-knee-v43-owned-train",
+  "code_file": "rsna-knee-v43-owned-train.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "machine_shape": "NvidiaTeslaT4",
+  "kernel_sources": [
+    "danielsolo1770/rsna-knee-v31-cache-280"
+  ],
+  "dataset_sources": [
+    "danielsolo1770/rsna-knee-v43-labels"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": []
+}

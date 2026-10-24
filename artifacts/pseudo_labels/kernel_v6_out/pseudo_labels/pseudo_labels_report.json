@@ -1,0 +1,17 @@
+{
+ "arms": {
+  "v5": {
+   "file": "raptor_ft_coatnet_v5_full_swa.pt",
+   "weight": 0.4,
+   "arch": "coatnet_rmlp_2_rw_384.sw_in12k_ft_in1k",
+   "res": 384,
+   "seconds": 4015.7
+  }
+ },
+ "k_eval": 12,
+ "blend_w": 0.6,
+ "n_train": 4349,
+ "gold58_label_auc": {
+  "fusion": 0.9033
+ }
+}

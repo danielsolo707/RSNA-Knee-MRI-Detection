@@ -1,0 +1,26 @@
+{
+  "id": "danielsolo1770/rsna-knee-v35-raptor-f0-resume",
+  "title": "rsna-knee-v35-raptor-f0-resume",
+  "code_file": "rsna-knee-v35-raptor-f0-resume.ipynb",
+  "language": "python",
+  "kernel_type": "notebook",
+  "is_private": true,
+  "enable_gpu": true,
+  "enable_tpu": false,
+  "enable_internet": true,
+  "keywords": [
+    "gpu"
+  ],
+  "dataset_sources": [
+    "dreaddevelopment/knee-raptor-corpus",
+    "dreaddevelopment/knee-raptor-corpus-ext"
+  ],
+  "kernel_sources": [
+    "danielsolo1770/rsna-knee-v34-raptor-f0"
+  ],
+  "competition_sources": [
+    "rsna-knee-abnormality-detection"
+  ],
+  "model_sources": [],
+  "machine_shape": "NvidiaTeslaT4"
+}
