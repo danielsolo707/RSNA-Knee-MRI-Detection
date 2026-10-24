@@ -18,6 +18,7 @@ kaggle/**/output/
 # Caches & scratch
 __pycache__/
 .pytest_cache/
+.ruff_cache/
 artifacts/_tmp*
 *.log
 *.zip
@@ -29,6 +30,7 @@ artifacts/_tmp*
 .firecrawl/
 .workbuddy-ai/
 .playwright-mcp/
+.zcode/
 
 # Secrets
 .modal.toml
