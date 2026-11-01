@@ -6,7 +6,7 @@
 
 **Updated:** 2026-10-25 (final wrap-up) · this file wins over `docs/archive/*`, `README.md`, and every older SESSION/TARGET/DEEP_RESEARCH note.
 **Competition:** rsna-knee-abnormality-detection · closed 2026-10-22 · kernels-only
-**Owner:** danielsolo1770 · team Daniel solo (`16697840`) · private GitHub mirror `rsna-knee-workspace`
+**Owner:** danielsolo1770 · team Daniel solo (`16697840`) · GitHub repo `RSNA-Knee-MRI-Detection`
 
 ---
 
@@ -117,7 +117,7 @@ Cache: `artifacts/v31_cache/v31_cache` (4407 complete).
 ## 5) KEY PATHS / COMMANDS
 
 ```
-HANDOFF.md                                   # this file
+docs/HANDOFF.md                              # this file
 kaggle/submission_v33_dino_raptor_0936/      # Stage 1 kernel
 kaggle/raptor-single-model/                  # 0.924 incumbent
 references/spy/highscore/dinosaur_v4/        # upstream 0.936 notebook
@@ -768,7 +768,7 @@ predictions; compare on one common arm-independent reference with per-target
 AUC and uncertainty, then use Gold58 only once as a non-blind external sanity
 check. Promote only a reproducible, multi-target improvement and test it as a
 single change to V48 on a 2×T4 inference proxy with zero missing-arm
-fallbacks before using one hidden rerun. See the dated plan in `PLAN_TOP50.md`.
+fallbacks before using one hidden rerun. See the dated plan in `docs/PLAN_TOP50.md`.
 
 ---
 
@@ -860,5 +860,5 @@ Competition closed → this repo is an archive. Cleanup performed 2026-10-25:
   (final submission outputs + blend receipts), label banks (`v3/v32/v43_labels`,
   `pseudo_labels`, `raptor_labels` on disk), all `kaggle/` kernel sources, all `tools/`,
   `references/spy/` (public kernel source pulls).
-- Everything above is committed and pushed to the private mirror
-  `github.com/danielsolo707/rsna-knee-workspace`.
+- Everything above is committed and pushed to the public repo
+  `github.com/danielsolo707/RSNA-Knee-MRI-Detection`.

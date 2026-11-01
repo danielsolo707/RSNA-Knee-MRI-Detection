@@ -1,7 +1,7 @@
 # Competition strategy (historical, 2026-08-10)
 
-> **Superseded as a live plan.** Current incumbent, rank, and next steps are in
-> repo-root `HANDOFF.md`. This file is the original research synthesis; do not
+> **Superseded as a live plan.** Final result and next steps are in
+> `docs/HANDOFF.md`. This file is the original research synthesis; do not
 > treat its leaderboard cutoffs or submission-1 plan as current.
 
 Last updated: 2026-08-10. Leaderboard thresholds move; the observed public

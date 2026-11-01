@@ -1,9 +1,9 @@
 # Handoff — RSNA Knee, target 0.930 / 0.940 (for the next AI)
 
-> **STALE (2026-08-17).** Current start-here is repo-root **`HANDOFF.md`** (2026-08-19). Incumbent is V27 **0.914**. Do not use the live table below.
+> **STALE (2026-08-17).** Current start-here is **`docs/HANDOFF.md`** (2026-10-25). Incumbent is V27 **0.914**. Do not use the live table below.
 
 **Written:** 2026-08-17  
-**Why this file exists:** weekly GPU may run out (`refresh 2026-08-22T00:00:00Z`). Do **not** restart from V1. Read **`HANDOFF.md` first**, then `docs/TARGET_0940.md`, then `docs/SESSION_HANDOFF.md` only for history.
+**Why this file exists:** weekly GPU may run out (`refresh 2026-08-22T00:00:00Z`). Do **not** restart from V1. Read **`docs/HANDOFF.md` first**, then `docs/archive/TARGET_0940.md`, then `docs/archive/SESSION_HANDOFF.md` only for history.
 
 **Owner Kaggle:** `danielsolo1770`  
 **Team:** Daniel solo (`16697840`)  

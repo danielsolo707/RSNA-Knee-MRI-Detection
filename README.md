@@ -8,7 +8,7 @@ weights and caches were deleted, evidence and code are kept.
 **Final result: rank 1450 / 6425 (top ~23%), private AUC 0.942** via V51
 (`57516897`) — a private fork of `goodpjw2008`'s public 0.958 kernel (Raptor 384+224 +
 ConvNeXt R6 flip-TTA + 2.5D ConvNeXt MIL) with per-class blend weights.
-Full story, final-week log, and post-mortem: [`HANDOFF.md`](HANDOFF.md) §15–§17.
+Full story, final-week log, and post-mortem: [`docs/HANDOFF.md`](docs/HANDOFF.md) §15–§17.
 
 ## Result timeline
 
@@ -21,13 +21,13 @@ Full story, final-week log, and post-mortem: [`HANDOFF.md`](HANDOFF.md) §15–�
 | **V51 (`57516897`)** | **0.958** | **0.942** | **fork of `goodpjw2008` CoAtNet-R6 2.5D MIL + per-class blend — final** |
 
 Owned-model arms (V31/V38/V39/V42/V43/V45/V46) never passed their gates; every closure
-is documented with receipts in `HANDOFF.md` §3–§14.
+is documented with receipts in `docs/HANDOFF.md` §3–§14.
 
 ## Repo map
 
 | Path | Role |
 |---|---|
-| `HANDOFF.md` | Source of truth: full session log + final result + post-mortem |
+| `docs/HANDOFF.md` | Source of truth: full session log + final result + post-mortem |
 | `kaggle/` | All submission/train kernel sources (V33 → V51, fold trainers, probes) |
 | `tools/` | Trainers, gold scorer, validators, kernel builders, submit/watch scripts |
 | `artifacts/lb_scan/` | Leaderboard snapshots incl. full private board (`lb_private.json`) |
